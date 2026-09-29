@@ -172,3 +172,30 @@ document.addEventListener('DOMContentLoaded',()=>{
   setDateLimits();
   document.getElementById('languageSelect')?.addEventListener('change',e=>setLanguage(e.target.value));
 });
+
+
+// Photo lightbox
+document.addEventListener('DOMContentLoaded',()=>{
+  const box=document.getElementById('lightbox');
+  if(!box) return;
+  const img=box.querySelector('.lightbox-image');
+  const close=box.querySelector('.lightbox-close');
+  const open=(src,alt='')=>{
+    img.src=src; img.alt=alt;
+    box.classList.add('is-open');
+    box.setAttribute('aria-hidden','false');
+    document.body.classList.add('lightbox-open');
+  };
+  const shut=()=>{
+    box.classList.remove('is-open');
+    box.setAttribute('aria-hidden','true');
+    document.body.classList.remove('lightbox-open');
+    img.src='';
+  };
+  document.querySelectorAll('[data-lightbox]').forEach(btn=>{
+    btn.addEventListener('click',()=>open(btn.dataset.lightbox,btn.querySelector('img')?.alt||''));
+  });
+  close?.addEventListener('click',shut);
+  box.addEventListener('click',e=>{if(e.target===box) shut();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&box.classList.contains('is-open')) shut();});
+});
