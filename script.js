@@ -142,48 +142,50 @@ const extraTranslations = {
 };
 
 
-const recommendationTranslations = {
+
+const siteV8Translations = {
   it:{
-    "food.kicker":"04 — I NOSTRI INDIRIZZI","food.title":"Dove mangiare<br><em>e bere.</em>","food.lead":"A Montepulciano si mangia bene in tanti posti. Questi però sono gli indirizzi a cui siamo davvero affezionati: persone che conosciamo e che ci fa piacere farvi conoscere.",
-    "food.lieviti":"Pizza napoletana, impasti lunghi e ingredienti scelti, con una bella selezione di birre, in una caratteristica struttura in pietra del centro storico.","food.bottega":"Un piccolo locale nel cuore del borgo: piatti della tradizione, taglieri, pici e vini del territorio. Perfetto per un pranzo, una cena o anche solo un buon calice.","food.acquacheta":"Un indirizzo storico, conosciuto per la carne alla brace e la bistecca alla fiorentina. Ambiente vivace, tavoli condivisi e nessuna formalità.","food.poliziano":"Uno dei caffè storici più affascinanti del borgo. Se riuscite, chiedete un tavolo con vista: è un bellissimo modo di iniziare la giornata.","food.romantico":"Il nostro posto preferito per un aperitivo verso il tramonto: ambiente piacevole e una posizione che regala Montepulciano nella luce migliore.","food.tenuta":"Una bella occasione per uscire dal centro e scoprire Montepulciano attraverso il Vino Nobile e i suoi paesaggi. Meglio prenotare la visita in anticipo.","food.tag.meat":"Carne alla brace","food.tag.breakfast":"Colazione","food.tag.aperitivo":"Aperitivo al tramonto","food.tag.tasting":"Degustazione · in auto",
-    "map.kicker":"05 — TUTTO A PORTATA DI PASSEGGIATA","map.title":"La mappa dei<br><em>nostri consigli.</em>","map.lead":"Casa, tavole che amiamo, luoghi da vedere, parcheggi e servizi utili: una piccola mappa per capire subito cosa hai intorno.","map.note":"Tocca un punto per leggere il consiglio e aprire la posizione in Google Maps.","map.cat.home":"Casa","map.cat.food":"Mangiare e bere","map.cat.see":"Da vedere","map.cat.park":"Parcheggi","map.cat.useful":"Utile","map.home":"Centra su casa","map.credit":"I link dei punti aprono Google Maps.","map.open":"Apri in Google Maps",
-    "bravio.kicker":"06 — IL BRAVÌO DELLE BOTTI","surroundings.kicker":"08 — DINTORNI","booking.kicker":"09 — PRENOTA DIRETTAMENTE","faq.kicker":"10 — FAQ"
+    "places.biagio":"Appena fuori dalle mura, il Tempio di San Biagio è uno dei simboli rinascimentali di Montepulciano, immerso nel verde ai piedi del borgo.",
+    "places.views.title":"Gli scorci sulle due Valli",
+    "places.views":"Camminando per il centro si aprono improvvisamente vedute sulla Valdichiana e sulla Val d'Orcia. Il momento più bello è poco prima del tramonto.",
+    "bravio.kicker":"04 — IL BRAVÌO DELLE BOTTI","surroundings.kicker":"06 — DINTORNI","booking.kicker":"07 — PRENOTA DIRETTAMENTE",
+    "contacts.kicker":"08 — CONTATTI","contacts.title":"Per qualsiasi cosa,<br><em>scrivici.</em>","contacts.lead":"Per una domanda prima del soggiorno o per organizzare al meglio il tuo arrivo, puoi trovarci qui.","faq.kicker":"09 — FAQ"
   },
   en:{
-    "food.kicker":"04 — OUR FAVOURITE ADDRESSES","food.title":"Where to eat<br><em>and drink.</em>","food.lead":"There are many good places to eat in Montepulciano. These are the ones we are genuinely fond of: people we know and places we are happy to share with our guests.",
-    "food.lieviti":"Neapolitan pizza with long-fermented dough, carefully chosen ingredients and a good beer selection, inside a characterful stone building in the old town.","food.bottega":"A small place in the heart of town for traditional dishes, boards, pici pasta and local wines. Perfect for lunch, dinner or simply a good glass of wine.","food.acquacheta":"A historic address known for grilled meat and Florentine steak. Lively atmosphere, shared tables and no formality.","food.poliziano":"One of the town’s most charming historic cafés. If you can, ask for a table with a view: a beautiful way to start the day.","food.romantico":"Our favourite place for a sunset aperitivo: relaxed atmosphere and a position that shows Montepulciano in its best light.","food.tenuta":"A lovely reason to leave the old town and discover Montepulciano through Vino Nobile and its landscape. Booking ahead is recommended.","food.tag.meat":"Grilled meat","food.tag.breakfast":"Breakfast","food.tag.aperitivo":"Sunset aperitivo","food.tag.tasting":"Wine tasting · by car",
-    "map.kicker":"05 — EVERYTHING WITHIN REACH","map.title":"Our little map<br><em>of recommendations.</em>","map.lead":"Home, places we love to eat and drink, sights, parking and useful services: a quick map of what is around you.","map.note":"Tap a point to read our note and open the location in Google Maps.","map.cat.home":"Home","map.cat.food":"Eat & drink","map.cat.see":"See","map.cat.park":"Parking","map.cat.useful":"Useful","map.home":"Centre on home","map.credit":"Point links open Google Maps.","map.open":"Open in Google Maps",
-    "bravio.kicker":"06 — THE BRAVÌO DELLE BOTTI","surroundings.kicker":"08 — SURROUNDINGS","booking.kicker":"09 — BOOK DIRECT","faq.kicker":"10 — FAQ"
+    "places.biagio":"Just outside the walls, the Temple of San Biagio is one of Montepulciano’s Renaissance landmarks, surrounded by greenery below the town.",
+    "places.views.title":"Views over the two valleys","places.views":"As you walk through the old town, sudden views open over the Valdichiana and Val d'Orcia. The most beautiful light comes just before sunset.",
+    "bravio.kicker":"04 — THE BRAVÌO DELLE BOTTI","surroundings.kicker":"06 — SURROUNDINGS","booking.kicker":"07 — BOOK DIRECT",
+    "contacts.kicker":"08 — CONTACTS","contacts.title":"Whatever you need,<br><em>write to us.</em>","contacts.lead":"For a question before your stay or to organise your arrival, you can reach us here.","faq.kicker":"09 — FAQ"
   },
   es:{
-    "food.kicker":"04 — NUESTROS SITIOS FAVORITOS","food.title":"Dónde comer<br><em>y beber.</em>","food.lead":"En Montepulciano se come bien en muchos sitios. Estos son los lugares a los que de verdad tenemos cariño: personas que conocemos y que nos gusta recomendar.",
-    "food.lieviti":"Pizza napolitana, masas de larga fermentación, buenos ingredientes y una cuidada selección de cervezas, en un característico local de piedra del centro.","food.bottega":"Un pequeño local en pleno centro: platos tradicionales, tablas, pici y vinos de la zona. Perfecto para comer, cenar o simplemente tomar una copa.","food.acquacheta":"Un clásico conocido por la carne a la brasa y la bistecca alla fiorentina. Ambiente animado, mesas compartidas y sin formalidades.","food.poliziano":"Uno de los cafés históricos más bonitos del pueblo. Si podéis, pedid una mesa con vistas: es una forma preciosa de empezar el día.","food.romantico":"Nuestro lugar favorito para un aperitivo al atardecer, con un ambiente agradable y Montepulciano bajo su mejor luz.","food.tenuta":"Una bonita ocasión para salir del centro y descubrir Montepulciano a través del Vino Nobile y su paisaje. Mejor reservar con antelación.","food.tag.meat":"Carne a la brasa","food.tag.breakfast":"Desayuno","food.tag.aperitivo":"Aperitivo al atardecer","food.tag.tasting":"Degustación · en coche",
-    "map.kicker":"05 — TODO MUY CERCA","map.title":"El mapa de<br><em>nuestros consejos.</em>","map.lead":"La casa, nuestros lugares favoritos, sitios que ver, aparcamientos y servicios útiles: un mapa rápido de lo que tienes alrededor.","map.note":"Toca un punto para leer el consejo y abrirlo en Google Maps.","map.cat.home":"Casa","map.cat.food":"Comer y beber","map.cat.see":"Qué ver","map.cat.park":"Aparcamientos","map.cat.useful":"Útil","map.home":"Centrar en casa","map.credit":"Los enlaces abren Google Maps.","map.open":"Abrir en Google Maps",
-    "bravio.kicker":"06 — EL BRAVÌO DELLE BOTTI","surroundings.kicker":"08 — ALREDEDORES","booking.kicker":"09 — RESERVA DIRECTA","faq.kicker":"10 — FAQ"
+    "places.biagio":"Justo fuera de las murallas, el Templo de San Biagio es uno de los símbolos renacentistas de Montepulciano, rodeado de verde a los pies del pueblo.",
+    "places.views.title":"Vistas sobre los dos valles","places.views":"Paseando por el centro aparecen de repente vistas sobre la Valdichiana y la Val d'Orcia. La mejor luz llega poco antes del atardecer.",
+    "bravio.kicker":"04 — EL BRAVÌO DELLE BOTTI","surroundings.kicker":"06 — ALREDEDORES","booking.kicker":"07 — RESERVA DIRECTA",
+    "contacts.kicker":"08 — CONTACTO","contacts.title":"Para cualquier cosa,<br><em>escríbenos.</em>","contacts.lead":"Para una pregunta antes de la estancia o para organizar tu llegada, puedes encontrarnos aquí.","faq.kicker":"09 — FAQ"
   },
   de:{
-    "food.kicker":"04 — UNSERE LIEBLINGSADRESSEN","food.title":"Essen und<br><em>Trinken.</em>","food.lead":"In Montepulciano kann man an vielen Orten gut essen. Diese Adressen liegen uns besonders am Herzen: Menschen, die wir kennen, und Orte, die wir unseren Gästen gern empfehlen.",
-    "food.lieviti":"Neapolitanische Pizza mit lang geführtem Teig, ausgewählten Zutaten und guter Bierauswahl in einem charakteristischen Steingebäude der Altstadt.","food.bottega":"Ein kleines Lokal mitten im Ort: traditionelle Gerichte, Platten, Pici und Weine aus der Region. Ideal zum Mittag- oder Abendessen oder einfach für ein gutes Glas Wein.","food.acquacheta":"Eine historische Adresse, bekannt für Grillfleisch und Bistecca alla Fiorentina. Lebhafte Atmosphäre, gemeinsame Tische, ganz unkompliziert.","food.poliziano":"Eines der schönsten historischen Cafés des Ortes. Wenn möglich, fragen Sie nach einem Tisch mit Aussicht – ein wunderbarer Start in den Tag.","food.romantico":"Unser Lieblingsort für einen Aperitif bei Sonnenuntergang: angenehme Atmosphäre und Montepulciano im schönsten Licht.","food.tenuta":"Eine schöne Gelegenheit, die Altstadt zu verlassen und Montepulciano über Vino Nobile und die Landschaft kennenzulernen. Vorab reservieren.","food.tag.meat":"Grillfleisch","food.tag.breakfast":"Frühstück","food.tag.aperitivo":"Aperitif zum Sonnenuntergang","food.tag.tasting":"Weinprobe · mit dem Auto",
-    "map.kicker":"05 — ALLES GANZ NAH","map.title":"Unsere Karte<br><em>mit Empfehlungen.</em>","map.lead":"Zuhause, Lieblingslokale, Sehenswürdigkeiten, Parkplätze und Nützliches: eine schnelle Übersicht über alles in Ihrer Nähe.","map.note":"Tippen Sie auf einen Punkt, um unseren Hinweis zu lesen und ihn in Google Maps zu öffnen.","map.cat.home":"Zuhause","map.cat.food":"Essen & Trinken","map.cat.see":"Sehen","map.cat.park":"Parken","map.cat.useful":"Nützlich","map.home":"Auf Zuhause zentrieren","map.credit":"Die Links öffnen Google Maps.","map.open":"In Google Maps öffnen",
-    "bravio.kicker":"06 — DER BRAVÌO DELLE BOTTI","surroundings.kicker":"08 — UMGEBUNG","booking.kicker":"09 — DIREKT BUCHEN","faq.kicker":"10 — FAQ"
+    "places.biagio":"Direkt außerhalb der Mauern liegt der Tempel San Biagio, eines der Renaissance-Wahrzeichen Montepulcianos, umgeben von Grün am Fuß der Altstadt.",
+    "places.views.title":"Ausblicke auf beide Täler","places.views":"Beim Spaziergang durch die Altstadt öffnen sich plötzlich Blicke auf Valdichiana und Val d'Orcia. Am schönsten ist das Licht kurz vor Sonnenuntergang.",
+    "bravio.kicker":"04 — DER BRAVÌO DELLE BOTTI","surroundings.kicker":"06 — UMGEBUNG","booking.kicker":"07 — DIREKT BUCHEN",
+    "contacts.kicker":"08 — KONTAKT","contacts.title":"Wenn Sie etwas brauchen,<br><em>schreiben Sie uns.</em>","contacts.lead":"Bei Fragen vor dem Aufenthalt oder zur Organisation Ihrer Anreise erreichen Sie uns hier.","faq.kicker":"09 — FAQ"
   },
   fr:{
-    "food.kicker":"04 — NOS ADRESSES PRÉFÉRÉES","food.title":"Où manger<br><em>et boire.</em>","food.lead":"On mange très bien à de nombreux endroits à Montepulciano. Voici ceux auxquels nous sommes vraiment attachés : des personnes que nous connaissons et des adresses que nous aimons partager.",
-    "food.lieviti":"Pizza napolitaine, pâtes à fermentation longue, ingrédients choisis et belle sélection de bières, dans un lieu en pierre plein de caractère au cœur du centre historique.","food.bottega":"Une petite adresse au cœur du bourg : plats traditionnels, planches, pici et vins locaux. Parfait pour déjeuner, dîner ou simplement boire un bon verre.","food.acquacheta":"Une adresse historique réputée pour ses viandes grillées et la bistecca alla fiorentina. Ambiance animée, tables partagées et sans formalités.","food.poliziano":"L’un des cafés historiques les plus charmants du bourg. Si possible, demandez une table avec vue : une très belle façon de commencer la journée.","food.romantico":"Notre endroit préféré pour l’aperitivo au coucher du soleil : une atmosphère agréable et Montepulciano dans sa plus belle lumière.","food.tenuta":"Une belle occasion de sortir du centre historique et de découvrir Montepulciano à travers le Vino Nobile et ses paysages. Réservation conseillée.","food.tag.meat":"Viandes grillées","food.tag.breakfast":"Petit-déjeuner","food.tag.aperitivo":"Aperitivo au coucher du soleil","food.tag.tasting":"Dégustation · en voiture",
-    "map.kicker":"05 — TOUT À PORTÉE DE MAIN","map.title":"La carte de<br><em>nos bonnes adresses.</em>","map.lead":"La maison, nos tables préférées, les lieux à voir, les parkings et les services utiles : une carte rapide de ce qui vous entoure.","map.note":"Touchez un point pour lire notre conseil et ouvrir l’adresse dans Google Maps.","map.cat.home":"Maison","map.cat.food":"Manger & boire","map.cat.see":"À voir","map.cat.park":"Parkings","map.cat.useful":"Utile","map.home":"Centrer sur la maison","map.credit":"Les liens ouvrent Google Maps.","map.open":"Ouvrir dans Google Maps",
-    "bravio.kicker":"06 — LE BRAVÌO DELLE BOTTI","surroundings.kicker":"08 — ALENTOURS","booking.kicker":"09 — RÉSERVER EN DIRECT","faq.kicker":"10 — FAQ"
+    "places.biagio":"Juste hors des remparts, le temple de San Biagio est l’un des symboles Renaissance de Montepulciano, entouré de verdure au pied du bourg.",
+    "places.views.title":"Les vues sur les deux vallées","places.views":"En parcourant le centre historique, des vues s’ouvrent soudain sur la Valdichiana et le Val d'Orcia. La lumière est particulièrement belle juste avant le coucher du soleil.",
+    "bravio.kicker":"04 — LE BRAVÌO DELLE BOTTI","surroundings.kicker":"06 — ALENTOURS","booking.kicker":"07 — RÉSERVER EN DIRECT",
+    "contacts.kicker":"08 — CONTACT","contacts.title":"Pour toute question,<br><em>écrivez-nous.</em>","contacts.lead":"Pour une question avant votre séjour ou pour organiser votre arrivée, vous pouvez nous joindre ici.","faq.kicker":"09 — FAQ"
   },
   ru:{
-    "food.kicker":"04 — НАШИ ЛЮБИМЫЕ МЕСТА","food.title":"Где поесть<br><em>и выпить.</em>","food.lead":"В Монтепульчано много хороших мест. Эти особенно дороги нам: мы знаем людей, которые за ними стоят, и с удовольствием рекомендуем их гостям.",
-    "food.lieviti":"Неаполитанская пицца с долгой ферментацией теста, хорошими ингредиентами и выбором пива в характерном каменном помещении старого города.","food.bottega":"Небольшое место в самом центре: традиционные блюда, мясные и сырные тарелки, пичи и местные вина. Подойдёт для обеда, ужина или просто бокала вина.","food.acquacheta":"Историческое заведение, известное мясом на гриле и флорентийским стейком. Живая атмосфера, общие столы и минимум формальностей.","food.poliziano":"Одно из самых красивых исторических кафе города. Если получится, попросите столик с видом — отличный способ начать день.","food.romantico":"Наше любимое место для аперитива на закате: приятная атмосфера и Монтепульчано в самом красивом свете.","food.tenuta":"Хороший повод выехать из центра и открыть Монтепульчано через Vino Nobile и пейзажи. Лучше бронировать заранее.","food.tag.meat":"Мясо на гриле","food.tag.breakfast":"Завтрак","food.tag.aperitivo":"Аперитив на закате","food.tag.tasting":"Дегустация · на машине",
-    "map.kicker":"05 — ВСЁ РЯДОМ","map.title":"Карта<br><em>наших рекомендаций.</em>","map.lead":"Дом, любимые рестораны, достопримечательности, парковки и полезные места — всё необходимое на одной карте.","map.note":"Нажмите на точку, чтобы прочитать совет и открыть место в Google Maps.","map.cat.home":"Дом","map.cat.food":"Еда и напитки","map.cat.see":"Посмотреть","map.cat.park":"Парковки","map.cat.useful":"Полезное","map.home":"Центрировать на доме","map.credit":"Ссылки открывают Google Maps.","map.open":"Открыть в Google Maps",
-    "bravio.kicker":"06 — BRAVÌO DELLE BOTTI","surroundings.kicker":"08 — ОКРЕСТНОСТИ","booking.kicker":"09 — ПРЯМОЕ БРОНИРОВАНИЕ","faq.kicker":"10 — FAQ"
+    "places.biagio":"Сразу за городскими стенами находится храм Сан-Бьяджо — один из символов ренессансного Монтепульчано, окружённый зеленью у подножия города.",
+    "places.views.title":"Виды на две долины","places.views":"Во время прогулки по историческому центру внезапно открываются виды на Вальдикьяну и Валь-д'Орча. Самый красивый свет — незадолго до заката.",
+    "bravio.kicker":"04 — BRAVÌO DELLE BOTTI","surroundings.kicker":"06 — ОКРЕСТНОСТИ","booking.kicker":"07 — ПРЯМОЕ БРОНИРОВАНИЕ",
+    "contacts.kicker":"08 — КОНТАКТЫ","contacts.title":"Если что-то понадобится,<br><em>напишите нам.</em>","contacts.lead":"Если у вас есть вопрос до приезда или нужно организовать прибытие, связаться с нами можно здесь.","faq.kicker":"09 — FAQ"
   },
   zh:{
-    "food.kicker":"04 — 我们喜欢的店","food.title":"去哪里吃饭<br><em>和喝一杯。</em>","food.lead":"蒙特普尔恰诺有很多好吃的地方。下面这些是我们真正喜欢、也愿意介绍给客人的店，其中很多店主都是我们认识的人。",
-    "food.lieviti":"那不勒斯风格披萨，长时间发酵面团、精选食材和不错的啤酒选择，店铺位于老城一处很有特色的石建筑中。","food.bottega":"老城中心的一家小店：传统菜、冷切拼盘、Pici 手工面和当地葡萄酒。适合午餐、晚餐，也适合只喝一杯好酒。","food.acquacheta":"老城里很有历史的餐厅，以炭烤肉和佛罗伦萨牛排闻名。气氛热闹，有共享桌，不拘礼节。","food.poliziano":"镇上最迷人的历史咖啡馆之一。如果可以，尽量选一张有景观的桌子，是开启一天很美的方式。","food.romantico":"我们最喜欢的日落开胃酒去处：氛围舒服，也能看到蒙特普尔恰诺最漂亮的光线。","food.tenuta":"离开老城、通过 Vino Nobile 和周边风景认识蒙特普尔恰诺的好机会。建议提前预约。","food.tag.meat":"炭烤肉","food.tag.breakfast":"早餐","food.tag.aperitivo":"日落开胃酒","food.tag.tasting":"品酒 · 需要开车",
-    "map.kicker":"05 — 周边一目了然","map.title":"我们的<br><em>推荐地图。</em>","map.lead":"住所、我们喜欢的餐厅、景点、停车场和实用服务，都放在一张小地图里，方便你快速了解周边。","map.note":"点击地图上的点，可以查看我们的提示并在 Google Maps 中打开位置。","map.cat.home":"住所","map.cat.food":"吃喝","map.cat.see":"景点","map.cat.park":"停车","map.cat.useful":"实用","map.home":"定位到住所","map.credit":"地图中的链接会打开 Google Maps。","map.open":"在 Google Maps 中打开",
-    "bravio.kicker":"06 — 滚酒桶节 BRAVÌO","surroundings.kicker":"08 — 周边","booking.kicker":"09 — 直接预订","faq.kicker":"10 — 常见问题"
+    "places.biagio":"圣比亚焦神殿位于城墙外，是蒙特普尔恰诺文艺复兴时期最具代表性的建筑之一，坐落在老城脚下的绿意之中。",
+    "places.views.title":"两座山谷的风景","places.views":"漫步老城时，会突然看到 Valdichiana 和 Val d'Orcia 的开阔景色。日落前的光线尤其漂亮。",
+    "bravio.kicker":"04 — 滚酒桶节 BRAVÌO","surroundings.kicker":"06 — 周边","booking.kicker":"07 — 直接预订",
+    "contacts.kicker":"08 — 联系方式","contacts.title":"有任何需要，<br><em>请联系我们。</em>","contacts.lead":"无论是入住前的问题还是抵达安排，都可以通过以下方式联系我们。","faq.kicker":"09 — 常见问题"
   }
 };
 
@@ -199,7 +201,7 @@ const languageMeta = {
 
 function setLanguage(lang){
   if(!translations[lang]) lang='it';
-  const t={...translations[lang], ...(extraTranslations[lang]||{}), ...(recommendationTranslations[lang]||{})};
+  const t={...translations[lang], ...(extraTranslations[lang]||{}), ...(siteV8Translations[lang]||{})};
   document.documentElement.lang=languageMeta[lang].htmlLang;
   document.title=languageMeta[lang].title;
   document.querySelectorAll('[data-i18n]').forEach(el=>{
@@ -219,7 +221,6 @@ function setLanguage(lang){
   const next=document.getElementById('nextUrl');
   if(next) next.value=`https://ilnidodisofi.github.io/grazie.html?lang=${lang}`;
   localStorage.setItem('nidoLanguage',lang);
-  renderRecommendationsMap(lang);
 }
 
 function setDateLimits(){
@@ -274,70 +275,3 @@ document.addEventListener('DOMContentLoaded',()=>{
   box.addEventListener('click',e=>{if(e.target===box) shut();});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&box.classList.contains('is-open')) shut();});
 });
-
-
-// Recommendations map — adapted from the private guest guide.
-const TIP_HOME=[43.0909279,11.7811431];
-const TIP_COLORS={casa:'#7b2d20',mangiare:'#c35a2b',vedere:'#a38528',parcheggio:'#496d8e',utile:'#47705b'};
-const TIP_PLACES=[
-  {cat:'casa',lat:43.0909279,lng:11.7811431,name:'Il Nido di Sofì',q:'Il Nido di Sofì Via del Poliziano 12 Montepulciano',desc:{it:'Via del Poliziano 12 — il punto da cui partire.',en:'Via del Poliziano 12 — your starting point.',es:'Via del Poliziano 12 — vuestro punto de partida.',de:'Via del Poliziano 12 — Ihr Ausgangspunkt.',fr:'Via del Poliziano 12 — votre point de départ.',ru:'Via del Poliziano 12 — ваша отправная точка.',zh:'Via del Poliziano 12 — 你的出发点。'}},
-  {cat:'mangiare',lat:43.0919791,lng:11.7814425,name:'Lieviti Pizzeria',q:'Lieviti Pizzeria Montepulciano',desc:{it:'Pizza napoletana in una struttura in pietra del centro.',en:'Neapolitan pizza in a characterful stone setting.',es:'Pizza napolitana en un local de piedra con mucho carácter.',de:'Neapolitanische Pizza in einem charakteristischen Steingebäude.',fr:'Pizza napolitaine dans un lieu en pierre plein de caractère.',ru:'Неаполитанская пицца в атмосферном каменном помещении.',zh:'老城石建筑里的那不勒斯披萨。'}},
-  {cat:'mangiare',lat:43.09162,lng:11.7813507,name:'La Bottega del Vino',q:'La Bottega del Vino Montepulciano',desc:{it:'Piatti della tradizione, pici e vini del territorio.',en:'Traditional dishes, pici and local wines.',es:'Platos tradicionales, pici y vinos locales.',de:'Traditionelle Gerichte, Pici und lokale Weine.',fr:'Cuisine traditionnelle, pici et vins locaux.',ru:'Традиционные блюда, пичи и местные вина.',zh:'传统菜、Pici 手工面和当地葡萄酒。'}},
-  {cat:'mangiare',lat:43.091404,lng:11.781266,name:'Osteria Acquacheta',q:'Osteria Acquacheta Montepulciano',desc:{it:'Carne alla brace e bistecca alla fiorentina. Prenotate.',en:'Grilled meat and Florentine steak. Booking recommended.',es:'Carne a la brasa y bistecca alla fiorentina. Mejor reservar.',de:'Grillfleisch und Bistecca alla Fiorentina. Reservieren.',fr:'Viandes grillées et bistecca alla fiorentina. Réservez.',ru:'Мясо на гриле и флорентийский стейк. Лучше бронировать.',zh:'炭烤肉和佛罗伦萨牛排，建议预订。'}},
-  {cat:'mangiare',lat:43.0942808,lng:11.7821115,name:'Caffè Storico Poliziano',q:'Caffè Poliziano Montepulciano',desc:{it:'Colazione con vista nelle sale storiche.',en:'Breakfast with a view in historic rooms.',es:'Desayuno con vistas en sus salones históricos.',de:'Frühstück mit Aussicht in historischen Räumen.',fr:'Petit-déjeuner avec vue dans des salles historiques.',ru:'Завтрак с видом в исторических залах.',zh:'在历史咖啡厅里享用带景观的早餐。'}},
-  {cat:'mangiare',lat:43.093107,lng:11.780476,name:'Romantico',q:'Romantico Montepulciano',desc:{it:'Aperitivo al tramonto, il nostro preferito.',en:'Our favourite sunset aperitivo.',es:'Nuestro aperitivo favorito al atardecer.',de:'Unser Lieblingsort für den Aperitif bei Sonnenuntergang.',fr:'Notre aperitivo préféré au coucher du soleil.',ru:'Наше любимое место для аперитива на закате.',zh:'我们最喜欢的日落开胃酒去处。'}},
-  {cat:'mangiare',lat:43.1337606,lng:11.8365681,name:'Tenuta di Gracciano della Seta',q:'Tenuta di Gracciano della Seta Montepulciano',desc:{it:'Degustazione di Vino Nobile fuori dal centro: serve l’auto.',en:'Vino Nobile tasting outside town: you will need a car.',es:'Degustación de Vino Nobile fuera del centro: hace falta coche.',de:'Vino-Nobile-Verkostung außerhalb der Altstadt: Auto nötig.',fr:'Dégustation de Vino Nobile hors du centre : voiture nécessaire.',ru:'Дегустация Vino Nobile за пределами центра: нужна машина.',zh:'老城外的 Vino Nobile 品酒体验，需要开车。'}},
-  {cat:'vedere',lat:43.0925919,lng:11.7808956,name:'Piazza Grande',q:'Piazza Grande Montepulciano',desc:{it:'Il cuore monumentale di Montepulciano.',en:'The monumental heart of Montepulciano.',es:'El corazón monumental de Montepulciano.',de:'Das monumentale Herz von Montepulciano.',fr:'Le cœur monumental de Montepulciano.',ru:'Монументальное сердце Монтепульчано.',zh:'蒙特普尔恰诺最具代表性的中心广场。'}},
-  {cat:'vedere',lat:43.0909163,lng:11.7797282,name:'Fortezza Medicea',q:'Fortezza Medicea Montepulciano',desc:{it:'Verde, panorami e passeggiate, a due passi da casa.',en:'Gardens, views and walks just steps from home.',es:'Jardines, vistas y paseos a pocos pasos de casa.',de:'Grün, Aussicht und Spaziergänge direkt bei der Wohnung.',fr:'Jardins, panoramas et promenade à deux pas de la maison.',ru:'Сады, виды и прогулки буквально в двух шагах от дома.',zh:'离住所很近的花园、景观和散步路线。'}},
-  {cat:'vedere',lat:43.0907791,lng:11.7745647,name:'Tempio di San Biagio',q:'Tempio di San Biagio Montepulciano',desc:{it:'Capolavoro rinascimentale appena fuori dalle mura.',en:'A Renaissance masterpiece just outside the walls.',es:'Una obra maestra renacentista justo fuera de las murallas.',de:'Ein Renaissance-Meisterwerk direkt außerhalb der Mauern.',fr:'Un chef-d’œuvre de la Renaissance juste hors des remparts.',ru:'Шедевр Ренессанса сразу за городскими стенами.',zh:'城墙外的文艺复兴建筑杰作。'}},
-  {cat:'parcheggio',lat:43.0909641,lng:11.7805203,name:'Parcheggio Fortezza',q:'Parcheggio Fortezza Montepulciano',desc:{it:'Il più vicino a casa, circa 2 minuti a piedi.',en:'The closest to the apartment, about 2 minutes on foot.',es:'El más cercano a la casa, unos 2 minutos andando.',de:'Am nächsten zur Wohnung, etwa 2 Minuten zu Fuß.',fr:'Le plus proche de la maison, environ 2 minutes à pied.',ru:'Ближайшая парковка, около 2 минут пешком.',zh:'离住所最近，步行约2分钟。'}},
-  {cat:'parcheggio',lat:43.0894384,lng:11.7790681,name:'P8 · Via dei Filosofi',q:'Parcheggio P8 Via dei Filosofi Montepulciano',desc:{it:'Fuori dalle mura, circa 5 minuti a piedi.',en:'Outside the walls, about 5 minutes on foot.',es:'Fuera de las murallas, unos 5 minutos andando.',de:'Außerhalb der Mauern, etwa 5 Minuten zu Fuß.',fr:'Hors des remparts, environ 5 minutes à pied.',ru:'За городскими стенами, около 5 минут пешком.',zh:'城墙外，步行约5分钟。'}},
-  {cat:'parcheggio',lat:43.0914985,lng:11.7823742,name:"P7 · Via dell'Oriolo",q:"Parcheggio P7 Via dell'Oriolo Montepulciano",desc:{it:'Alternativa nei giorni più affollati.',en:'A useful alternative on busy days.',es:'Una buena alternativa en los días de mayor afluencia.',de:'Eine gute Alternative an stark besuchten Tagen.',fr:'Une bonne alternative les jours de forte affluence.',ru:'Удобная альтернатива в загруженные дни.',zh:'客流较多时的备选停车场。'}},
-  {cat:'utile',lat:43.0939771,lng:11.7820736,name:'Farmacia Franceschi',q:'Farmacia Franceschi Montepulciano',desc:{it:'Farmacia nel centro storico.',en:'Pharmacy in the historic centre.',es:'Farmacia en el centro histórico.',de:'Apotheke in der Altstadt.',fr:'Pharmacie dans le centre historique.',ru:'Аптека в историческом центре.',zh:'历史中心内的药房。'}},
-  {cat:'utile',lat:43.1192629,lng:11.825645,name:'Ospedale · Nottola',q:'Ospedale Nottola Montepulciano',desc:{it:'Pronto soccorso più vicino, circa 10 minuti in auto.',en:'Nearest emergency department, about 10 minutes by car.',es:'Urgencias más cercanas, unos 10 minutos en coche.',de:'Nächste Notaufnahme, etwa 10 Autominuten.',fr:'Service d’urgences le plus proche, environ 10 minutes en voiture.',ru:'Ближайшее отделение неотложной помощи, около 10 минут на машине.',zh:'最近的急诊，开车约10分钟。'}}
-];
-const activeTipCats=new Set(['casa','mangiare','vedere','parcheggio','utile']);
-let tipsMap=null,tipsLayer=null,tipsMapLanguage='it';
-
-function tipGoogleUrl(p){
-  return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(p.q);
-}
-function tipPin(cat){
-  return L.divIcon({className:'',html:'<div class="tip-pin" style="background:'+TIP_COLORS[cat]+'"><span></span></div>',iconSize:[27,27],iconAnchor:[14,25],popupAnchor:[0,-24]});
-}
-function drawTipMarkers(lang){
-  if(!tipsMap||!tipsLayer) return;
-  tipsLayer.clearLayers();
-  const pts=[];
-  TIP_PLACES.filter(p=>activeTipCats.has(p.cat)).forEach(p=>{
-    const desc=p.desc[lang]||p.desc.it;
-    const open=((recommendationTranslations[lang]||{})['map.open']||recommendationTranslations.it['map.open']);
-    const html='<div class="tip-popup"><strong>'+p.name+'</strong><p>'+desc+'</p><a href="'+tipGoogleUrl(p)+'" target="_blank" rel="noopener">'+open+' ↗</a></div>';
-    L.marker([p.lat,p.lng],{icon:tipPin(p.cat),title:p.name}).bindPopup(html).addTo(tipsLayer);
-    pts.push([p.lat,p.lng]);
-  });
-  if(pts.length>1) tipsMap.fitBounds(L.latLngBounds(pts).pad(.16),{maxZoom:16});
-  else if(pts.length===1) tipsMap.setView(pts[0],17);
-}
-function renderRecommendationsMap(lang){
-  tipsMapLanguage=lang||'it';
-  const el=document.getElementById('tipsMap');
-  if(!el||typeof L==='undefined') return;
-  if(!tipsMap){
-    const mobile=window.matchMedia('(max-width: 560px)').matches;
-    tipsMap=L.map('tipsMap',{scrollWheelZoom:false,dragging:!mobile,touchZoom:!mobile,doubleClickZoom:!mobile}).setView(TIP_HOME,15);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap'}).addTo(tipsMap);
-    tipsLayer=L.layerGroup().addTo(tipsMap);
-    document.querySelectorAll('[data-map-filter]').forEach(btn=>{
-      btn.addEventListener('click',()=>{
-        const cat=btn.dataset.mapFilter;
-        if(activeTipCats.has(cat)){activeTipCats.delete(cat);btn.classList.remove('is-active');}
-        else{activeTipCats.add(cat);btn.classList.add('is-active');}
-        drawTipMarkers(tipsMapLanguage);
-      });
-    });
-    document.getElementById('mapHomeButton')?.addEventListener('click',()=>tipsMap.setView(TIP_HOME,17));
-    setTimeout(()=>tipsMap.invalidateSize(),100);
-  }
-  drawTipMarkers(tipsMapLanguage);
-}
