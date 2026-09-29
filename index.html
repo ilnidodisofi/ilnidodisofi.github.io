@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=8">
-  <script src="script.js?v=8" defer></script>
+  <link rel="stylesheet" href="style.css?v=9">
+  <script src="script.js?v=9" defer></script>
 </head>
 <body>
   <header class="topbar">
@@ -248,6 +248,7 @@
             <label><span data-i18n="form.message">Messaggio</span><input type="text" name="Messaggio" data-i18n-placeholder="form.messagePlaceholder" placeholder="Eventuali richieste"></label>
           </div>
           <button class="button button-dark" type="submit" data-i18n="form.submit">Invia richiesta</button>
+          <div class="booking-status" id="bookingStatus" aria-live="polite" hidden></div>
         </form>
         <p class="small-note" data-i18n="booking.note">La richiesta non costituisce ancora una prenotazione: riceverai la conferma della disponibilità via email. Il pagamento online verrà richiesto solo successivamente.</p>
       </div>
