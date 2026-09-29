@@ -371,3 +371,74 @@ body.lightbox-open{overflow:hidden}
 
   footer{padding:34px 7%}
 }
+
+
+/* v7 — recommendations and interactive map */
+.food-section{padding-top:110px}
+.recommendation-head,.tips-map-head{display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:end;margin-top:28px}
+.recommendation-head .lead,.tips-map-head .lead{margin:0;max-width:570px}
+.food-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:60px}
+.food-card{border:1px solid var(--line);padding:28px;background:#fff;display:flex;flex-direction:column;min-height:330px}
+.food-card--favorite{background:var(--cream)}
+.food-tag{align-self:flex-start;border:1px solid var(--line);padding:5px 8px;font-size:8px;letter-spacing:.11em;text-transform:uppercase;margin-bottom:28px}
+.food-card--favorite .food-tag{background:var(--brand);border-color:var(--brand);color:#fff}
+.food-card h3{font-size:34px;line-height:1;margin-bottom:10px}
+.food-meta{font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:#8b877f;margin:0 0 20px}
+.food-card>p:not(.food-meta){font-size:13px;line-height:1.65;color:#555851;margin:0 0 24px}
+.food-map-link{margin-top:auto;align-self:flex-start;font-size:9px;letter-spacing:.11em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:3px}
+.food-map-link:hover{color:var(--brand);border-color:var(--brand)}
+
+.tips-map-section{width:100%;max-width:none;background:var(--cream);padding-left:6%;padding-right:6%}
+.tips-map-section>.section-kicker,.tips-map-head,.map-filter-row,.tips-map,.map-credit{width:min(1180px,100%);margin-left:auto;margin-right:auto}
+.map-note{font-size:12px;color:#777;margin:16px 0 0}
+.map-filter-row{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-top:38px;margin-bottom:14px}
+.map-filter,.map-home-button{appearance:none;border:1px solid var(--line);background:#fff;color:var(--ink);font:500 9px var(--sans);letter-spacing:.07em;text-transform:uppercase;padding:9px 11px;display:inline-flex;align-items:center;gap:7px;cursor:pointer}
+.map-filter:not(.is-active){opacity:.38}
+.map-filter.is-active{border-color:#a9a497}
+.filter-dot{display:block;width:9px;height:9px;border-radius:50%}
+.dot-home{background:#7b2d20}.dot-food{background:#c35a2b}.dot-see{background:#a38528}.dot-park{background:#496d8e}.dot-useful{background:#47705b}
+.map-home-button{margin-left:auto;background:var(--ink);border-color:var(--ink);color:#fff}
+.tips-map{height:min(570px,60vh);min-height:420px;border:1px solid var(--line);background:#e8e0d4;z-index:1}
+.map-credit{font-size:9px;color:#8b877f;text-align:right;margin-top:8px;letter-spacing:.04em}
+.tip-pin{width:27px;height:27px;border-radius:50% 50% 50% 7px;transform:rotate(45deg);border:2px solid #fff;box-shadow:0 3px 10px rgba(0,0,0,.25);display:grid;place-items:center}
+.tip-pin span{transform:rotate(-45deg);display:block;width:7px;height:7px;border-radius:50%;background:#fff}
+.tip-popup strong{font:600 18px var(--serif);display:block;margin-bottom:4px}
+.tip-popup p{font:400 12px/1.5 var(--sans);margin:0 0 8px;max-width:230px}
+.tip-popup a{font:600 10px var(--sans);text-transform:uppercase;letter-spacing:.07em;color:var(--brand)}
+.leaflet-popup-content-wrapper{border-radius:2px}
+.leaflet-popup-content{margin:13px 15px}
+
+@media(max-width:900px){
+  .recommendation-head,.tips-map-head{grid-template-columns:1fr;gap:24px}
+  .food-grid{grid-template-columns:repeat(2,1fr);margin-top:42px}
+  .map-home-button{margin-left:0}
+}
+@media(max-width:560px){
+  .food-section{padding-top:64px}
+  .food-grid{
+    display:flex;
+    overflow-x:auto;
+    gap:8px;
+    margin:36px -7vw 0;
+    padding:0 7vw 10px;
+    scroll-snap-type:x mandatory;
+    scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
+  }
+  .food-grid::-webkit-scrollbar{display:none}
+  .food-card{
+    flex:0 0 78vw;
+    min-height:350px;
+    scroll-snap-align:center;
+    padding:23px;
+  }
+  .food-card h3{font-size:30px}
+  .food-tag{margin-bottom:20px}
+  .tips-map-section{padding-top:64px;padding-bottom:64px}
+  .map-filter-row{flex-wrap:nowrap;overflow-x:auto;padding-bottom:7px;margin-top:28px;scrollbar-width:none}
+  .map-filter-row::-webkit-scrollbar{display:none}
+  .map-filter,.map-home-button{flex:0 0 auto}
+  .map-home-button{margin-left:0}
+  .tips-map{height:360px;min-height:360px}
+  .map-credit{text-align:left}
+}
