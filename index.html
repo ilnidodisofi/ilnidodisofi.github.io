@@ -8,8 +8,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=6">
-  <script src="script.js?v=5" defer></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css?v=7">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+  <script src="script.js?v=7" defer></script>
 </head>
 <body>
   <header class="topbar">
@@ -176,10 +178,93 @@
       </div>
     </section>
 
+
+    <section class="food-section section" id="mangiare-bere">
+      <div class="section-kicker" data-i18n="food.kicker">04 — I NOSTRI INDIRIZZI</div>
+      <div class="recommendation-head">
+        <h2 data-i18n-html="food.title">Dove mangiare<br><em>e bere.</em></h2>
+        <p class="lead" data-i18n="food.lead">A Montepulciano si mangia bene in tanti posti. Questi però sono gli indirizzi a cui siamo davvero affezionati: persone che conosciamo e che ci fa piacere farvi conoscere.</p>
+      </div>
+
+      <div class="food-grid">
+        <article class="food-card food-card--favorite">
+          <span class="food-tag">Pizzeria</span>
+          <h3>Lieviti Pizzeria</h3>
+          <p class="food-meta">Via di Cagnano 33 · ≈ 4 min</p>
+          <p data-i18n="food.lieviti">Pizza napoletana, impasti lunghi e ingredienti scelti, con una bella selezione di birre, in una caratteristica struttura in pietra del centro storico.</p>
+          <a class="food-map-link" href="https://www.google.com/maps/search/?api=1&query=Lieviti%20Pizzeria%20Montepulciano&query_place_id=ChIJ2bfWWIldKRMR4iuEovw7EZQ" target="_blank" rel="noopener">Google Maps ↗</a>
+        </article>
+
+        <article class="food-card food-card--favorite">
+          <span class="food-tag">Trattoria · Vino</span>
+          <h3>La Bottega del Vino</h3>
+          <p class="food-meta">Via del Teatro 19 · ≈ 3 min</p>
+          <p data-i18n="food.bottega">Un piccolo locale nel cuore del borgo: piatti della tradizione, taglieri, pici e vini del territorio. Perfetto per un pranzo, una cena o anche solo un buon calice.</p>
+          <a class="food-map-link" href="https://www.google.com/maps/search/?api=1&query=La%20Bottega%20del%20Vino%20Montepulciano&query_place_id=ChIJR4Ry0RpdKRMR2bCQ9ynln4E" target="_blank" rel="noopener">Google Maps ↗</a>
+        </article>
+
+        <article class="food-card">
+          <span class="food-tag" data-i18n="food.tag.meat">Carne alla brace</span>
+          <h3>Osteria Acquacheta</h3>
+          <p class="food-meta">Via del Teatro 22 · ≈ 3 min</p>
+          <p data-i18n="food.acquacheta">Un indirizzo storico, conosciuto per la carne alla brace e la bistecca alla fiorentina. Ambiente vivace, tavoli condivisi e nessuna formalità.</p>
+          <a class="food-map-link" href="https://www.google.com/maps/search/?api=1&query=Osteria%20Acquacheta%20Montepulciano&query_place_id=ChIJ6Qh5URFcKRMR2tn65am9pGU" target="_blank" rel="noopener">Google Maps ↗</a>
+        </article>
+
+        <article class="food-card">
+          <span class="food-tag" data-i18n="food.tag.breakfast">Colazione</span>
+          <h3>Caffè Storico Poliziano</h3>
+          <p class="food-meta">Via di Voltaia nel Corso · ≈ 8 min</p>
+          <p data-i18n="food.poliziano">Uno dei caffè storici più affascinanti del borgo. Se riuscite, chiedete un tavolo con vista: è un bellissimo modo di iniziare la giornata.</p>
+          <a class="food-map-link" href="https://www.google.com/maps/search/?api=1&query=Caff%C3%A8%20Poliziano%20Montepulciano&query_place_id=ChIJVX70bABdKRMRBHxuvG0l010" target="_blank" rel="noopener">Google Maps ↗</a>
+        </article>
+
+        <article class="food-card">
+          <span class="food-tag" data-i18n="food.tag.aperitivo">Aperitivo al tramonto</span>
+          <h3>Romantico</h3>
+          <p class="food-meta">Vicolo del Leone 2 · ≈ 5 min</p>
+          <p data-i18n="food.romantico">Il nostro posto preferito per un aperitivo verso il tramonto: ambiente piacevole e una posizione che regala Montepulciano nella luce migliore.</p>
+          <a class="food-map-link" href="https://www.google.com/maps/search/?api=1&query=Romantico%20Montepulciano&query_place_id=ChIJN9wFeWZdKRMRuOc4CTG-meY" target="_blank" rel="noopener">Google Maps ↗</a>
+        </article>
+
+        <article class="food-card">
+          <span class="food-tag" data-i18n="food.tag.tasting">Degustazione · in auto</span>
+          <h3>Tenuta di Gracciano della Seta</h3>
+          <p class="food-meta">Via Umbria 61</p>
+          <p data-i18n="food.tenuta">Una bella occasione per uscire dal centro e scoprire Montepulciano attraverso il Vino Nobile e i suoi paesaggi. Meglio prenotare la visita in anticipo.</p>
+          <a class="food-map-link" href="https://www.google.com/maps/search/?api=1&query=Tenuta%20di%20Gracciano%20della%20Seta&query_place_id=ChIJBycVUxtZKRMRE-Mx3g2iMLM" target="_blank" rel="noopener">Google Maps ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="tips-map-section section" id="mappa-consigli">
+      <div class="section-kicker" data-i18n="map.kicker">05 — TUTTO A PORTATA DI PASSEGGIATA</div>
+      <div class="tips-map-head">
+        <div>
+          <h2 data-i18n-html="map.title">La mappa dei<br><em>nostri consigli.</em></h2>
+        </div>
+        <div>
+          <p class="lead" data-i18n="map.lead">Casa, tavole che amiamo, luoghi da vedere, parcheggi e servizi utili: una piccola mappa per capire subito cosa hai intorno.</p>
+          <p class="map-note" data-i18n="map.note">Tocca un punto per leggere il consiglio e aprire la posizione in Google Maps.</p>
+        </div>
+      </div>
+
+      <div class="map-filter-row" id="tipsMapFilters">
+        <button class="map-filter is-active" type="button" data-map-filter="casa"><span class="filter-dot dot-home"></span><span data-i18n="map.cat.home">Casa</span></button>
+        <button class="map-filter is-active" type="button" data-map-filter="mangiare"><span class="filter-dot dot-food"></span><span data-i18n="map.cat.food">Mangiare e bere</span></button>
+        <button class="map-filter is-active" type="button" data-map-filter="vedere"><span class="filter-dot dot-see"></span><span data-i18n="map.cat.see">Da vedere</span></button>
+        <button class="map-filter is-active" type="button" data-map-filter="parcheggio"><span class="filter-dot dot-park"></span><span data-i18n="map.cat.park">Parcheggi</span></button>
+        <button class="map-filter is-active" type="button" data-map-filter="utile"><span class="filter-dot dot-useful"></span><span data-i18n="map.cat.useful">Utile</span></button>
+        <button class="map-home-button" id="mapHomeButton" type="button" data-i18n="map.home">Centra su casa</button>
+      </div>
+      <div id="tipsMap" class="tips-map" aria-label="Mappa dei consigli a Montepulciano"></div>
+      <p class="map-credit">© OpenStreetMap · <span data-i18n="map.credit">I link dei punti aprono Google Maps.</span></p>
+    </section>
+
     <section class="bravio section" id="bravio">
       <div class="bravio-grid">
         <div class="bravio-copy">
-          <div class="section-kicker bravio-kicker" data-i18n="bravio.kicker">04 — IL BRAVÌO DELLE BOTTI</div>
+          <div class="section-kicker bravio-kicker" data-i18n="bravio.kicker">06 — IL BRAVÌO DELLE BOTTI</div>
           <h2 data-i18n-html="bravio.title">Una settimana in cui<br><em>Montepulciano cambia ritmo.</em></h2>
           <p class="lead" data-i18n="bravio.lead">Negli ultimi giorni di agosto le otto contrade animano il centro storico con prove, cortei, cene e bandiere. La festa culmina nell’ultima domenica di agosto, quando due spingitori per contrada fanno rotolare botti da circa 80 kg lungo le strade in salita fino a Piazza Grande.</p>
           <p data-i18n="bravio.body">Soggiornare al Nido durante il Bravìo significa vivere la città dall’interno: le contrade aperte, il Corteo dei Ceri, il corteo storico e l’attesa della gara trasformano ogni sera in qualcosa di diverso. È uno dei periodi più intensi e caratteristici dell’anno a Montepulciano.</p>
@@ -204,7 +289,7 @@
         <img src="assets/photos/living-03.jpg" alt="Interni de Il Nido di Sofì" loading="lazy">
       </div>
       <div class="host-copy">
-        <div class="section-kicker">05 — ROSARIO &amp; SOFIA</div>
+        <div class="section-kicker">07 — ROSARIO &amp; SOFIA</div>
         <h2 data-i18n-html="host.title">Una casa che amiamo<br><em>condividere.</em></h2>
         <p data-i18n="host.p1">Il Nido di Sofì nasce dal desiderio di avere a Montepulciano un posto semplice, accogliente e davvero nostro. Oggi ci piace aprirlo a chi vuole scoprire questo angolo di Toscana senza rinunciare alla sensazione di sentirsi a casa.</p>
         <p data-i18n="host.p2">Abbiamo cercato di conservare il carattere della casa e di aggiungere tutto ciò che rende un soggiorno semplice, piacevole e autentico.</p>
@@ -212,7 +297,7 @@
     </section>
 
     <section class="valdorcia section" id="valdorcia">
-      <div class="section-kicker" data-i18n="surroundings.kicker">06 — DINTORNI</div>
+      <div class="section-kicker" data-i18n="surroundings.kicker">08 — DINTORNI</div>
       <div class="val-grid">
         <div>
           <h2 data-i18n-html="surroundings.title">La Val d'Orcia<br><em>comincia da qui.</em></h2>
@@ -231,7 +316,7 @@
 
     <section class="booking section" id="prenota">
       <div class="booking-card">
-        <div class="section-kicker" data-i18n="booking.kicker">07 — PRENOTA DIRETTAMENTE</div>
+        <div class="section-kicker" data-i18n="booking.kicker">09 — PRENOTA DIRETTAMENTE</div>
         <h2 data-i18n-html="booking.title">Il tuo soggiorno<br><em>comincia qui.</em></h2>
         <p class="booking-intro" data-i18n="booking.intro">Invia una richiesta con le date desiderate. Verificheremo personalmente la disponibilità e ti risponderemo via email prima del pagamento.</p>
 
@@ -257,7 +342,7 @@
     </section>
 
     <section class="faq section" id="faq">
-      <div class="section-kicker" data-i18n="faq.kicker">08 — FAQ</div>
+      <div class="section-kicker" data-i18n="faq.kicker">10 — FAQ</div>
       <h2 data-i18n="faq.title">Prima di arrivare.</h2>
       <div class="faq-list">
         <details><summary data-i18n="faq.checkin.q">Come funziona il check-in?</summary><p data-i18n="faq.checkin.a">Il Nido utilizza il self check-in tramite cassetta di sicurezza. Le istruzioni complete vengono inviate prima dell'arrivo.</p></details>
