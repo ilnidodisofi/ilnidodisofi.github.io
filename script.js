@@ -1,5 +1,10 @@
 if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-window.addEventListener('pageshow',()=>{ if(!location.hash) setTimeout(()=>window.scrollTo(0,0),0); });
+window.addEventListener('pageshow',()=>{
+  // Mobile browsers often restore the last anchor/scroll position after a reload.
+  // For the public homepage we always reopen from the top.
+  if(location.hash) history.replaceState(null,'',location.pathname+location.search);
+  setTimeout(()=>window.scrollTo({top:0,left:0,behavior:'auto'}),0);
+});
 
 const translations = {
   it: {
@@ -274,4 +279,65 @@ document.addEventListener('DOMContentLoaded',()=>{
   close?.addEventListener('click',shut);
   box.addEventListener('click',e=>{if(e.target===box) shut();});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&box.classList.contains('is-open')) shut();});
+});
+
+
+// Booking form — AJAX submission so guests never leave the site for FormSubmit pages.
+document.addEventListener('DOMContentLoaded',()=>{
+  const form=document.getElementById('bookingForm');
+  const status=document.getElementById('bookingStatus');
+  if(!form||!status) return;
+
+  const submit=form.querySelector('button[type="submit"]');
+  const originalLabel=submit?.textContent || 'Invia richiesta';
+
+  form.addEventListener('submit',async(e)=>{
+    e.preventDefault();
+
+    const lang=localStorage.getItem('nidoLanguage') || 'it';
+    const messages={
+      it:{sending:'Invio in corso…',error:'Il servizio di invio è temporaneamente non disponibile. Puoi scriverci direttamente a ilnidodisofi@gmail.com.',success:'Richiesta inviata correttamente.'},
+      en:{sending:'Sending…',error:'The sending service is temporarily unavailable. You can email us directly at ilnidodisofi@gmail.com.',success:'Request sent successfully.'},
+      es:{sending:'Enviando…',error:'El servicio de envío no está disponible temporalmente. Puedes escribirnos a ilnidodisofi@gmail.com.',success:'Solicitud enviada correctamente.'},
+      de:{sending:'Wird gesendet…',error:'Der Versanddienst ist vorübergehend nicht verfügbar. Sie können uns direkt an ilnidodisofi@gmail.com schreiben.',success:'Anfrage erfolgreich gesendet.'},
+      fr:{sending:'Envoi en cours…',error:'Le service d’envoi est temporairement indisponible. Vous pouvez nous écrire directement à ilnidodisofi@gmail.com.',success:'Demande envoyée avec succès.'},
+      ru:{sending:'Отправка…',error:'Сервис отправки временно недоступен. Напишите нам напрямую: ilnidodisofi@gmail.com.',success:'Запрос успешно отправлен.'},
+      zh:{sending:'正在发送…',error:'发送服务暂时不可用。你可以直接发邮件至 ilnidodisofi@gmail.com。',success:'申请已成功发送。'}
+    };
+    const m=messages[lang]||messages.it;
+
+    status.hidden=false;
+    status.className='booking-status is-sending';
+    status.textContent=m.sending;
+    if(submit){submit.disabled=true;submit.setAttribute('aria-busy','true');}
+
+    try{
+      const data=new FormData(form);
+      // These fields are only useful for classic redirect submissions.
+      data.delete('_next');
+      data.delete('_url');
+
+      const response=await fetch('https://formsubmit.co/ajax/ilnidodisofi@gmail.com',{
+        method:'POST',
+        headers:{'Accept':'application/json'},
+        body:data
+      });
+
+      let payload={};
+      try{payload=await response.json();}catch(_){}
+
+      if(!response.ok || payload.success===false){
+        throw new Error(payload.message||('HTTP '+response.status));
+      }
+
+      status.className='booking-status is-success';
+      status.textContent=m.success;
+      const next=document.getElementById('nextUrl')?.value || ('https://ilnidodisofi.github.io/grazie.html?lang='+lang);
+      setTimeout(()=>{window.location.href=next;},450);
+    }catch(err){
+      status.className='booking-status is-error';
+      status.innerHTML=m.error+' <a href="mailto:ilnidodisofi@gmail.com">Email ↗</a>';
+      if(submit){submit.disabled=false;submit.removeAttribute('aria-busy');submit.textContent=originalLabel;}
+    }
+  });
 });
