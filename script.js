@@ -1,3 +1,6 @@
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+window.addEventListener('pageshow',()=>{ if(!location.hash) setTimeout(()=>window.scrollTo(0,0),0); });
+
 const translations = {
   it: {
     "nav.home":"La casa","nav.montepulciano":"Montepulciano","nav.valdorcia":"Val d'Orcia","nav.faq":"FAQ","nav.book":"Prenota direttamente","language.label":"Lingua",
@@ -113,6 +116,31 @@ const translations = {
   }
 };
 
+
+const extraTranslations = {
+  it:{
+    "bravio.kicker":"04 — IL BRAVÌO DELLE BOTTI","bravio.title":"Una settimana in cui<br><em>Montepulciano cambia ritmo.</em>","bravio.lead":"Negli ultimi giorni di agosto le otto contrade animano il centro storico con prove, cortei, cene e bandiere. La festa culmina nell’ultima domenica di agosto, quando due spingitori per contrada fanno rotolare botti da circa 80 kg lungo le strade in salita fino a Piazza Grande.","bravio.body":"Soggiornare al Nido durante il Bravìo significa vivere la città dall’interno: le contrade aperte, il Corteo dei Ceri, il corteo storico e l’attesa della gara trasformano ogni sera in qualcosa di diverso. È uno dei periodi più intensi e caratteristici dell’anno a Montepulciano.","bravio.book":"Prenota per la settimana del Bravìo","bravio.official":"Sito ufficiale del Bravìo ↗","bravio.stat1":"contrade","bravio.stat2":"circa per botte","bravio.lastSunday":"ultima domenica","bravio.stat3":"di agosto · giorno della gara","surroundings.kicker":"06 — DINTORNI","booking.kicker":"07 — PRENOTA DIRETTAMENTE","faq.kicker":"08 — FAQ"
+  },
+  en:{
+    "bravio.kicker":"04 — THE BRAVÌO DELLE BOTTI","bravio.title":"A week when<br><em>Montepulciano changes rhythm.</em>","bravio.lead":"In the final days of August, the eight historic districts fill the old town with trials, parades, dinners and flags. The celebrations culminate on the last Sunday of August, when two pushers from each district race roughly 80 kg barrels uphill through the streets to Piazza Grande.","bravio.body":"Staying at Il Nido during the Bravìo means experiencing Montepulciano from within: open contrade, the candlelit procession, the historical parade and the anticipation of the race make every evening different. It is one of the most distinctive times of the year in town.","bravio.book":"Stay for Bravìo week","bravio.official":"Official Bravìo website ↗","bravio.stat1":"historic districts","bravio.stat2":"approx. per barrel","bravio.lastSunday":"last Sunday","bravio.stat3":"of August · race day","surroundings.kicker":"06 — SURROUNDINGS","booking.kicker":"07 — BOOK DIRECT","faq.kicker":"08 — FAQ"
+  },
+  es:{
+    "bravio.kicker":"04 — EL BRAVÌO DELLE BOTTI","bravio.title":"Una semana en la que<br><em>Montepulciano cambia de ritmo.</em>","bravio.lead":"En los últimos días de agosto, las ocho contradas llenan el centro histórico de pruebas, desfiles, cenas y banderas. La fiesta culmina el último domingo de agosto, cuando dos empujadores por contrada hacen rodar barriles de unos 80 kg cuesta arriba hasta Piazza Grande.","bravio.body":"Alojarse en Il Nido durante el Bravìo significa vivir la ciudad desde dentro: las contradas abiertas, el Corteo dei Ceri, el desfile histórico y la espera de la carrera hacen que cada noche sea distinta.","bravio.book":"Reserva para la semana del Bravìo","bravio.official":"Web oficial del Bravìo ↗","bravio.stat1":"contradas","bravio.stat2":"aprox. por barril","bravio.lastSunday":"último domingo","bravio.stat3":"de agosto · día de la carrera","surroundings.kicker":"06 — ALREDEDORES","booking.kicker":"07 — RESERVA DIRECTA","faq.kicker":"08 — FAQ"
+  },
+  de:{
+    "bravio.kicker":"04 — DER BRAVÌO DELLE BOTTI","bravio.title":"Eine Woche, in der<br><em>Montepulciano seinen Rhythmus ändert.</em>","bravio.lead":"In den letzten Augusttagen beleben die acht Stadtviertel die Altstadt mit Trainingsläufen, Umzügen, Abendessen und Fahnen. Höhepunkt ist der letzte Sonntag im August, wenn je zwei Läufer rund 80 kg schwere Fässer bergauf bis zur Piazza Grande rollen.","bravio.body":"Ein Aufenthalt im Il Nido während des Bravìo bedeutet, Montepulciano mitten im Geschehen zu erleben: offene Contrade, der Lichterzug Corteo dei Ceri, der historische Umzug und die Spannung vor dem Rennen machen jeden Abend besonders.","bravio.book":"Für die Bravìo-Woche buchen","bravio.official":"Offizielle Bravìo-Website ↗","bravio.stat1":"Contrade","bravio.stat2":"ca. pro Fass","bravio.lastSunday":"letzter Sonntag","bravio.stat3":"im August · Renntag","surroundings.kicker":"06 — UMGEBUNG","booking.kicker":"07 — DIREKT BUCHEN","faq.kicker":"08 — FAQ"
+  },
+  fr:{
+    "bravio.kicker":"04 — LE BRAVÌO DELLE BOTTI","bravio.title":"Une semaine où<br><em>Montepulciano change de rythme.</em>","bravio.lead":"À la fin du mois d’août, les huit contrade animent le centre historique avec essais, cortèges, dîners et drapeaux. La fête culmine le dernier dimanche d’août, lorsque deux pousseurs par contrada font rouler des tonneaux d’environ 80 kg dans les rues en pente jusqu’à Piazza Grande.","bravio.body":"Séjourner à Il Nido pendant le Bravìo, c’est vivre Montepulciano de l’intérieur : contrade ouvertes, procession aux flambeaux, cortège historique et attente de la course rendent chaque soirée unique.","bravio.book":"Réserver pour la semaine du Bravìo","bravio.official":"Site officiel du Bravìo ↗","bravio.stat1":"contrade","bravio.stat2":"env. par tonneau","bravio.lastSunday":"dernier dimanche","bravio.stat3":"d’août · jour de la course","surroundings.kicker":"06 — ALENTOURS","booking.kicker":"07 — RÉSERVER EN DIRECT","faq.kicker":"08 — FAQ"
+  },
+  ru:{
+    "bravio.kicker":"04 — BRAVÌO DELLE BOTTI","bravio.title":"Неделя, когда<br><em>Монтепульчано меняет ритм.</em>","bravio.lead":"В последние дни августа восемь контрад наполняют исторический центр тренировками, шествиями, ужинами и флагами. Праздник завершается в последнее воскресенье августа: по два участника от каждой контрады катят вверх по улицам бочки весом около 80 кг до Piazza Grande.","bravio.body":"Жить в Il Nido во время Bravìo — значит увидеть город изнутри: открытые контрады, шествие со свечами, исторический парад и ожидание гонки делают каждый вечер особенным.","bravio.book":"Забронировать на неделю Bravìo","bravio.official":"Официальный сайт Bravìo ↗","bravio.stat1":"контрад","bravio.stat2":"примерно на бочку","bravio.lastSunday":"последнее воскресенье","bravio.stat3":"августа · день гонки","surroundings.kicker":"06 — ОКРЕСТНОСТИ","booking.kicker":"07 — ПРЯМОЕ БРОНИРОВАНИЕ","faq.kicker":"08 — FAQ"
+  },
+  zh:{
+    "bravio.kicker":"04 — 滚酒桶节 BRAVÌO","bravio.title":"一周时间，<br><em>蒙特普尔恰诺换了节奏。</em>","bravio.lead":"八月底，八个历史街区会用训练、游行、聚餐和旗帜点燃老城。庆典在八月最后一个星期日达到高潮：每个街区的两名选手将约80公斤重的酒桶沿上坡街道推向 Piazza Grande。","bravio.body":"Bravìo 期间住在 Il Nido，可以从城市内部感受节庆：开放的街区会所、烛光游行、历史巡游以及赛前的期待，让每一个夜晚都与众不同。","bravio.book":"预订 Bravìo 节庆周","bravio.official":"Bravìo 官方网站 ↗","bravio.stat1":"个历史街区","bravio.stat2":"每只酒桶约","bravio.lastSunday":"最后一个星期日","bravio.stat3":"八月 · 比赛日","surroundings.kicker":"06 — 周边","booking.kicker":"07 — 直接预订","faq.kicker":"08 — 常见问题"
+  }
+};
+
 const languageMeta = {
   it:{htmlLang:'it', title:'Il Nido di Sofì — Montepulciano'},
   en:{htmlLang:'en', title:'Il Nido di Sofì — Montepulciano, Tuscany'},
@@ -125,7 +153,7 @@ const languageMeta = {
 
 function setLanguage(lang){
   if(!translations[lang]) lang='it';
-  const t=translations[lang];
+  const t={...translations[lang], ...(extraTranslations[lang]||{})};
   document.documentElement.lang=languageMeta[lang].htmlLang;
   document.title=languageMeta[lang].title;
   document.querySelectorAll('[data-i18n]').forEach(el=>{
