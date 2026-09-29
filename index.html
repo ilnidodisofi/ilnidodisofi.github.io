@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3">
-  <script src="script.js?v=3" defer></script>
+  <link rel="stylesheet" href="style.css?v=4">
+  <script src="script.js?v=4" defer></script>
 </head>
 <body>
   <header class="topbar">
@@ -44,7 +44,7 @@
 
   <main id="top">
     <section class="hero">
-      <img class="hero-photo" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1741914713406474771/original/792d8f51-d13b-4fcd-a5b5-c91271a21311.jpeg?im_w=1600" alt="Il Nido di Sofì a Montepulciano" referrerpolicy="no-referrer" fetchpriority="high">
+      <img class="hero-photo" src="assets/photos/hero.jpg" alt="Soggiorno e cucina de Il Nido di Sofì a Montepulciano" fetchpriority="high">
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <p class="eyebrow light" data-i18n="hero.eyebrow">MONTEPULCIANO · TOSCANA · ITALIA</p>
@@ -81,19 +81,65 @@
       </div>
     </section>
 
-    <section class="gallery section-tight" aria-label="Galleria fotografica">
-      <figure class="gallery-main photo-frame">
-        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1741914713406474771/original/792d8f51-d13b-4fcd-a5b5-c91271a21311.jpeg?im_w=1600" alt="Interni de Il Nido di Sofì" referrerpolicy="no-referrer" loading="lazy">
-      </figure>
-      <div class="gallery-side">
-        <figure class="photo-frame"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1741914713406474771/original/1b49b538-6065-4da9-a9a0-d025fe7cd236.jpeg?im_w=1200" alt="Dettaglio dell'appartamento" referrerpolicy="no-referrer" loading="lazy"></figure>
-        <figure class="photo-frame"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1741914713406474771/original/ea680cb6-0ca7-4967-8969-611c669b3135.jpeg?im_w=1200" alt="Ambiente de Il Nido di Sofì" referrerpolicy="no-referrer" loading="lazy"></figure>
-      </div>
-      <div class="gallery-side">
-        <figure class="photo-frame"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1741914713406474771/original/e03350b6-648b-4032-b15e-da43cb56014c.jpeg?im_w=1200" alt="Dettaglio della casa" referrerpolicy="no-referrer" loading="lazy"></figure>
-        <figure class="photo-frame"><img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1741914713406474771/original/a8a61e4f-8f99-4f79-a8f6-b715158831df.jpeg?im_w=1200" alt="Interno della dimora" referrerpolicy="no-referrer" loading="lazy"></figure>
-      </div>
+
+    <section class="gallery-v2 section-tight" aria-label="Galleria fotografica de Il Nido di Sofì">
+      <button class="gallery-photo gallery-photo--wide" type="button" data-lightbox="assets/photos/living-02.jpg" aria-label="Apri foto del soggiorno">
+        <img src="assets/photos/living-02.jpg" alt="Soggiorno con camino e finestra" loading="lazy">
+      </button>
+      <button class="gallery-photo" type="button" data-lightbox="assets/photos/living-03.jpg" aria-label="Apri foto della zona pranzo">
+        <img src="assets/photos/living-03.jpg" alt="Zona pranzo luminosa" loading="lazy">
+      </button>
+      <button class="gallery-photo" type="button" data-lightbox="assets/photos/wine-detail.jpg" aria-label="Apri dettaglio del vino">
+        <img src="assets/photos/wine-detail.jpg" alt="Dettaglio con vino Nobile di Montepulciano" loading="lazy">
+      </button>
+      <button class="gallery-photo gallery-photo--tall" type="button" data-lightbox="assets/photos/bedroom-01.jpg" aria-label="Apri foto della camera">
+        <img src="assets/photos/bedroom-01.jpg" alt="Camera matrimoniale" loading="lazy">
+      </button>
+      <button class="gallery-photo" type="button" data-lightbox="assets/photos/bedroom-02.jpg" aria-label="Apri dettaglio della camera">
+        <img src="assets/photos/bedroom-02.jpg" alt="Letto matrimoniale e biancheria" loading="lazy">
+      </button>
+      <button class="gallery-photo" type="button" data-lightbox="assets/photos/bedroom-03.jpg" aria-label="Apri dettaglio del letto">
+        <img src="assets/photos/bedroom-03.jpg" alt="Dettaglio del letto in ferro battuto" loading="lazy">
+      </button>
+      <button class="gallery-photo" type="button" data-lightbox="assets/photos/bedroom-detail.jpg" aria-label="Apri dettaglio della testiera">
+        <img src="assets/photos/bedroom-detail.jpg" alt="Dettaglio artigianale della testiera" loading="lazy">
+      </button>
+      <button class="gallery-photo gallery-photo--wide" type="button" data-lightbox="assets/photos/guestbook.jpg" aria-label="Apri foto del guestbook">
+        <img src="assets/photos/guestbook.jpg" alt="Guestbook de Il Nido di Sofì" loading="lazy">
+      </button>
+      <button class="gallery-photo" type="button" data-lightbox="assets/photos/entrance-door.jpg" aria-label="Apri foto della porta d'ingresso">
+        <img src="assets/photos/entrance-door.jpg" alt="Porta d'ingresso in legno" loading="lazy">
+      </button>
+      <button class="gallery-photo" type="button" data-lightbox="assets/photos/coffee-corner.jpg" aria-label="Apri foto dell'angolo caffè">
+        <img src="assets/photos/coffee-corner.jpg" alt="Angolo caffè e tè" loading="lazy">
+      </button>
+      <button class="gallery-photo gallery-photo--tall" type="button" data-lightbox="assets/photos/bathroom.jpg" aria-label="Apri foto del bagno">
+        <img src="assets/photos/bathroom.jpg" alt="Bagno de Il Nido di Sofì" loading="lazy">
+      </button>
+      <button class="gallery-photo" type="button" data-lightbox="assets/photos/shower.jpg" aria-label="Apri foto della doccia">
+        <img src="assets/photos/shower.jpg" alt="Doccia del bagno" loading="lazy">
+      </button>
+      <button class="gallery-photo" type="button" data-lightbox="assets/photos/bathroom-sink-detail.jpg" aria-label="Apri dettaglio del lavabo">
+        <img src="assets/photos/bathroom-sink-detail.jpg" alt="Dettaglio del lavabo" loading="lazy">
+      </button>
+      <button class="gallery-photo" type="button" data-lightbox="assets/photos/wardrobe.jpg" aria-label="Apri foto dell'armadio">
+        <img src="assets/photos/wardrobe.jpg" alt="Armadio della camera" loading="lazy">
+      </button>
+      <button class="gallery-photo" type="button" data-lightbox="assets/photos/amenities-hairdryer-iron.jpg" aria-label="Apri foto dei servizi">
+        <img src="assets/photos/amenities-hairdryer-iron.jpg" alt="Asciugacapelli e ferro da stiro a disposizione" loading="lazy">
+      </button>
+      <button class="gallery-photo" type="button" data-lightbox="assets/photos/first-aid.jpg" aria-label="Apri foto del kit di primo soccorso">
+        <img src="assets/photos/first-aid.jpg" alt="Kit di primo soccorso" loading="lazy">
+      </button>
+      <button class="gallery-photo" type="button" data-lightbox="assets/photos/recycling.jpg" aria-label="Apri foto della raccolta differenziata">
+        <img src="assets/photos/recycling.jpg" alt="Contenitori per la raccolta differenziata" loading="lazy">
+      </button>
     </section>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Foto ingrandita">
+      <button class="lightbox-close" type="button" aria-label="Chiudi foto">×</button>
+      <img class="lightbox-image" src="" alt="">
+    </div>
 
     <section class="story section" id="casa">
       <div class="section-kicker" data-i18n="home.kicker">02 — LA CASA</div>
@@ -129,7 +175,7 @@
 
     <section class="host section">
       <div class="host-image photo-frame">
-        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1741914713406474771/original/1b49b538-6065-4da9-a9a0-d025fe7cd236.jpeg?im_w=1200" alt="Il Nido di Sofì" referrerpolicy="no-referrer" loading="lazy">
+        <img src="assets/photos/living-03.jpg" alt="Interni de Il Nido di Sofì" loading="lazy">
       </div>
       <div class="host-copy">
         <div class="section-kicker">04 — ROSARIO &amp; SOFIA</div>
