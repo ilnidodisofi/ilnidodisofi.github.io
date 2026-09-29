@@ -187,3 +187,187 @@ body.lightbox-open{overflow:hidden}
 .bravio-stats span{display:block;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7)}
 @media(max-width:900px){.bravio-grid{grid-template-columns:1fr;gap:30px}.bravio-visual{min-height:430px}.barrel-graphic{width:300px}.bravio-stats{position:relative;margin-top:30px}}
 @media(max-width:560px){.language-picker select{min-width:52px;height:34px;line-height:32px}.nav-cta{height:34px}.bravio{padding-left:7%;padding-right:7%}.bravio-visual{min-height:390px}.barrel-graphic{width:240px}.bravio-stats{grid-template-columns:1fr}.bravio-stats div:last-child{grid-column:auto}}
+
+
+/* v6 — mobile refinement and swipe gallery */
+.gallery-photo--feature{grid-column:span 2;grid-row:span 2}
+
+/* Tablet: keep the gallery compact and visually varied. */
+@media(max-width:900px) and (min-width:561px){
+  .gallery-photo--feature{grid-column:span 2;grid-row:span 2}
+}
+
+/* Phone layout: horizontal photo rail instead of a very long vertical stack. */
+@media(max-width:560px){
+  .topbar{
+    height:62px;
+    padding:0 3.5%;
+    grid-template-columns:minmax(0,1fr) auto;
+    gap:8px;
+  }
+  .brand-lockup{gap:7px;min-width:0}
+  .brand-mark{width:19px;height:30px}
+  .brand-wordmark{width:92px;max-width:24vw}
+  .top-actions{gap:5px}
+  .nav-cta{
+    max-width:88px;
+    height:32px;
+    padding:0 7px;
+    font-size:8px;
+    line-height:1.08;
+    letter-spacing:.055em;
+    white-space:normal;
+    text-align:center;
+  }
+  .language-picker select{
+    width:48px;
+    min-width:48px;
+    height:32px;
+    line-height:30px;
+    padding:0 4px;
+    font-size:8px;
+    text-align:center;
+  }
+
+  .hero{
+    height:90svh;
+    min-height:570px;
+  }
+  .hero-photo{object-position:center 45%}
+  .hero-content{
+    width:88%;
+    padding-top:42px;
+  }
+  h1{
+    font-size:clamp(44px,13vw,56px);
+    line-height:.92;
+    margin:16px 0 14px;
+  }
+  .hero-sub{
+    font-size:20px;
+    line-height:1.2;
+    max-width:310px;
+    margin-bottom:24px;
+  }
+  .hero-actions{
+    display:grid;
+    grid-template-columns:1fr;
+    width:min(270px,100%);
+    gap:8px;
+  }
+  .hero-actions .button{
+    width:100%;
+    text-align:center;
+    padding:11px 12px;
+  }
+  .scroll-note{bottom:18px}
+
+  .brand-showcase{
+    min-height:245px;
+    padding:42px 8%;
+  }
+  .brand-showcase img{width:min(520px,88vw)}
+
+  .section{
+    width:88%;
+    padding:64px 0;
+  }
+  .story,.valdorcia,.bravio{
+    width:100%;
+    padding-left:6%;
+    padding-right:6%;
+  }
+  .section h2{font-size:44px;line-height:.96}
+  .lead{font-size:21px}
+  .section-kicker,.eyebrow{font-size:9px}
+  .intro-grid,.story-grid,.val-grid{gap:20px;margin-top:20px}
+  .facts{margin-top:38px}
+  .facts div{padding:19px 7px}
+  .facts strong{font-size:27px}
+  .facts span{font-size:8px;letter-spacing:.08em}
+
+  .gallery-v2{
+    display:flex;
+    width:100%;
+    max-width:none;
+    margin:0;
+    padding:0 7vw 12px;
+    gap:8px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    scroll-snap-type:x mandatory;
+    scroll-padding:7vw;
+    -webkit-overflow-scrolling:touch;
+    overscroll-behavior-x:contain;
+    scrollbar-width:none;
+  }
+  .gallery-v2::-webkit-scrollbar{display:none}
+  .gallery-photo,
+  .gallery-photo--wide,
+  .gallery-photo--tall,
+  .gallery-photo--feature{
+    flex:0 0 76vw;
+    width:76vw;
+    height:auto;
+    min-height:0;
+    aspect-ratio:3/4;
+    grid-column:auto;
+    grid-row:auto;
+    scroll-snap-align:center;
+    border-radius:1px;
+  }
+  .gallery-photo img{object-fit:cover}
+  .lightbox{padding:54px 14px 18px}
+  .lightbox-image{max-width:96vw;max-height:82vh}
+  .lightbox-close{top:10px;right:12px}
+
+  .place-grid{
+    grid-template-columns:1fr 1fr;
+    margin-top:38px;
+  }
+  .place-grid article{
+    margin:0;
+    padding:22px 14px 22px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .place-grid article:nth-child(odd){border-right:1px solid var(--line);padding-right:14px}
+  .place-grid article:nth-child(even){padding-left:14px;border-right:0}
+  .place-grid h3{font-size:27px;margin:14px 0 8px}
+  .place-grid p{font-size:12px;line-height:1.5}
+
+  .host-image{min-height:320px}
+  .host-copy{padding:58px 7%}
+
+  .bravio{padding-top:64px;padding-bottom:64px}
+  .bravio-grid{gap:18px}
+  .bravio h2{margin:20px 0 22px}
+  .bravio-copy .lead{font-size:20px}
+  .bravio-actions{gap:14px;margin-top:24px}
+  .bravio-visual{min-height:270px}
+  .barrel-graphic{width:180px}
+  .barrel-graphic:before{inset:22px}
+  .barrel-graphic:after{inset:44px}
+  .barrel-graphic span:nth-child(1){inset:66px}
+  .bravio-stats{
+    position:absolute;
+    bottom:0;
+    grid-template-columns:repeat(3,1fr);
+    gap:5px;
+    margin:0;
+  }
+  .bravio-stats div,
+  .bravio-stats div:last-child{
+    grid-column:auto;
+    padding:9px 7px;
+  }
+  .bravio-stats strong{font-size:21px;margin-bottom:4px}
+  .bravio-stats span{font-size:7px;letter-spacing:.05em;line-height:1.25}
+
+  .destinations strong{font-size:21px}
+  .booking{padding-top:64px}
+  .booking-card{padding:38px 6%}
+  .form-grid{gap:18px;margin:32px 0 24px}
+  summary{font-size:21px;padding:18px 0}
+
+  footer{padding:34px 7%}
+}
