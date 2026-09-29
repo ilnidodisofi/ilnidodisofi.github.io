@@ -408,3 +408,12 @@ body.lightbox-open{overflow:hidden}
   footer{grid-template-columns:1fr;gap:20px}
   .footer-contact{font-size:10px}
 }
+
+
+/* v9 — booking status */
+.booking-status{margin-top:16px;padding:12px 14px;border:1px solid var(--line);font-size:12px;line-height:1.5}
+.booking-status.is-sending{background:var(--cream);color:#666}
+.booking-status.is-success{background:#eef3eb;color:#33462f;border-color:#cddbc8}
+.booking-status.is-error{background:#f7ece7;color:#6e3218;border-color:#e5c5b8}
+.booking-status a{font-weight:600;text-decoration:underline}
+.booking-card button[disabled]{opacity:.58;cursor:wait}
