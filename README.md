@@ -1,21 +1,47 @@
-# Il Nido di Sofì — sito ufficiale
+# Il Nido di Sofì — sito ufficiale v2
 
-Prima versione del sito ufficiale per la prenotazione diretta.
+Questa versione è pensata per essere pubblicata nella **radice** del repository GitHub Pages `ilnidodisofi.github.io`, mantenendo la guida ospiti separata nella cartella `/guida/`.
 
-## Pubblicazione su GitHub Pages
+## File da caricare nella radice
 
-1. Crea/apri il repository GitHub che vuoi usare per il sito.
-2. Carica `index.html` e `style.css` nella cartella principale del repository.
-3. Vai in **Settings → Pages**.
-4. Seleziona **Deploy from a branch**, scegli `main` e `/root` (root), quindi salva.
-5. Dopo la pubblicazione apri l'indirizzo GitHub Pages generato.
+- `index.html`
+- `style.css`
+- `script.js`
+- `grazie.html`
+- cartella `assets/` con i tre loghi
 
-## Prima della pubblicazione definitiva
+**Non modificare e non cancellare la cartella `guida/`.**
 
-- Sostituire le immagini temporanee prese dalla CDN di Airbnb con le fotografie originali ad alta risoluzione.
-- Sostituire `INSERISCI-LA-TUA-EMAIL` nel form con l'indirizzo email reale.
-- Collegare la richiesta di prenotazione a un sistema gratuito di raccolta richieste/form.
-- Successivamente collegare il pagamento tramite Stripe Payment Link dopo la verifica manuale delle date.
-- Quando le prenotazioni dirette aumenteranno, valutare un booking engine/channel manager con sincronizzazione Airbnb.
+La struttura finale dovrà essere:
 
-Il form attuale è intenzionalmente una **richiesta di prenotazione**, non una conferma automatica: serve a evitare doppie prenotazioni mentre il calendario viene verificato manualmente.
+```text
+/
+├── index.html
+├── style.css
+├── script.js
+├── grazie.html
+├── assets/
+│   ├── logo-mark.png
+│   ├── logo-wordmark.png
+│   └── logo-large.png
+└── guida/
+    └── index.html
+```
+
+## Modifiche incluse
+
+- Due loghi nella barra superiore: simbolo + scritta estesa.
+- Grande logo completo nella homepage.
+- Menu lingue: italiano, inglese, spagnolo, tedesco, francese, russo e cinese semplificato.
+- Nessun link alla guida ospiti.
+- Form di richiesta collegato a `ilnidodisofi@gmail.com` tramite FormSubmit.
+- Pagina `grazie.html` dopo l'invio.
+- Foto Airbnb richiamate come immagini con `referrerpolicy="no-referrer"` per aumentare la compatibilità rispetto alla precedente versione con immagini di sfondo.
+
+## Importante: attivazione del modulo email
+
+Dopo la pubblicazione, invia una richiesta di prova dal sito. Al primo invio FormSubmit manderà una mail di attivazione a `ilnidodisofi@gmail.com`. Apri quella mail e conferma l'indirizzo. Dopo la conferma, le richieste successive arriveranno normalmente alla casella.
+
+## Foto
+
+Le foto sono ancora richiamate dal CDN di Airbnb perché non sono disponibili come file originali in questa cartella. È più affidabile caricare in seguito le fotografie originali dentro `assets/` e sostituire i link remoti con file locali. In questo modo le immagini non dipenderanno più da Airbnb.

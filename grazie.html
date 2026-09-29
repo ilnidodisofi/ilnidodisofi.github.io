@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Richiesta inviata — Il Nido di Sofì</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#252821;--cream:#f5f1e9;--brand:#6e3218;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Inter',Arial,sans-serif}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:var(--cream);color:var(--ink);display:grid;place-items:center;font-family:var(--sans);padding:30px}.card{max-width:760px;text-align:center;background:#fff;padding:65px 8%;border:1px solid #ddd6ca}.logo{width:min(430px,80vw);margin:0 auto 35px}h1{font:600 clamp(44px,7vw,72px)/.98 var(--serif);margin:0 0 22px}p{font-size:15px;line-height:1.7;max-width:580px;margin:0 auto 30px}.btn{display:inline-block;border:1px solid var(--ink);padding:12px 18px;text-decoration:none;color:var(--ink);text-transform:uppercase;letter-spacing:.1em;font-size:10px}.btn:hover{background:var(--ink);color:white}
+  </style>
+</head>
+<body>
+  <main class="card">
+    <img src="assets/logo-large.png" alt="Il Nido di Sofì" class="logo">
+    <h1 id="thanksTitle">Richiesta inviata.</h1>
+    <p id="thanksText">Grazie. Abbiamo ricevuto la tua richiesta e ti risponderemo via email dopo aver verificato la disponibilità delle date.</p>
+    <a class="btn" href="./" id="backLink">Torna al sito</a>
+  </main>
+  <script>
+    const m={
+      it:['Richiesta inviata.','Grazie. Abbiamo ricevuto la tua richiesta e ti risponderemo via email dopo aver verificato la disponibilità delle date.','Torna al sito'],
+      en:['Request sent.','Thank you. We have received your request and will reply by email after checking availability for your dates.','Back to the website'],
+      es:['Solicitud enviada.','Gracias. Hemos recibido tu solicitud y te responderemos por email después de comprobar la disponibilidad de las fechas.','Volver al sitio'],
+      de:['Anfrage gesendet.','Vielen Dank. Wir haben Ihre Anfrage erhalten und antworten per E-Mail, sobald wir die Verfügbarkeit geprüft haben.','Zurück zur Website'],
+      fr:['Demande envoyée.','Merci. Nous avons bien reçu votre demande et nous vous répondrons par e-mail après vérification des disponibilités.','Retour au site'],
+      ru:['Запрос отправлен.','Спасибо. Мы получили ваш запрос и ответим по электронной почте после проверки доступности дат.','Вернуться на сайт'],
+      zh:['申请已提交。','谢谢。我们已收到你的申请，并会在确认日期是否可订后通过电子邮件回复。','返回网站']
+    };
+    const p=new URLSearchParams(location.search); const lang=m[p.get('lang')]?p.get('lang'):'it';
+    document.documentElement.lang=lang==='zh'?'zh-CN':lang;
+    document.getElementById('thanksTitle').textContent=m[lang][0];document.getElementById('thanksText').textContent=m[lang][1];document.getElementById('backLink').textContent=m[lang][2];
+  </script>
+</body>
+</html>
