@@ -1,0 +1,17 @@
+name: fixlink
+on: [push]
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          printf '\n/* readable link on Val d Orcia section */\n.valdorcia .bravio-link{color:var(--brand);border-bottom-color:rgba(110,50,24,.38);font-weight:500}\n.valdorcia .bravio-link:hover{color:var(--ink);border-bottom-color:var(--ink)}\n' >> style.css
+          rm .github/workflows/fixlink.yml
+          git config user.name "Il Nido di Sofì"
+          git config user.email "ilnidodisofi@gmail.com"
+          git add style.css .github/workflows/fixlink.yml
+          git commit -m "Improve Val d Orcia link contrast"
+          git push
