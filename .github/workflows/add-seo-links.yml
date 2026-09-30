@@ -1,0 +1,56 @@
+name: Add SEO internal links
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/add-seo-links.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update-homepage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add internal links
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text()
+
+          old = '''      </div>\n    </section>\n\n    <section class="bravio section" id="bravio">'''
+          new = '''      </div>\n      <div class="bravio-actions">\n        <a class="bravio-link" href="/montepulciano/">Montepulciano · guida al soggiorno ↗</a>\n      </div>\n    </section>\n\n    <section class="bravio section" id="bravio">'''
+          if old not in s:
+              raise SystemExit('Montepulciano insertion point not found')
+          s = s.replace(old, new, 1)
+
+          old = '''            <a class="button button-light" href="#prenota" data-i18n="bravio.book">Prenota per la settimana del Bravìo</a>\n            <a class="bravio-link" href="https://www.braviodellebotti.com/" target="_blank" rel="noopener" data-i18n="bravio.official">Sito ufficiale del Bravìo ↗</a>'''
+          new = '''            <a class="button button-light" href="#prenota" data-i18n="bravio.book">Prenota per la settimana del Bravìo</a>\n            <a class="bravio-link" href="/bravio-delle-botti/">Bravìo delle Botti · dove dormire ↗</a>\n            <a class="bravio-link" href="https://www.braviodellebotti.com/" target="_blank" rel="noopener" data-i18n="bravio.official">Sito ufficiale del Bravìo ↗</a>'''
+          if old not in s:
+              raise SystemExit('Bravio insertion point not found')
+          s = s.replace(old, new, 1)
+
+          old = '''          <p class="lead" data-i18n="surroundings.lead">Montepulciano è una base perfetta per alternare il centro storico a giornate tra colline, borghi e terme.</p>\n        </div>'''
+          new = '''          <p class="lead" data-i18n="surroundings.lead">Montepulciano è una base perfetta per alternare il centro storico a giornate tra colline, borghi e terme.</p>\n          <div class="bravio-actions">\n            <a class="bravio-link" href="/val-dorcia/">Val d'Orcia · itinerari dal Nido ↗</a>\n          </div>\n        </div>'''
+          if old not in s:
+              raise SystemExit('Val d Orciа insertion point not found')
+          s = s.replace(old, new, 1)
+
+          old = '''    <div class="footer-links"><a href="#prenota" data-i18n="footer.book">Prenota</a></div>'''
+          new = '''    <div class="footer-links"><a href="#prenota" data-i18n="footer.book">Prenota</a><a href="/montepulciano/">Montepulciano</a><a href="/bravio-delle-botti/">Bravìo delle Botti</a><a href="/val-dorcia/">Val d'Orcia</a></div>'''
+          if old not in s:
+              raise SystemExit('Footer insertion point not found')
+          s = s.replace(old, new, 1)
+
+          p.write_text(s)
+          PY
+      - name: Commit changes
+        run: |
+          git config user.name "Il Nido di Sofì"
+          git config user.email "ilnidodisofi@gmail.com"
+          git add index.html
+          git commit -m "Link homepage to SEO landing pages"
+          git push
