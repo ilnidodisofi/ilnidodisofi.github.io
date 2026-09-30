@@ -417,3 +417,7 @@ body.lightbox-open{overflow:hidden}
 .booking-status.is-error{background:#f7ece7;color:#6e3218;border-color:#e5c5b8}
 .booking-status a{font-weight:600;text-decoration:underline}
 .booking-card button[disabled]{opacity:.58;cursor:wait}
+
+/* readable link on Val d Orcia section */
+.valdorcia .bravio-link{color:var(--brand);border-bottom-color:rgba(110,50,24,.38);font-weight:500}
+.valdorcia .bravio-link:hover{color:var(--ink);border-bottom-color:var(--ink)}
