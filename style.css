@@ -421,3 +421,7 @@ body.lightbox-open{overflow:hidden}
 /* readable link on Val d Orcia section */
 .valdorcia .bravio-link{color:var(--brand);border-bottom-color:rgba(110,50,24,.38);font-weight:500}
 .valdorcia .bravio-link:hover{color:var(--ink);border-bottom-color:var(--ink)}
+
+/* readable link on section 03 */
+.places .bravio-link{color:var(--brand);border-bottom-color:rgba(110,50,24,.38);font-weight:500}
+.places .bravio-link:hover{color:var(--ink);border-bottom-color:var(--ink)}
