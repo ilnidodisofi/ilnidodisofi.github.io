@@ -1,0 +1,117 @@
+name: Refine booking email
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/refine-mailto-email.yml'
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Refine generated email
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          p = Path('script.js')
+          s = p.read_text()
+
+          pattern = re.compile(r"  const val=\(name\)=>form\.elements\[name\]\?\.value\?\.trim\?\.\(\)\|\|form\.elements\[name\]\?\.value\|\|'';.*?\n  \}\);\n\}\);", re.S)
+
+          replacement = r'''  const val=(name)=>form.elements[name]?.value?.trim?.()||form.elements[name]?.value||'';
+  const localeMap={it:'it-IT',en:'en-GB',es:'es-ES',de:'de-DE',fr:'fr-FR',ru:'ru-RU',zh:'zh-CN'};
+  const labels={
+    it:{title:'IL NIDO DI SOFÌ',place:'Montepulciano · Toscana',request:'RICHIESTA DI SOGGIORNO',guest:'OSPITE',stay:'SOGGIORNO',name:'Nome e cognome',email:'Email',phone:'Telefono',checkin:'Check-in',checkout:'Check-out',nights:'Durata',guests:'Ospiti',message:'MESSAGGIO',nightOne:'notte',nightMany:'notti',note1:'La presente è una richiesta di disponibilità pre-compilata.',note2:'La prenotazione sarà confermata solo dopo la nostra verifica e il successivo pagamento tramite link Stripe personale.',address:'Via del Poliziano 12 · Montepulciano'},
+    en:{title:'IL NIDO DI SOFÌ',place:'Montepulciano · Tuscany',request:'STAY REQUEST',guest:'GUEST',stay:'STAY',name:'Full name',email:'Email',phone:'Phone',checkin:'Check-in',checkout:'Check-out',nights:'Length',guests:'Guests',message:'MESSAGE',nightOne:'night',nightMany:'nights',note1:'This is a pre-filled availability request.',note2:'The booking will be confirmed only after our check and the subsequent payment through your personal Stripe link.',address:'Via del Poliziano 12 · Montepulciano'},
+    es:{title:'IL NIDO DI SOFÌ',place:'Montepulciano · Toscana',request:'SOLICITUD DE ESTANCIA',guest:'HUÉSPED',stay:'ESTANCIA',name:'Nombre y apellidos',email:'Email',phone:'Teléfono',checkin:'Llegada',checkout:'Salida',nights:'Duración',guests:'Huéspedes',message:'MENSAJE',nightOne:'noche',nightMany:'noches',note1:'Esta es una solicitud de disponibilidad precompletada.',note2:'La reserva se confirmará únicamente después de nuestra comprobación y del posterior pago mediante tu enlace personal de Stripe.',address:'Via del Poliziano 12 · Montepulciano'},
+    de:{title:'IL NIDO DI SOFÌ',place:'Montepulciano · Toskana',request:'AUFENTHALTSANFRAGE',guest:'GAST',stay:'AUFENTHALT',name:'Vor- und Nachname',email:'E-Mail',phone:'Telefon',checkin:'Check-in',checkout:'Check-out',nights:'Dauer',guests:'Gäste',message:'NACHRICHT',nightOne:'Nacht',nightMany:'Nächte',note1:'Dies ist eine vorausgefüllte Verfügbarkeitsanfrage.',note2:'Die Buchung wird erst nach unserer Prüfung und der anschließenden Zahlung über Ihren persönlichen Stripe-Link bestätigt.',address:'Via del Poliziano 12 · Montepulciano'},
+    fr:{title:'IL NIDO DI SOFÌ',place:'Montepulciano · Toscane',request:'DEMANDE DE SÉJOUR',guest:'VOYAGEUR',stay:'SÉJOUR',name:'Nom et prénom',email:'E-mail',phone:'Téléphone',checkin:'Arrivée',checkout:'Départ',nights:'Durée',guests:'Voyageurs',message:'MESSAGE',nightOne:'nuit',nightMany:'nuits',note1:'Il s’agit d’une demande de disponibilité préremplie.',note2:'La réservation ne sera confirmée qu’après notre vérification et le paiement ultérieur via votre lien Stripe personnel.',address:'Via del Poliziano 12 · Montepulciano'},
+    ru:{title:'IL NIDO DI SOFÌ',place:'Монтепульчано · Тоскана',request:'ЗАПРОС НА ПРОЖИВАНИЕ',guest:'ГОСТЬ',stay:'ПРОЖИВАНИЕ',name:'Имя и фамилия',email:'Email',phone:'Телефон',checkin:'Заезд',checkout:'Выезд',nights:'Продолжительность',guests:'Гости',message:'СООБЩЕНИЕ',nightOne:'ночь',nightMany:'ночей',note1:'Это предварительно заполненный запрос о доступности.',note2:'Бронирование будет подтверждено только после нашей проверки и последующей оплаты по вашей персональной ссылке Stripe.',address:'Via del Poliziano 12 · Montepulciano'},
+    zh:{title:'IL NIDO DI SOFÌ',place:'蒙特普尔恰诺 · 托斯卡纳',request:'住宿申请',guest:'住客',stay:'入住信息',name:'姓名',email:'电子邮箱',phone:'电话',checkin:'入住',checkout:'退房',nights:'住宿时长',guests:'人数',message:'留言',nightOne:'晚',nightMany:'晚',note1:'这是一封已预填的房态咨询邮件。',note2:'预订仅在我们确认房态并通过专属 Stripe 链接完成后续付款后才正式确认。',address:'Via del Poliziano 12 · Montepulciano'}
+  };
+
+  const fmtDate=(v,lang)=>{
+    if(!v) return '';
+    const d=new Date(`${v}T12:00:00`);
+    return new Intl.DateTimeFormat(localeMap[lang]||'it-IT',{day:'numeric',month:'long',year:'numeric'}).format(d);
+  };
+
+  form.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    if(!form.reportValidity()) return;
+    const lang=localStorage.getItem('nidoLanguage')||'it';
+    const t=text[lang]||text.it;
+    const l=labels[lang]||labels.it;
+    const nightCount=Number(val('Notti'))||0;
+    const duration=nightCount ? `${nightCount} ${nightCount===1?l.nightOne:l.nightMany}` : '—';
+    const line='────────────────────────';
+    const body=[
+      l.title,
+      l.place,
+      '',
+      line,
+      l.request,
+      line,
+      '',
+      l.guest,
+      `${l.name}: ${val('Nome e cognome')}`,
+      `${l.email}: ${val('email')}`,
+      `${l.phone}: ${val('Telefono / WhatsApp')}`,
+      '',
+      l.stay,
+      `${l.checkin}: ${fmtDate(val('Check-in'),lang)}`,
+      `${l.checkout}: ${fmtDate(val('Check-out'),lang)}`,
+      `${l.nights}: ${duration}`,
+      `${l.guests}: ${val('Ospiti')}`,
+      '',
+      l.message,
+      val('Messaggio')||'—',
+      '',
+      line,
+      l.note1,
+      l.note2,
+      '',
+      l.title,
+      l.address
+    ].join('\n');
+    status.hidden=false;
+    status.className='booking-status is-success';
+    status.textContent=t.open;
+    const mailto=`mailto:ilnidodisofi@gmail.com?subject=${encodeURIComponent(t.subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href=mailto;
+  });
+});'''
+
+          ns, n = pattern.subn(replacement, s, count=1)
+          if n != 1:
+              raise SystemExit(f'Expected one booking handler replacement, found {n}')
+          p.write_text(ns)
+
+          ip = Path('index.html')
+          idx = ip.read_text().replace('style.css?v=14','style.css?v=15').replace('script.js?v=14','script.js?v=15')
+          ip.write_text(idx)
+          PY
+      - name: Sanity checks
+        run: |
+          node --check script.js
+          grep -q "richiesta di disponibilità pre-compilata" script.js
+          grep -q "script.js?v=15" index.html
+          grep -q "style.css?v=15" index.html
+      - name: Commit changes
+        run: |
+          git config user.name "Il Nido di Sofì"
+          git config user.email "ilnidodisofi@gmail.com"
+          git add script.js index.html
+          git commit -m "Refine booking request email layout"
+          git push
+      - name: Remove temporary workflow
+        run: |
+          git pull --rebase
+          git rm .github/workflows/refine-mailto-email.yml
+          git commit -m "Remove temporary email refinement workflow"
+          git push
