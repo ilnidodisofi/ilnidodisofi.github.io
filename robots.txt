@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /guida/
+Disallow: /grazie.html
+
+Sitemap: https://ilnidodisofi.github.io/sitemap.xml
