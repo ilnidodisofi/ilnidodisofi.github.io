@@ -50,8 +50,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=13">
-  <script src="script.js?v=13" defer></script>
+  <link rel="stylesheet" href="style.css?v=14">
+  <script src="script.js?v=14" defer></script>
 </head>
 <body>
   <header class="topbar">
@@ -286,13 +286,8 @@
           <div class="booking-step"><span>03</span><strong data-i18n="booking.step3.title">Conferma con Stripe</strong><p data-i18n="booking.step3.text">Ricevi un link personale e paghi solo dopo la nostra conferma.</p></div>
         </div>
 
-        <form id="bookingForm" action="https://formsubmit.co/ilnidodisofi@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="Nuova richiesta di soggiorno — Il Nido di Sofì">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_next" id="nextUrl" value="https://ilnidodisofi.github.io/grazie.html">
-          <input type="hidden" name="_url" value="https://ilnidodisofi.github.io/#prenota">
+        <form id="bookingForm" action="mailto:ilnidodisofi@gmail.com" method="GET">
           <input type="hidden" name="Notti" id="nights" value="">
-          <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off">
 
           <div class="form-grid">
             <label><span data-i18n="form.name">Nome e cognome</span><input type="text" name="Nome e cognome" required autocomplete="name"></label>
@@ -304,10 +299,10 @@
             <label class="form-message"><span data-i18n="form.message">Messaggio</span><input type="text" name="Messaggio" data-i18n-placeholder="form.messagePlaceholder" placeholder="Eventuali richieste"></label>
           </div>
           <div class="booking-summary" id="bookingSummary" hidden aria-live="polite"></div>
-          <button class="button button-dark" type="submit" data-i18n="form.submit">Invia richiesta</button>
+          <button class="button button-dark" type="submit" data-i18n="form.submit">Prepara email</button>
           <div class="booking-status" id="bookingStatus" aria-live="polite" hidden></div>
         </form>
-        <p class="small-note" data-i18n="booking.note">La richiesta non comporta alcun pagamento. La prenotazione sarà confermata solo dopo la nostra verifica e il pagamento tramite il link Stripe personale che riceverai via email o WhatsApp.</p>
+        <p class="small-note" data-i18n="booking.note">Al clic su “Prepara email” si aprirà la tua app di posta con la richiesta già compilata. Dovrai solo controllarla e premere Invia. La prenotazione sarà confermata solo dopo la nostra verifica e il successivo pagamento tramite link Stripe personale.</p>
       </div>
     </section>
 

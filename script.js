@@ -18,8 +18,8 @@ const translations = {
     "places.fortezza":"Circa 2 minuti. Il punto panoramico ideale per iniziare a guardare la Val d'Orcia dall'alto.","places.piazza":"Circa 5 minuti. Il cuore monumentale di Montepulciano, tra palazzi storici e vicoli.","places.acquacheta":"Una delle tavole storiche del borgo, perfetta per una cena toscana sostanziosa.","places.lieviti":"Pizza e atmosfera informale, un indirizzo che consigliamo volentieri ai nostri ospiti.",
     "host.title":"Una casa che amiamo<br><em>condividere.</em>","host.p1":"Il Nido di Sofì nasce dal desiderio di avere a Montepulciano un posto semplice, accogliente e davvero nostro. Oggi ci piace aprirlo a chi vuole scoprire questo angolo di Toscana senza rinunciare alla sensazione di sentirsi a casa.","host.p2":"Abbiamo cercato di conservare il carattere della casa e di aggiungere tutto ciò che rende un soggiorno semplice, piacevole e autentico.",
     "surroundings.kicker":"05 — DINTORNI","surroundings.title":"La Val d'Orcia<br><em>comincia da qui.</em>","surroundings.lead":"Montepulciano è una base perfetta per alternare il centro storico a giornate tra colline, borghi e terme.",
-    "booking.kicker":"06 — PRENOTA DIRETTAMENTE","booking.title":"Il tuo soggiorno<br><em>comincia qui.</em>","booking.intro":"Invia una richiesta con le date desiderate. Verificheremo personalmente la disponibilità e il totale del soggiorno; dopo la conferma riceverai un link Stripe sicuro con l’importo esatto concordato.","booking.note":"La richiesta non comporta alcun pagamento. La prenotazione sarà confermata solo dopo la nostra verifica e il pagamento tramite il link Stripe personale che riceverai via email o WhatsApp.",
-    "form.name":"Nome e cognome","form.email":"Email","form.checkin":"Check-in","form.checkout":"Check-out","form.guests":"Ospiti","form.message":"Messaggio","form.messagePlaceholder":"Eventuali richieste","form.submit":"Invia richiesta",
+    "booking.kicker":"06 — PRENOTA DIRETTAMENTE","booking.title":"Il tuo soggiorno<br><em>comincia qui.</em>","booking.intro":"Invia una richiesta con le date desiderate. Verificheremo personalmente la disponibilità e il totale del soggiorno; dopo la conferma riceverai un link Stripe sicuro con l’importo esatto concordato.","booking.note":"Al clic su “Prepara email” si aprirà la tua app di posta con la richiesta già compilata. Dovrai solo controllarla e premere Invia. La prenotazione sarà confermata solo dopo la nostra verifica e il successivo pagamento tramite link Stripe personale.",
+    "form.name":"Nome e cognome","form.email":"Email","form.checkin":"Check-in","form.checkout":"Check-out","form.guests":"Ospiti","form.message":"Messaggio","form.messagePlaceholder":"Eventuali richieste","form.submit":"Prepara email",
     "faq.kicker":"07 — FAQ","faq.title":"Prima di arrivare.","faq.checkin.q":"Come funziona il check-in?","faq.checkin.a":"Il Nido utilizza il self check-in tramite cassetta di sicurezza. Le istruzioni complete vengono inviate prima dell'arrivo.","faq.parking.q":"Dove posso parcheggiare?","faq.parking.a":"Tra le possibilità più vicine ci sono il parcheggio della Fortezza, circa 2 minuti a piedi, e i parcheggi P8 Via dei Filosofi e P7 Via dell’Oriolo, circa 5 minuti.","faq.mobility.q":"L'appartamento è adatto a persone con mobilità ridotta?","faq.mobility.a":"L'appartamento si trova al terzo piano di un edificio storico e non dispone di ascensore. Per questo può non essere adatto a persone con difficoltà motorie.","faq.pets.q":"Gli animali sono ammessi?","faq.pets.a":"Sì, gli animali sono ammessi. Ti chiediamo semplicemente di segnalarlo nella richiesta.","faq.fireplace.q":"Il camino è utilizzabile?","faq.fireplace.a":"Al momento il camino a legna non è utilizzabile per motivi di sicurezza.",
     "footer.book":"Prenota","footer.airbnb":"Vedi su Airbnb"
   },
@@ -34,8 +34,8 @@ const translations = {
     "places.fortezza":"About 2 minutes. An ideal viewpoint for your first look over the Val d'Orcia.","places.piazza":"About 5 minutes. Montepulciano's monumental heart, surrounded by historic buildings and lanes.","places.acquacheta":"One of the town's historic tables, ideal for a hearty Tuscan dinner.","places.lieviti":"Pizza and an informal atmosphere, a place we are always happy to recommend to our guests.",
     "host.title":"A home we love<br><em>to share.</em>","host.p1":"Il Nido di Sofì grew from our wish to have a simple, welcoming place in Montepulciano that truly felt like ours. Today we enjoy opening it to travellers who want to discover this corner of Tuscany while still feeling at home.","host.p2":"We have tried to preserve the character of the house while adding everything that makes a stay easy, pleasant and authentic.",
     "surroundings.kicker":"05 — SURROUNDINGS","surroundings.title":"The Val d'Orcia<br><em>starts from here.</em>","surroundings.lead":"Montepulciano is an ideal base for combining the historic centre with days among hills, villages and thermal baths.",
-    "booking.kicker":"06 — BOOK DIRECT","booking.title":"Your stay<br><em>starts here.</em>","booking.intro":"Send us your preferred dates. We will personally confirm availability and the total stay price; once confirmed, you will receive a secure Stripe payment link for the exact agreed amount.","booking.note":"Submitting a request does not require payment. Your booking is confirmed only after our availability check and payment through the personal Stripe link sent to you by email or WhatsApp.",
-    "form.name":"Full name","form.email":"Email","form.checkin":"Check-in","form.checkout":"Check-out","form.guests":"Guests","form.message":"Message","form.messagePlaceholder":"Any requests","form.submit":"Send request",
+    "booking.kicker":"06 — BOOK DIRECT","booking.title":"Your stay<br><em>starts here.</em>","booking.intro":"Send us your preferred dates. We will personally confirm availability and the total stay price; once confirmed, you will receive a secure Stripe payment link for the exact agreed amount.","booking.note":"Clicking “Prepare email” opens your email app with the request already completed. You only need to review it and press Send. Your booking is confirmed only after our availability check and the subsequent payment through your personal Stripe link.",
+    "form.name":"Full name","form.email":"Email","form.checkin":"Check-in","form.checkout":"Check-out","form.guests":"Guests","form.message":"Message","form.messagePlaceholder":"Any requests","form.submit":"Prepare email",
     "faq.kicker":"07 — FAQ","faq.title":"Before you arrive.","faq.checkin.q":"How does check-in work?","faq.checkin.a":"Il Nido offers self check-in via a lockbox. Full instructions are sent before arrival.","faq.parking.q":"Where can I park?","faq.parking.a":"Nearby options include the Fortezza car park, about a 2-minute walk away, and P8 Via dei Filosofi and P7 Via dell’Oriolo, about 5 minutes away.","faq.mobility.q":"Is the apartment suitable for guests with reduced mobility?","faq.mobility.a":"The apartment is on the third floor of a historic building and there is no lift. It may therefore not be suitable for guests with mobility difficulties.","faq.pets.q":"Are pets allowed?","faq.pets.a":"Yes, pets are welcome. Please simply mention them in your request.","faq.fireplace.q":"Can the fireplace be used?","faq.fireplace.a":"The wood-burning fireplace is currently not available for safety reasons.",
     "footer.book":"Book","footer.airbnb":"View on Airbnb"
   },
@@ -51,7 +51,7 @@ const translations = {
     "host.title":"Una casa que nos encanta<br><em>compartir.</em>","host.p1":"Il Nido di Sofì nació del deseo de tener en Montepulciano un lugar sencillo, acogedor y verdaderamente nuestro. Hoy nos gusta abrirlo a quienes quieren descubrir este rincón de la Toscana sintiéndose como en casa.","host.p2":"Hemos intentado conservar el carácter de la casa y añadir todo lo necesario para que la estancia sea sencilla, agradable y auténtica.",
     "surroundings.kicker":"05 — ALREDEDORES","surroundings.title":"La Val d'Orcia<br><em>empieza aquí.</em>","surroundings.lead":"Montepulciano es una base perfecta para combinar el centro histórico con días entre colinas, pueblos y termas.",
     "booking.kicker":"06 — RESERVA DIRECTA","booking.title":"Tu estancia<br><em>empieza aquí.</em>","booking.intro":"Envíanos las fechas deseadas. Comprobaremos personalmente la disponibilidad y el total de la estancia; después recibirás un enlace seguro de Stripe con el importe exacto acordado.","booking.note":"Enviar la solicitud no implica ningún pago. La reserva se confirma solo después de nuestra comprobación y del pago mediante el enlace personal de Stripe que recibirás por email o WhatsApp.",
-    "form.name":"Nombre y apellidos","form.email":"Email","form.checkin":"Llegada","form.checkout":"Salida","form.guests":"Huéspedes","form.message":"Mensaje","form.messagePlaceholder":"Peticiones especiales","form.submit":"Enviar solicitud",
+    "form.name":"Nombre y apellidos","form.email":"Email","form.checkin":"Llegada","form.checkout":"Salida","form.guests":"Huéspedes","form.message":"Mensaje","form.messagePlaceholder":"Peticiones especiales","form.submit":"Preparar email",
     "faq.kicker":"07 — FAQ","faq.title":"Antes de llegar.","faq.checkin.q":"¿Cómo funciona la llegada?","faq.checkin.a":"Il Nido dispone de llegada autónoma mediante una caja de seguridad para llaves. Las instrucciones completas se envían antes de la llegada.","faq.parking.q":"¿Dónde puedo aparcar?","faq.parking.a":"Entre las opciones más cercanas están el aparcamiento de la Fortezza, a unos 2 minutos a pie, y P8 Via dei Filosofi y P7 Via dell’Oriolo, a unos 5 minutos.","faq.mobility.q":"¿El apartamento es apto para personas con movilidad reducida?","faq.mobility.a":"El apartamento está en la tercera planta de un edificio histórico y no dispone de ascensor. Por ello puede no ser adecuado para personas con dificultades de movilidad.","faq.pets.q":"¿Se admiten mascotas?","faq.pets.a":"Sí. Solo te pedimos que lo indiques en la solicitud.","faq.fireplace.q":"¿Se puede usar la chimenea?","faq.fireplace.a":"Actualmente la chimenea de leña no puede utilizarse por motivos de seguridad.",
     "footer.book":"Reservar","footer.airbnb":"Ver en Airbnb"
   },
@@ -67,7 +67,7 @@ const translations = {
     "host.title":"Ein Zuhause, das wir gerne<br><em>teilen.</em>","host.p1":"Il Nido di Sofì entstand aus dem Wunsch nach einem einfachen, gemütlichen Ort in Montepulciano, der sich wirklich nach unserem Zuhause anfühlt. Heute öffnen wir ihn gerne für Reisende, die diesen Teil der Toskana entdecken und sich zugleich wie zu Hause fühlen möchten.","host.p2":"Wir haben versucht, den Charakter des Hauses zu bewahren und alles hinzuzufügen, was einen Aufenthalt unkompliziert, angenehm und authentisch macht.",
     "surroundings.kicker":"05 — UMGEBUNG","surroundings.title":"Das Val d'Orcia<br><em>beginnt genau hier.</em>","surroundings.lead":"Montepulciano ist ein idealer Ausgangspunkt, um die Altstadt mit Ausflügen zu Hügeln, Dörfern und Thermalbädern zu verbinden.",
     "booking.kicker":"06 — DIREKT BUCHEN","booking.title":"Ihr Aufenthalt<br><em>beginnt hier.</em>","booking.intro":"Sende uns deine gewünschten Reisedaten. Wir prüfen persönlich Verfügbarkeit und Gesamtpreis; anschließend erhältst du einen sicheren Stripe-Zahlungslink über den genau vereinbarten Betrag.","booking.note":"Mit der Anfrage ist noch keine Zahlung verbunden. Die Buchung wird erst nach unserer Verfügbarkeitsprüfung und der Zahlung über deinen persönlichen Stripe-Link per E-Mail oder WhatsApp bestätigt.",
-    "form.name":"Vor- und Nachname","form.email":"E-Mail","form.checkin":"Check-in","form.checkout":"Check-out","form.guests":"Gäste","form.message":"Nachricht","form.messagePlaceholder":"Besondere Wünsche","form.submit":"Anfrage senden",
+    "form.name":"Vor- und Nachname","form.email":"E-Mail","form.checkin":"Check-in","form.checkout":"Check-out","form.guests":"Gäste","form.message":"Nachricht","form.messagePlaceholder":"Besondere Wünsche","form.submit":"E-Mail vorbereiten",
     "faq.kicker":"07 — FAQ","faq.title":"Vor Ihrer Anreise.","faq.checkin.q":"Wie funktioniert der Check-in?","faq.checkin.a":"Il Nido bietet Self-Check-in über eine Schlüsselbox. Die vollständigen Anweisungen werden vor der Anreise gesendet.","faq.parking.q":"Wo kann ich parken?","faq.parking.a":"Zu den nächstgelegenen Möglichkeiten gehören der Parkplatz an der Fortezza, etwa 2 Gehminuten entfernt, sowie P8 Via dei Filosofi und P7 Via dell’Oriolo, etwa 5 Minuten entfernt.","faq.mobility.q":"Ist das Apartment für Personen mit eingeschränkter Mobilität geeignet?","faq.mobility.a":"Das Apartment liegt im dritten Stock eines historischen Gebäudes ohne Aufzug und ist daher möglicherweise nicht für Gäste mit eingeschränkter Mobilität geeignet.","faq.pets.q":"Sind Haustiere erlaubt?","faq.pets.a":"Ja. Bitte erwähnen Sie Ihr Haustier einfach in der Anfrage.","faq.fireplace.q":"Kann der Kamin benutzt werden?","faq.fireplace.a":"Der Holzkamin kann derzeit aus Sicherheitsgründen nicht genutzt werden.",
     "footer.book":"Buchen","footer.airbnb":"Auf Airbnb ansehen"
   },
@@ -83,7 +83,7 @@ const translations = {
     "host.title":"Une maison que nous aimons<br><em>partager.</em>","host.p1":"Il Nido di Sofì est né de notre envie d'avoir à Montepulciano un lieu simple, accueillant et vraiment à nous. Aujourd'hui, nous aimons l'ouvrir à celles et ceux qui souhaitent découvrir ce coin de Toscane tout en se sentant chez eux.","host.p2":"Nous avons cherché à préserver le caractère de la maison tout en ajoutant ce qui rend le séjour simple, agréable et authentique.",
     "surroundings.kicker":"05 — ALENTOURS","surroundings.title":"Le Val d'Orcia<br><em>commence ici.</em>","surroundings.lead":"Montepulciano est une base idéale pour alterner centre historique, collines, villages et thermes.",
     "booking.kicker":"06 — RÉSERVER EN DIRECT","booking.title":"Votre séjour<br><em>commence ici.</em>","booking.intro":"Envoyez-nous les dates souhaitées. Nous vérifierons personnellement la disponibilité et le montant total du séjour; après confirmation, vous recevrez un lien Stripe sécurisé correspondant exactement au montant convenu.","booking.note":"L’envoi de la demande n’entraîne aucun paiement. La réservation n’est confirmée qu’après notre vérification et le paiement via le lien Stripe personnel envoyé par e-mail ou WhatsApp.",
-    "form.name":"Nom et prénom","form.email":"E-mail","form.checkin":"Arrivée","form.checkout":"Départ","form.guests":"Voyageurs","form.message":"Message","form.messagePlaceholder":"Demandes particulières","form.submit":"Envoyer la demande",
+    "form.name":"Nom et prénom","form.email":"E-mail","form.checkin":"Arrivée","form.checkout":"Départ","form.guests":"Voyageurs","form.message":"Message","form.messagePlaceholder":"Demandes particulières","form.submit":"Préparer l’e-mail",
     "faq.kicker":"07 — FAQ","faq.title":"Avant votre arrivée.","faq.checkin.q":"Comment fonctionne l'arrivée ?","faq.checkin.a":"Il Nido propose une arrivée autonome grâce à une boîte à clés sécurisée. Les instructions complètes sont envoyées avant l'arrivée.","faq.parking.q":"Où puis-je me garer ?","faq.parking.a":"Parmi les options les plus proches : le parking de la Fortezza, à environ 2 minutes à pied, ainsi que P8 Via dei Filosofi et P7 Via dell’Oriolo, à environ 5 minutes.","faq.mobility.q":"L'appartement convient-il aux personnes à mobilité réduite ?","faq.mobility.a":"L'appartement se trouve au troisième étage d'un bâtiment historique sans ascenseur. Il peut donc ne pas convenir aux personnes ayant des difficultés de mobilité.","faq.pets.q":"Les animaux sont-ils acceptés ?","faq.pets.a":"Oui. Merci simplement de le signaler dans votre demande.","faq.fireplace.q":"La cheminée peut-elle être utilisée ?","faq.fireplace.a":"La cheminée à bois n'est actuellement pas utilisable pour des raisons de sécurité.",
     "footer.book":"Réserver","footer.airbnb":"Voir sur Airbnb"
   },
@@ -99,7 +99,7 @@ const translations = {
     "host.title":"Дом, которым мы любим<br><em>делиться.</em>","host.p1":"Il Nido di Sofì появился из нашего желания иметь в Монтепульчано простое, уютное и по-настоящему наше место. Теперь мы с радостью открываем его тем, кто хочет узнать этот уголок Тосканы и при этом чувствовать себя как дома.","host.p2":"Мы постарались сохранить характер дома и добавить всё, что делает проживание удобным, приятным и аутентичным.",
     "surroundings.kicker":"05 — ОКРЕСТНОСТИ","surroundings.title":"Валь-д'Орча<br><em>начинается отсюда.</em>","surroundings.lead":"Монтепульчано — отличная база, чтобы чередовать прогулки по старому городу с поездками по холмам, деревням и термальным источникам.",
     "booking.kicker":"06 — ПРЯМОЕ БРОНИРОВАНИЕ","booking.title":"Ваше путешествие<br><em>начинается здесь.</em>","booking.intro":"Отправьте желаемые даты. Мы лично проверим доступность и итоговую стоимость проживания; после подтверждения вы получите безопасную ссылку Stripe на точно согласованную сумму.","booking.note":"Отправка запроса не требует оплаты. Бронирование подтверждается только после нашей проверки и оплаты по персональной ссылке Stripe, отправленной по email или WhatsApp.",
-    "form.name":"Имя и фамилия","form.email":"Электронная почта","form.checkin":"Заезд","form.checkout":"Выезд","form.guests":"Гости","form.message":"Сообщение","form.messagePlaceholder":"Особые пожелания","form.submit":"Отправить запрос",
+    "form.name":"Имя и фамилия","form.email":"Электронная почта","form.checkin":"Заезд","form.checkout":"Выезд","form.guests":"Гости","form.message":"Сообщение","form.messagePlaceholder":"Особые пожелания","form.submit":"Подготовить письмо",
     "faq.kicker":"07 — FAQ","faq.title":"Перед приездом.","faq.checkin.q":"Как проходит заселение?","faq.checkin.a":"В Il Nido предусмотрено самостоятельное заселение через сейф для ключей. Подробные инструкции отправляются до приезда.","faq.parking.q":"Где можно припарковаться?","faq.parking.a":"Среди ближайших вариантов — парковка у Fortezza примерно в 2 минутах пешком, а также P8 Via dei Filosofi и P7 Via dell’Oriolo примерно в 5 минутах.","faq.mobility.q":"Подходит ли квартира людям с ограниченной мобильностью?","faq.mobility.a":"Апартаменты находятся на третьем этаже исторического здания без лифта, поэтому могут не подойти гостям с ограниченной мобильностью.","faq.pets.q":"Можно ли с животными?","faq.pets.a":"Да. Просто укажите это в запросе.","faq.fireplace.q":"Можно ли пользоваться камином?","faq.fireplace.a":"Дровяной камин сейчас не используется по соображениям безопасности.",
     "footer.book":"Забронировать","footer.airbnb":"Смотреть на Airbnb"
   },
@@ -115,7 +115,7 @@ const translations = {
     "host.title":"一个我们愿意<br><em>与你分享的家。</em>","host.p1":"Il Nido di Sofì 源于我们希望在蒙特普尔恰诺拥有一个简单、温暖、真正属于自己的空间。现在，我们也很愿意把它分享给想要探索托斯卡纳、同时又希望拥有家一般感觉的旅人。","host.p2":"我们尽量保留房子的原有气质，同时加入让住宿更轻松、舒适和真实所需要的一切。",
     "surroundings.kicker":"05 — 周边","surroundings.title":"奥尔恰谷<br><em>从这里开始。</em>","surroundings.lead":"蒙特普尔恰诺是理想的旅行据点，可以在历史中心漫步，也可以前往丘陵、小镇和温泉度过一天。",
     "booking.kicker":"06 — 直接预订","booking.title":"你的旅程<br><em>从这里开始。</em>","booking.intro":"请发送您希望入住的日期。我们会亲自确认房源可用情况和住宿总价；确认后，您将收到一个安全的 Stripe 付款链接，金额与双方确认的总价完全一致。","booking.note":"提交申请时无需付款。只有在我们确认可用情况并通过发送给您的专属 Stripe 链接完成付款后，预订才算正式确认。",
-    "form.name":"姓名","form.email":"电子邮箱","form.checkin":"入住日期","form.checkout":"退房日期","form.guests":"客人数","form.message":"留言","form.messagePlaceholder":"其他需求","form.submit":"提交申请",
+    "form.name":"姓名","form.email":"电子邮箱","form.checkin":"入住日期","form.checkout":"退房日期","form.guests":"客人数","form.message":"留言","form.messagePlaceholder":"其他需求","form.submit":"准备邮件",
     "faq.kicker":"07 — 常见问题","faq.title":"抵达之前。","faq.checkin.q":"如何办理入住？","faq.checkin.a":"Il Nido 使用钥匙保险盒进行自助入住。完整说明会在抵达前发送。","faq.parking.q":"可以在哪里停车？","faq.parking.a":"附近可选择 Fortezza 停车场，步行约 2 分钟；P8 Via dei Filosofi 和 P7 Via dell’Oriolo 停车场步行约 5 分钟。","faq.mobility.q":"公寓适合行动不便的客人吗？","faq.mobility.a":"公寓位于历史建筑的三楼，且没有电梯，因此可能不适合行动不便的客人。","faq.pets.q":"可以携带宠物吗？","faq.pets.a":"可以。请在预订申请中告知我们。","faq.fireplace.q":"壁炉可以使用吗？","faq.fireplace.a":"出于安全原因，目前木柴壁炉暂不开放使用。",
     "footer.book":"预订","footer.airbnb":"在 Airbnb 查看"
   }
@@ -355,62 +355,52 @@ document.addEventListener('DOMContentLoaded',()=>{
 });
 
 
-// Booking form — AJAX submission so guests never leave the site for FormSubmit pages.
+// Booking form — prepare a complete email in the guest's own mail app.
 document.addEventListener('DOMContentLoaded',()=>{
   const form=document.getElementById('bookingForm');
   const status=document.getElementById('bookingStatus');
   if(!form||!status) return;
 
-  const submit=form.querySelector('button[type="submit"]');
-  const originalLabel=submit?.textContent || 'Invia richiesta';
+  const text={
+    it:{subject:'Richiesta di soggiorno — Il Nido di Sofì',open:'Si sta aprendo la tua app email. Controlla la richiesta e premi Invia.'},
+    en:{subject:'Stay request — Il Nido di Sofì',open:'Your email app is opening. Review the request and press Send.'},
+    es:{subject:'Solicitud de estancia — Il Nido di Sofì',open:'Se está abriendo tu aplicación de correo. Revisa la solicitud y pulsa Enviar.'},
+    de:{subject:'Aufenthaltsanfrage — Il Nido di Sofì',open:'Ihre E-Mail-App wird geöffnet. Bitte prüfen Sie die Anfrage und klicken Sie auf Senden.'},
+    fr:{subject:'Demande de séjour — Il Nido di Sofì',open:'Votre application e-mail va s’ouvrir. Vérifiez la demande puis appuyez sur Envoyer.'},
+    ru:{subject:'Запрос на проживание — Il Nido di Sofì',open:'Откроется ваше почтовое приложение. Проверьте запрос и нажмите «Отправить».'},
+    zh:{subject:'住宿申请 — Il Nido di Sofì',open:'即将打开你的邮件应用。请检查申请内容，然后点击发送。'}
+  };
 
-  form.addEventListener('submit',async(e)=>{
+  const val=(name)=>form.elements[name]?.value?.trim?.()||form.elements[name]?.value||'';
+  const fmtDate=(v)=>{
+    if(!v) return '';
+    const [y,m,d]=v.split('-');
+    return `${d}/${m}/${y}`;
+  };
+
+  form.addEventListener('submit',(e)=>{
     e.preventDefault();
-
-    const lang=localStorage.getItem('nidoLanguage') || 'it';
-    const messages={
-      it:{sending:'Invio in corso…',error:'Il servizio di invio è temporaneamente non disponibile. Puoi scriverci direttamente a ilnidodisofi@gmail.com.',success:'Richiesta inviata correttamente.'},
-      en:{sending:'Sending…',error:'The sending service is temporarily unavailable. You can email us directly at ilnidodisofi@gmail.com.',success:'Request sent successfully.'},
-      es:{sending:'Enviando…',error:'El servicio de envío no está disponible temporalmente. Puedes escribirnos a ilnidodisofi@gmail.com.',success:'Solicitud enviada correctamente.'},
-      de:{sending:'Wird gesendet…',error:'Der Versanddienst ist vorübergehend nicht verfügbar. Sie können uns direkt an ilnidodisofi@gmail.com schreiben.',success:'Anfrage erfolgreich gesendet.'},
-      fr:{sending:'Envoi en cours…',error:'Le service d’envoi est temporairement indisponible. Vous pouvez nous écrire directement à ilnidodisofi@gmail.com.',success:'Demande envoyée avec succès.'},
-      ru:{sending:'Отправка…',error:'Сервис отправки временно недоступен. Напишите нам напрямую: ilnidodisofi@gmail.com.',success:'Запрос успешно отправлен.'},
-      zh:{sending:'正在发送…',error:'发送服务暂时不可用。你可以直接发邮件至 ilnidodisofi@gmail.com。',success:'申请已成功发送。'}
-    };
-    const m=messages[lang]||messages.it;
-
+    if(!form.reportValidity()) return;
+    const lang=localStorage.getItem('nidoLanguage')||'it';
+    const t=text[lang]||text.it;
+    const body=[
+      'Richiesta di soggiorno — Il Nido di Sofì',
+      '',
+      `Nome e cognome: ${val('Nome e cognome')}`,
+      `Email: ${val('email')}`,
+      `Telefono / WhatsApp: ${val('Telefono / WhatsApp')}`,
+      `Check-in: ${fmtDate(val('Check-in'))}`,
+      `Check-out: ${fmtDate(val('Check-out'))}`,
+      `Notti: ${val('Notti')}`,
+      `Ospiti: ${val('Ospiti')}`,
+      `Messaggio: ${val('Messaggio')||'—'}`,
+      '',
+      'Nota: questa è una richiesta di disponibilità e non costituisce ancora una prenotazione confermata.'
+    ].join('\n');
     status.hidden=false;
-    status.className='booking-status is-sending';
-    status.textContent=m.sending;
-    if(submit){submit.disabled=true;submit.setAttribute('aria-busy','true');}
-
-    try{
-      const data=new FormData(form);
-      // These fields are only useful for classic redirect submissions.
-      data.delete('_next');
-      data.delete('_url');
-
-      const response=await fetch('https://formsubmit.co/ajax/ilnidodisofi@gmail.com',{
-        method:'POST',
-        headers:{'Accept':'application/json'},
-        body:data
-      });
-
-      let payload={};
-      try{payload=await response.json();}catch(_){}
-
-      if(!response.ok || payload.success===false){
-        throw new Error(payload.message||('HTTP '+response.status));
-      }
-
-      status.className='booking-status is-success';
-      status.textContent=m.success;
-      const next=document.getElementById('nextUrl')?.value || ('https://ilnidodisofi.github.io/grazie.html?lang='+lang);
-      setTimeout(()=>{window.location.href=next;},450);
-    }catch(err){
-      status.className='booking-status is-error';
-      status.innerHTML=m.error+' <a href="mailto:ilnidodisofi@gmail.com">Email ↗</a>';
-      if(submit){submit.disabled=false;submit.removeAttribute('aria-busy');submit.textContent=originalLabel;}
-    }
+    status.className='booking-status is-success';
+    status.textContent=t.open;
+    const mailto=`mailto:ilnidodisofi@gmail.com?subject=${encodeURIComponent(t.subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href=mailto;
   });
 });
