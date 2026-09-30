@@ -194,6 +194,51 @@ const siteV8Translations = {
   }
 };
 
+const bookingV13Translations = {
+  it:{
+    "booking.step1.title":"Invia la richiesta","booking.step1.text":"Indicaci date, ospiti e un recapito WhatsApp.",
+    "booking.step2.title":"Verifichiamo noi","booking.step2.text":"Controlliamo disponibilità e totale del soggiorno.",
+    "booking.step3.title":"Conferma con Stripe","booking.step3.text":"Ricevi un link personale e paghi solo dopo la nostra conferma.",
+    "form.phone":"Telefono / WhatsApp"
+  },
+  en:{
+    "booking.step1.title":"Send your request","booking.step1.text":"Tell us your dates, guests and a WhatsApp contact.",
+    "booking.step2.title":"We check it personally","booking.step2.text":"We verify availability and the total stay price.",
+    "booking.step3.title":"Confirm with Stripe","booking.step3.text":"You receive a personal link and pay only after our confirmation.",
+    "form.phone":"Phone / WhatsApp"
+  },
+  es:{
+    "booking.step1.title":"Envía tu solicitud","booking.step1.text":"Indícanos fechas, huéspedes y un contacto de WhatsApp.",
+    "booking.step2.title":"Lo comprobamos nosotros","booking.step2.text":"Verificamos disponibilidad y el total de la estancia.",
+    "booking.step3.title":"Confirma con Stripe","booking.step3.text":"Recibes un enlace personal y pagas solo tras nuestra confirmación.",
+    "form.phone":"Teléfono / WhatsApp"
+  },
+  de:{
+    "booking.step1.title":"Anfrage senden","booking.step1.text":"Nennen Sie uns Daten, Gästezahl und einen WhatsApp-Kontakt.",
+    "booking.step2.title":"Wir prüfen persönlich","booking.step2.text":"Wir prüfen Verfügbarkeit und den Gesamtpreis des Aufenthalts.",
+    "booking.step3.title":"Mit Stripe bestätigen","booking.step3.text":"Sie erhalten einen persönlichen Link und zahlen erst nach unserer Bestätigung.",
+    "form.phone":"Telefon / WhatsApp"
+  },
+  fr:{
+    "booking.step1.title":"Envoyez votre demande","booking.step1.text":"Indiquez vos dates, le nombre de voyageurs et un contact WhatsApp.",
+    "booking.step2.title":"Nous vérifions nous-mêmes","booking.step2.text":"Nous confirmons les disponibilités et le montant total du séjour.",
+    "booking.step3.title":"Confirmez avec Stripe","booking.step3.text":"Vous recevez un lien personnel et ne payez qu’après notre confirmation.",
+    "form.phone":"Téléphone / WhatsApp"
+  },
+  ru:{
+    "booking.step1.title":"Отправьте запрос","booking.step1.text":"Укажите даты, число гостей и контакт WhatsApp.",
+    "booking.step2.title":"Мы всё проверим","booking.step2.text":"Мы лично проверим доступность и общую стоимость проживания.",
+    "booking.step3.title":"Подтвердите через Stripe","booking.step3.text":"Вы получите персональную ссылку и оплатите только после нашего подтверждения.",
+    "form.phone":"Телефон / WhatsApp"
+  },
+  zh:{
+    "booking.step1.title":"提交住宿申请","booking.step1.text":"告诉我们日期、入住人数和 WhatsApp 联系方式。",
+    "booking.step2.title":"我们人工确认","booking.step2.text":"我们会核实房态和住宿总价。",
+    "booking.step3.title":"通过 Stripe 确认","booking.step3.text":"确认后你会收到专属支付链接，再进行付款。",
+    "form.phone":"电话 / WhatsApp"
+  }
+};
+
 const languageMeta = {
   it:{htmlLang:'it', title:'Il Nido di Sofì — Montepulciano'},
   en:{htmlLang:'en', title:'Il Nido di Sofì — Montepulciano, Tuscany'},
@@ -206,7 +251,7 @@ const languageMeta = {
 
 function setLanguage(lang){
   if(!translations[lang]) lang='it';
-  const t={...translations[lang], ...(extraTranslations[lang]||{}), ...(siteV8Translations[lang]||{})};
+  const t={...translations[lang], ...(extraTranslations[lang]||{}), ...(siteV8Translations[lang]||{}), ...(bookingV13Translations[lang]||{})};
   document.documentElement.lang=languageMeta[lang].htmlLang;
   document.title=languageMeta[lang].title;
   document.querySelectorAll('[data-i18n]').forEach(el=>{
@@ -231,18 +276,46 @@ function setLanguage(lang){
 function setDateLimits(){
   const ci=document.getElementById('checkin');
   const co=document.getElementById('checkout');
+  const nights=document.getElementById('nights');
+  const summary=document.getElementById('bookingSummary');
   if(!ci||!co) return;
   const today=new Date();
   const iso=d=>d.toISOString().split('T')[0];
+  const updateSummary=()=>{
+    if(!ci.value||!co.value){
+      if(nights) nights.value='';
+      if(summary){summary.hidden=true;summary.textContent='';}
+      return;
+    }
+    const start=new Date(`${ci.value}T12:00:00`);
+    const end=new Date(`${co.value}T12:00:00`);
+    const count=Math.round((end-start)/86400000);
+    if(count<1){
+      if(nights) nights.value='';
+      if(summary){summary.hidden=true;summary.textContent='';}
+      return;
+    }
+    if(nights) nights.value=String(count);
+    if(summary){
+      const lang=localStorage.getItem('nidoLanguage')||'it';
+      const labels={it:[count===1?'notte':'notti','Nessun pagamento ora'],en:[count===1?'night':'nights','No payment now'],es:[count===1?'noche':'noches','Sin pago ahora'],de:[count===1?'Nacht':'Nächte','Jetzt keine Zahlung'],fr:[count===1?'nuit':'nuits','Aucun paiement maintenant'],ru:[count===1?'ночь':'ночей','Сейчас без оплаты'],zh:['晚','此时无需付款']};
+      const l=labels[lang]||labels.it;
+      summary.textContent=`${count} ${l[0]} · ${l[1]}`;
+      summary.hidden=false;
+    }
+  };
   ci.min=iso(today);
   co.min=iso(today);
   ci.addEventListener('change',()=>{
-    if(!ci.value) return;
+    if(!ci.value){updateSummary();return;}
     const d=new Date(`${ci.value}T12:00:00`);
     d.setDate(d.getDate()+1);
     co.min=iso(d);
     if(co.value && co.value<=ci.value) co.value='';
+    updateSummary();
   });
+  co.addEventListener('change',updateSummary);
+  updateSummary();
 }
 
 document.addEventListener('DOMContentLoaded',()=>{

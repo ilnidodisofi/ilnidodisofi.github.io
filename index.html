@@ -50,8 +50,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=12">
-  <script src="script.js?v=12" defer></script>
+  <link rel="stylesheet" href="style.css?v=13">
+  <script src="script.js?v=13" defer></script>
 </head>
 <body>
   <header class="topbar">
@@ -280,21 +280,30 @@
         <h2 data-i18n-html="booking.title">Il tuo soggiorno<br><em>comincia qui.</em></h2>
         <p class="booking-intro" data-i18n="booking.intro">Invia una richiesta con le date desiderate. Verificheremo personalmente la disponibilità e il totale del soggiorno; dopo la conferma riceverai un link Stripe sicuro con l’importo esatto concordato.</p>
 
+        <div class="booking-flow" aria-label="Come funziona la prenotazione diretta">
+          <div class="booking-step"><span>01</span><strong data-i18n="booking.step1.title">Invia la richiesta</strong><p data-i18n="booking.step1.text">Indicaci date, ospiti e un recapito WhatsApp.</p></div>
+          <div class="booking-step"><span>02</span><strong data-i18n="booking.step2.title">Verifichiamo noi</strong><p data-i18n="booking.step2.text">Controlliamo disponibilità e totale del soggiorno.</p></div>
+          <div class="booking-step"><span>03</span><strong data-i18n="booking.step3.title">Conferma con Stripe</strong><p data-i18n="booking.step3.text">Ricevi un link personale e paghi solo dopo la nostra conferma.</p></div>
+        </div>
+
         <form id="bookingForm" action="https://formsubmit.co/ilnidodisofi@gmail.com" method="POST">
           <input type="hidden" name="_subject" value="Nuova richiesta di soggiorno — Il Nido di Sofì">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_next" id="nextUrl" value="https://ilnidodisofi.github.io/grazie.html">
           <input type="hidden" name="_url" value="https://ilnidodisofi.github.io/#prenota">
+          <input type="hidden" name="Notti" id="nights" value="">
           <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off">
 
           <div class="form-grid">
             <label><span data-i18n="form.name">Nome e cognome</span><input type="text" name="Nome e cognome" required autocomplete="name"></label>
             <label><span data-i18n="form.email">Email</span><input type="email" name="email" required autocomplete="email"></label>
+            <label><span data-i18n="form.phone">Telefono / WhatsApp</span><input type="tel" name="Telefono / WhatsApp" required autocomplete="tel" inputmode="tel" placeholder="+39 ..."></label>
+            <label><span data-i18n="form.guests">Ospiti</span><select name="Ospiti"><option value="1">1</option><option value="2" selected>2</option></select></label>
             <label><span data-i18n="form.checkin">Check-in</span><input id="checkin" type="date" name="Check-in" required></label>
             <label><span data-i18n="form.checkout">Check-out</span><input id="checkout" type="date" name="Check-out" required></label>
-            <label><span data-i18n="form.guests">Ospiti</span><select name="Ospiti"><option value="1">1</option><option value="2" selected>2</option></select></label>
-            <label><span data-i18n="form.message">Messaggio</span><input type="text" name="Messaggio" data-i18n-placeholder="form.messagePlaceholder" placeholder="Eventuali richieste"></label>
+            <label class="form-message"><span data-i18n="form.message">Messaggio</span><input type="text" name="Messaggio" data-i18n-placeholder="form.messagePlaceholder" placeholder="Eventuali richieste"></label>
           </div>
+          <div class="booking-summary" id="bookingSummary" hidden aria-live="polite"></div>
           <button class="button button-dark" type="submit" data-i18n="form.submit">Invia richiesta</button>
           <div class="booking-status" id="bookingStatus" aria-live="polite" hidden></div>
         </form>

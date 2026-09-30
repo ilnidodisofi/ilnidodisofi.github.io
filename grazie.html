@@ -3,35 +3,45 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
   <title>Richiesta inviata — Il Nido di Sofì</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
-    :root{--ink:#252821;--cream:#f5f1e9;--brand:#6e3218;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Inter',Arial,sans-serif}
-    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:var(--cream);color:var(--ink);display:grid;place-items:center;font-family:var(--sans);padding:30px}.card{max-width:760px;text-align:center;background:#fff;padding:65px 8%;border:1px solid #ddd6ca}.logo{width:min(430px,80vw);margin:0 auto 35px}h1{font:600 clamp(44px,7vw,72px)/.98 var(--serif);margin:0 0 22px}p{font-size:15px;line-height:1.7;max-width:580px;margin:0 auto 30px}.btn{display:inline-block;border:1px solid var(--ink);padding:12px 18px;text-decoration:none;color:var(--ink);text-transform:uppercase;letter-spacing:.1em;font-size:10px}.btn:hover{background:var(--ink);color:white}
+    :root{--ink:#252821;--cream:#f5f1e9;--paper:#fbfaf7;--brand:#6e3218;--line:#d8d3c8;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Inter',Arial,sans-serif}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:var(--cream);color:var(--ink);font-family:var(--sans);padding:28px;display:grid;place-items:center}.card{width:min(880px,100%);background:#fff;border:1px solid var(--line);padding:clamp(38px,7vw,72px);box-shadow:0 18px 50px rgba(37,40,33,.045)}.logo{width:min(360px,72vw);margin:0 auto 38px}h1{font:600 clamp(44px,7vw,72px)/.98 var(--serif);margin:0 0 20px;text-align:center}.lead{font-size:15px;line-height:1.75;max-width:620px;margin:0 auto 36px;text-align:center}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:10px 0 38px}.step{border-top:1px solid var(--line);padding:18px 16px 0 0}.step span{display:block;color:var(--brand);font-size:9px;letter-spacing:.17em;margin-bottom:9px}.step strong{display:block;font:500 22px/1.05 var(--serif);margin-bottom:7px}.step p{font-size:12px;line-height:1.55;color:#666;margin:0}.actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}.btn{display:inline-block;border:1px solid var(--ink);padding:12px 18px;text-decoration:none;color:var(--ink);text-transform:uppercase;letter-spacing:.1em;font-size:10px}.btn:hover,.btn.primary{background:var(--ink);color:white}.contact-note{text-align:center;color:#777;font-size:11px;margin:24px 0 0}@media(max-width:700px){body{padding:14px}.card{padding:38px 7%}.steps{grid-template-columns:1fr;gap:0}.step{padding:14px 0}.actions{flex-direction:column}.btn{text-align:center}}
   </style>
 </head>
 <body>
   <main class="card">
     <img src="assets/logo-large.png" alt="Il Nido di Sofì" class="logo">
     <h1 id="thanksTitle">Richiesta inviata.</h1>
-    <p id="thanksText">Grazie. Abbiamo ricevuto la tua richiesta e ti risponderemo via email dopo aver verificato la disponibilità delle date.</p>
-    <a class="btn" href="./" id="backLink">Torna al sito</a>
+    <p class="lead" id="thanksText">Grazie. Abbiamo ricevuto la tua richiesta. Ora controlleremo personalmente disponibilità e totale del soggiorno.</p>
+    <div class="steps">
+      <div class="step"><span>01</span><strong id="step1Title">Controlliamo le date</strong><p id="step1Text">Verifichiamo disponibilità e durata del soggiorno.</p></div>
+      <div class="step"><span>02</span><strong id="step2Title">Ti rispondiamo</strong><p id="step2Text">Riceverai il totale esatto via email o WhatsApp.</p></div>
+      <div class="step"><span>03</span><strong id="step3Title">Confermi con Stripe</strong><p id="step3Text">Se vuoi procedere, riceverai un link personale e sicuro per il pagamento.</p></div>
+    </div>
+    <div class="actions">
+      <a class="btn primary" href="./" id="backLink">Torna al sito</a>
+      <a class="btn" href="https://wa.me/393342091777" id="waLink">Scrivici su WhatsApp</a>
+    </div>
+    <p class="contact-note" id="contactNote">La richiesta non è ancora una prenotazione confermata e non è stato effettuato alcun pagamento.</p>
   </main>
   <script>
     const m={
-      it:['Richiesta inviata.','Grazie. Abbiamo ricevuto la tua richiesta e ti risponderemo via email dopo aver verificato la disponibilità delle date.','Torna al sito'],
-      en:['Request sent.','Thank you. We have received your request and will reply by email after checking availability for your dates.','Back to the website'],
-      es:['Solicitud enviada.','Gracias. Hemos recibido tu solicitud y te responderemos por email después de comprobar la disponibilidad de las fechas.','Volver al sitio'],
-      de:['Anfrage gesendet.','Vielen Dank. Wir haben Ihre Anfrage erhalten und antworten per E-Mail, sobald wir die Verfügbarkeit geprüft haben.','Zurück zur Website'],
-      fr:['Demande envoyée.','Merci. Nous avons bien reçu votre demande et nous vous répondrons par e-mail après vérification des disponibilités.','Retour au site'],
-      ru:['Запрос отправлен.','Спасибо. Мы получили ваш запрос и ответим по электронной почте после проверки доступности дат.','Вернуться на сайт'],
-      zh:['申请已提交。','谢谢。我们已收到你的申请，并会在确认日期是否可订后通过电子邮件回复。','返回网站']
+      it:['Richiesta inviata.','Grazie. Abbiamo ricevuto la tua richiesta. Ora controlleremo personalmente disponibilità e totale del soggiorno.','Controlliamo le date','Verifichiamo disponibilità e durata del soggiorno.','Ti rispondiamo','Riceverai il totale esatto via email o WhatsApp.','Confermi con Stripe','Se vuoi procedere, riceverai un link personale e sicuro per il pagamento.','Torna al sito','Scrivici su WhatsApp','La richiesta non è ancora una prenotazione confermata e non è stato effettuato alcun pagamento.'],
+      en:['Request sent.','Thank you. We received your request. We will now personally check availability and the total stay price.','We check your dates','We verify availability and the length of your stay.','We reply to you','You will receive the exact total by email or WhatsApp.','Confirm with Stripe','If you wish to proceed, you will receive a personal secure payment link.','Back to the website','Message us on WhatsApp','Your request is not yet a confirmed booking and no payment has been made.'],
+      es:['Solicitud enviada.','Gracias. Hemos recibido tu solicitud. Ahora comprobaremos personalmente la disponibilidad y el total de la estancia.','Comprobamos las fechas','Verificamos disponibilidad y duración de la estancia.','Te respondemos','Recibirás el total exacto por email o WhatsApp.','Confirma con Stripe','Si deseas continuar, recibirás un enlace de pago personal y seguro.','Volver al sitio','Escríbenos por WhatsApp','La solicitud todavía no es una reserva confirmada y no se ha realizado ningún pago.'],
+      de:['Anfrage gesendet.','Vielen Dank. Wir haben Ihre Anfrage erhalten. Nun prüfen wir persönlich Verfügbarkeit und Gesamtpreis.','Wir prüfen die Daten','Wir kontrollieren Verfügbarkeit und Aufenthaltsdauer.','Wir antworten Ihnen','Sie erhalten den genauen Gesamtbetrag per E-Mail oder WhatsApp.','Mit Stripe bestätigen','Wenn Sie fortfahren möchten, erhalten Sie einen persönlichen sicheren Zahlungslink.','Zurück zur Website','Per WhatsApp schreiben','Ihre Anfrage ist noch keine bestätigte Buchung und es wurde noch keine Zahlung vorgenommen.'],
+      fr:['Demande envoyée.','Merci. Nous avons reçu votre demande. Nous allons maintenant vérifier personnellement les disponibilités et le montant total du séjour.','Nous vérifions les dates','Nous contrôlons les disponibilités et la durée du séjour.','Nous vous répondons','Vous recevrez le montant exact par e-mail ou WhatsApp.','Confirmez avec Stripe','Si vous souhaitez continuer, vous recevrez un lien de paiement personnel et sécurisé.','Retour au site','Écrivez-nous sur WhatsApp','Votre demande n’est pas encore une réservation confirmée et aucun paiement n’a été effectué.'],
+      ru:['Запрос отправлен.','Спасибо. Мы получили ваш запрос. Теперь мы лично проверим доступность и общую стоимость проживания.','Проверяем даты','Проверяем доступность и продолжительность проживания.','Отвечаем вам','Точную сумму вы получите по электронной почте или WhatsApp.','Подтверждение через Stripe','Если вы захотите продолжить, мы отправим персональную безопасную ссылку для оплаты.','Вернуться на сайт','Написать в WhatsApp','Запрос ещё не является подтверждённым бронированием, и оплата не производилась.'],
+      zh:['申请已提交。','谢谢。我们已收到你的申请。接下来我们会人工确认房态和住宿总价。','核对日期','我们会确认房态和入住晚数。','回复你','你会通过邮件或 WhatsApp 收到准确总价。','通过 Stripe 确认','如需继续，我们会发送专属且安全的支付链接。','返回网站','WhatsApp 联系我们','当前申请尚未构成确认预订，也尚未进行任何付款。']
     };
-    const p=new URLSearchParams(location.search); const lang=m[p.get('lang')]?p.get('lang'):'it';
+    const p=new URLSearchParams(location.search); const lang=m[p.get('lang')]?p.get('lang'):'it'; const v=m[lang];
     document.documentElement.lang=lang==='zh'?'zh-CN':lang;
-    document.getElementById('thanksTitle').textContent=m[lang][0];document.getElementById('thanksText').textContent=m[lang][1];document.getElementById('backLink').textContent=m[lang][2];
+    ['thanksTitle','thanksText','step1Title','step1Text','step2Title','step2Text','step3Title','step3Text','backLink','waLink','contactNote'].forEach((id,i)=>document.getElementById(id).textContent=v[i]);
   </script>
 </body>
 </html>

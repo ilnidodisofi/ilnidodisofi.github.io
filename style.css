@@ -439,3 +439,16 @@ body.lightbox-open{overflow:hidden}
   color:var(--ink);
   border-bottom-color:var(--ink);
 }
+
+
+/* v13 — polished direct-booking flow */
+.booking-flow{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:38px 0 8px}
+.booking-step{border-top:1px solid var(--line);padding:20px 18px 18px 0;min-height:126px}
+.booking-step>span{display:block;font-size:9px;letter-spacing:.18em;color:var(--brand);margin-bottom:12px}
+.booking-step strong{display:block;font:500 24px/1.05 var(--serif);margin-bottom:8px}
+.booking-step p{margin:0;max-width:270px;font-size:12px;line-height:1.55;color:#666}
+.form-message{grid-column:1/-1}
+.booking-summary{width:max-content;max-width:100%;margin:-5px 0 22px;padding:8px 11px;background:var(--cream);border:1px solid var(--line);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#595a54}
+.booking-card .button-dark{min-width:190px}
+@media(max-width:900px){.booking-flow{grid-template-columns:1fr;gap:0;margin-top:30px}.booking-step{min-height:0;padding:16px 0}.booking-step p{max-width:none}.form-message{grid-column:auto}}
+@media(max-width:560px){.booking-step strong{font-size:22px}.booking-summary{width:100%;text-align:center}.booking-card .button-dark{width:100%}}
