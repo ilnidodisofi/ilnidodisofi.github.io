@@ -1,0 +1,76 @@
+name: Switch booking to mailto
+on:
+  push:
+    paths:
+      - '.github/workflows/switch-booking-to-mailto.yml'
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update booking flow
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          index = Path('index.html')
+          s = index.read_text()
+          s = s.replace('style.css?v=13','style.css?v=14').replace('script.js?v=13','script.js?v=14')
+          s = s.replace('<form id="bookingForm" action="https://formsubmit.co/ilnidodisofi@gmail.com" method="POST">','<form id="bookingForm" action="mailto:ilnidodisofi@gmail.com" method="GET">')
+          # FormSubmit-only hidden fields are no longer needed.
+          s = re.sub(r'\n\s*<input type="hidden" name="_subject"[^>]*>', '', s)
+          s = re.sub(r'\n\s*<input type="hidden" name="_template"[^>]*>', '', s)
+          s = re.sub(r'\n\s*<input type="hidden" name="_next"[^>]*>', '', s)
+          s = re.sub(r'\n\s*<input type="hidden" name="_url"[^>]*>', '', s)
+          s = re.sub(r'\n\s*<input type="text" name="_honey"[^>]*>', '', s)
+          s = s.replace('<button class="button button-dark" type="submit" data-i18n="form.submit">Invia richiesta</button>', '<button class="button button-dark" type="submit" data-i18n="form.submit">Prepara email</button>')
+          s = s.replace('La richiesta non comporta alcun pagamento. La prenotazione sarà confermata solo dopo la nostra verifica e il pagamento tramite il link Stripe personale che riceverai via email o WhatsApp.', 'Al clic su “Prepara email” si aprirà la tua app di posta con la richiesta già compilata. Dovrai solo controllarla e premere Invia. La prenotazione sarà confermata solo dopo la nostra verifica e il successivo pagamento tramite link Stripe personale.')
+          index.write_text(s)
+
+          script = Path('script.js')
+          js = script.read_text()
+          # Update Italian visible translation strings plus the submit labels in all languages.
+          repl = {
+            '"form.submit":"Invia richiesta"':'"form.submit":"Prepara email"',
+            '"form.submit":"Send request"':'"form.submit":"Prepare email"',
+            '"form.submit":"Enviar solicitud"':'"form.submit":"Preparar email"',
+            '"form.submit":"Anfrage senden"':'"form.submit":"E-Mail vorbereiten"',
+            '"form.submit":"Envoyer la demande"':'"form.submit":"Préparer l’e-mail"',
+            '"form.submit":"Отправить запрос"':'"form.submit":"Подготовить письмо"',
+            '"form.submit":"提交申请"':'"form.submit":"准备邮件"',
+            '"booking.note":"La richiesta non comporta alcun pagamento. La prenotazione sarà confermata solo dopo la nostra verifica e il pagamento tramite il link Stripe personale che riceverai via email o WhatsApp."':'"booking.note":"Al clic su “Prepara email” si aprirà la tua app di posta con la richiesta già compilata. Dovrai solo controllarla e premere Invia. La prenotazione sarà confermata solo dopo la nostra verifica e il successivo pagamento tramite link Stripe personale."',
+            '"booking.note":"Submitting a request does not require payment. Your booking is confirmed only after our availability check and payment through the personal Stripe link sent to you by email or WhatsApp."':'"booking.note":"Clicking “Prepare email” opens your email app with the request already completed. You only need to review it and press Send. Your booking is confirmed only after our availability check and the subsequent payment through your personal Stripe link."'
+          }
+          for a,b in repl.items(): js=js.replace(a,b)
+
+          marker='// Booking form — AJAX submission so guests never leave the site for FormSubmit pages.'
+          if marker not in js:
+              raise SystemExit('booking handler marker not found')
+          js = js.split(marker)[0] + '''// Booking form — prepare a complete email in the guest's own mail app.\ndocument.addEventListener('DOMContentLoaded',()=>{\n  const form=document.getElementById('bookingForm');\n  const status=document.getElementById('bookingStatus');\n  if(!form||!status) return;\n\n  const text={\n    it:{subject:'Richiesta di soggiorno — Il Nido di Sofì',open:'Si sta aprendo la tua app email. Controlla la richiesta e premi Invia.'},\n    en:{subject:'Stay request — Il Nido di Sofì',open:'Your email app is opening. Review the request and press Send.'},\n    es:{subject:'Solicitud de estancia — Il Nido di Sofì',open:'Se está abriendo tu aplicación de correo. Revisa la solicitud y pulsa Enviar.'},\n    de:{subject:'Aufenthaltsanfrage — Il Nido di Sofì',open:'Ihre E-Mail-App wird geöffnet. Bitte prüfen Sie die Anfrage und klicken Sie auf Senden.'},\n    fr:{subject:'Demande de séjour — Il Nido di Sofì',open:'Votre application e-mail va s’ouvrir. Vérifiez la demande puis appuyez sur Envoyer.'},\n    ru:{subject:'Запрос на проживание — Il Nido di Sofì',open:'Откроется ваше почтовое приложение. Проверьте запрос и нажмите «Отправить».'},\n    zh:{subject:'住宿申请 — Il Nido di Sofì',open:'即将打开你的邮件应用。请检查申请内容，然后点击发送。'}\n  };\n\n  const val=(name)=>form.elements[name]?.value?.trim?.()||form.elements[name]?.value||'';\n  const fmtDate=(v)=>{\n    if(!v) return '';\n    const [y,m,d]=v.split('-');\n    return `${d}/${m}/${y}`;\n  };\n\n  form.addEventListener('submit',(e)=>{\n    e.preventDefault();\n    if(!form.reportValidity()) return;\n    const lang=localStorage.getItem('nidoLanguage')||'it';\n    const t=text[lang]||text.it;\n    const body=[\n      'Richiesta di soggiorno — Il Nido di Sofì',\n      '',\n      `Nome e cognome: ${val('Nome e cognome')}`,\n      `Email: ${val('email')}`,\n      `Telefono / WhatsApp: ${val('Telefono / WhatsApp')}`,\n      `Check-in: ${fmtDate(val('Check-in'))}`,\n      `Check-out: ${fmtDate(val('Check-out'))}`,\n      `Notti: ${val('Notti')}`,\n      `Ospiti: ${val('Ospiti')}`,\n      `Messaggio: ${val('Messaggio')||'—'}`,\n      '',\n      'Nota: questa è una richiesta di disponibilità e non costituisce ancora una prenotazione confermata.'\n    ].join('\\n');\n    status.hidden=false;\n    status.className='booking-status is-success';\n    status.textContent=t.open;\n    const mailto=`mailto:ilnidodisofi@gmail.com?subject=${encodeURIComponent(t.subject)}&body=${encodeURIComponent(body)}`;\n    window.location.href=mailto;\n  });\n});\n'''
+          script.write_text(js)
+          PY
+      - name: Sanity checks
+        run: |
+          grep -q 'mailto:ilnidodisofi@gmail.com' index.html
+          grep -q 'Prepara email' index.html
+          grep -q 'window.location.href=mailto' script.js
+          ! grep -q 'formsubmit.co/ajax' script.js
+          grep -q 'script.js?v=14' index.html
+      - name: Commit changes
+        run: |
+          git config user.name 'Il Nido di Sofì'
+          git config user.email 'ilnidodisofi@gmail.com'
+          git add index.html script.js
+          git commit -m 'Switch booking request to prepared email flow'
+          git push
+      - name: Remove temporary workflow
+        if: always()
+        run: |
+          git pull --rebase
+          rm -f .github/workflows/switch-booking-to-mailto.yml
+          git add -A
+          git commit -m 'Remove temporary mailto workflow' || exit 0
+          git push
