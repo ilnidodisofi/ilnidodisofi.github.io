@@ -425,3 +425,17 @@ body.lightbox-open{overflow:hidden}
 /* readable link on section 03 */
 .places .bravio-link{color:var(--brand);border-bottom-color:rgba(110,50,24,.38);font-weight:500}
 .places .bravio-link:hover{color:var(--ink);border-bottom-color:var(--ink)}
+
+
+/* v12 — readable internal SEO links on light sections */
+.places .bravio-link,
+.valdorcia .bravio-link{
+  color:var(--brand);
+  border-bottom-color:rgba(110,50,24,.38);
+  font-weight:500;
+}
+.places .bravio-link:hover,
+.valdorcia .bravio-link:hover{
+  color:var(--ink);
+  border-bottom-color:var(--ink);
+}
