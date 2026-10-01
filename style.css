@@ -55,3 +55,26 @@
   .contacts{padding-top:54px;padding-bottom:54px}
   .host-copy{padding-top:48px;padding-bottom:48px}
 }
+
+/* v22 - wine, food and seasonal Montepulciano */
+.taste-section{padding-top:78px;padding-bottom:78px;border-top:1px solid var(--line)}
+.taste-head{display:grid;grid-template-columns:1.25fr .75fr;gap:7vw;align-items:end;margin-top:24px}
+.taste-head .lead{margin:0;max-width:430px}
+.taste-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);margin-top:48px}
+.taste-grid article{padding:26px 28px 6px 0;margin-right:28px;border-right:1px solid var(--line)}
+.taste-grid article:last-child{border-right:0;margin-right:0}
+.taste-grid article>span{font-size:10px;letter-spacing:.12em}
+.taste-grid h3{font-size:31px;line-height:1.02;margin:20px 0 12px}
+.taste-grid p{font-size:13px;margin:0;max-width:330px}
+@media(max-width:900px){
+  .taste-section{padding-top:64px;padding-bottom:64px}
+  .taste-head{grid-template-columns:1fr;gap:20px}
+  .taste-grid{grid-template-columns:1fr}
+  .taste-grid article{border-right:0;border-bottom:1px solid var(--line);margin:0;padding:24px 0}
+  .taste-grid article:last-child{border-bottom:0}
+}
+@media(max-width:560px){
+  .taste-section{padding-top:50px;padding-bottom:50px}
+  .taste-grid{margin-top:34px}
+  .taste-grid h3{font-size:28px}
+}
