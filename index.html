@@ -50,7 +50,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=15">
+  <link rel="stylesheet" href="style.css?v=16">
   <script src="script.js?v=15" defer></script>
 </head>
 <body>
@@ -334,6 +334,32 @@
       </div>
     </section>
 
+    <section class="guest-voices section" id="guest-voices">
+      <div class="section-kicker" data-guest-voice="kicker">COSA APPREZZANO I NOSTRI OSPITI</div>
+      <div class="guest-voices-head">
+        <h2 data-guest-voice="title">Piccole cose che
+          <em>fanno la differenza.</em></h2>
+      </div>
+      <div class="guest-voices-grid">
+        <article class="guest-voice-card">
+          <h3 data-guest-voice="h1">Sentirsi subito a casa</h3>
+          <p data-guest-voice="p1">Un ambiente raccolto e accogliente, dove è facile rallentare e ritrovare quella sensazione di tranquillità che fa sentire subito a proprio agio.</p>
+          <p class="guest-voice-name">— Fiona</p>
+        </article>
+        <article class="guest-voice-card">
+          <h3 data-guest-voice="h2">Il silenzio, nel cuore del borgo</h3>
+          <p data-guest-voice="p2">Essere nel centro storico di Montepulciano e, una volta chiusa la porta, trovare calma e silenzio: una combinazione particolarmente piacevole per riposare davvero.</p>
+          <p class="guest-voice-name">— Penelope</p>
+        </article>
+        <article class="guest-voice-card">
+          <h3 data-guest-voice="h3">Il carattere della casa</h3>
+          <p data-guest-voice="p3">Il cotto, le travi a vista, gli arredi e i piccoli dettagli restituiscono il carattere di una casa toscana autentica, curata senza perdere la sua semplicità.</p>
+          <p class="guest-voice-name">— Beatrice</p>
+        </article>
+      </div>
+    </section>
+
+
     <section class="faq section" id="faq">
       <div class="section-kicker" data-i18n="faq.kicker">09 — FAQ</div>
       <h2 data-i18n="faq.title">Prima di arrivare.</h2>
@@ -359,5 +385,31 @@
     <div class="footer-links"><a href="#prenota" data-i18n="footer.book">Prenota</a><a href="/montepulciano/">Montepulciano</a><a href="/bravio-delle-botti/">Bravìo delle Botti</a><a href="/val-dorcia/">Val d'Orcia</a></div>
     <small>© 2026 Il Nido di Sofì</small>
   </footer>
+
+  <script>
+  document.addEventListener('DOMContentLoaded',()=>{
+    const copy={
+      it:{kicker:'COSA APPREZZANO I NOSTRI OSPITI',title:'Piccole cose che <em>fanno la differenza.</em>',h1:'Sentirsi subito a casa',p1:'Un ambiente raccolto e accogliente, dove è facile rallentare e ritrovare quella sensazione di tranquillità che fa sentire subito a proprio agio.',h2:'Il silenzio, nel cuore del borgo',p2:'Essere nel centro storico di Montepulciano e, una volta chiusa la porta, trovare calma e silenzio: una combinazione particolarmente piacevole per riposare davvero.',h3:'Il carattere della casa',p3:'Il cotto, le travi a vista, gli arredi e i piccoli dettagli restituiscono il carattere di una casa toscana autentica, curata senza perdere la sua semplicità.'},
+      en:{kicker:'WHAT OUR GUESTS APPRECIATE',title:'Small details that <em>make a difference.</em>',h1:'Feeling at home right away',p1:'A warm, intimate setting where it is easy to slow down and enjoy the sense of calm that makes you feel immediately at ease.',h2:'Quiet, in the heart of the old town',p2:'Being in Montepulciano’s historic centre and, once the door closes, finding calm and quiet makes it especially pleasant to truly rest.',h3:'The character of the house',p3:'Terracotta floors, exposed beams, furnishings and small details convey the character of an authentic Tuscan home, cared for without losing its simplicity.'},
+      es:{kicker:'LO QUE APRECIAN NUESTROS HUÉSPEDES',title:'Pequeños detalles que <em>marcan la diferencia.</em>',h1:'Sentirse en casa desde el primer momento',p1:'Un ambiente acogedor e íntimo donde resulta fácil bajar el ritmo y disfrutar de una tranquilidad que hace sentirse enseguida a gusto.',h2:'Silencio, en pleno centro histórico',p2:'Estar en el centro histórico de Montepulciano y, al cerrar la puerta, encontrar calma y silencio: una combinación especialmente agradable para descansar de verdad.',h3:'El carácter de la casa',p3:'El barro cocido, las vigas vistas, el mobiliario y los pequeños detalles transmiten el carácter de una auténtica casa toscana, cuidada sin perder su sencillez.'},
+      de:{kicker:'WAS UNSERE GÄSTE SCHÄTZEN',title:'Kleine Dinge, die <em>den Unterschied machen.</em>',h1:'Sich sofort wie zu Hause fühlen',p1:'Eine ruhige, einladende Atmosphäre, in der man leicht entschleunigt und sich sofort wohlfühlt.',h2:'Ruhe mitten in der Altstadt',p2:'Mitten im historischen Zentrum von Montepulciano zu sein und hinter der geschlossenen Tür Ruhe und Stille zu finden, macht erholsamen Schlaf besonders angenehm.',h3:'Der Charakter des Hauses',p3:'Terrakottaböden, sichtbare Balken, Möbel und kleine Details verleihen dem Haus den authentischen Charakter eines gepflegten toskanischen Zuhauses.'},
+      fr:{kicker:'CE QUE NOS HÔTES APPRÉCIENT',title:'De petits détails qui <em>font la différence.</em>',h1:'Se sentir chez soi tout de suite',p1:'Une atmosphère intime et accueillante où il est facile de ralentir et de retrouver ce sentiment de calme qui met immédiatement à l’aise.',h2:'Le silence, au cœur du centre historique',p2:'Être dans le centre historique de Montepulciano et, une fois la porte fermée, retrouver calme et silence : une combinaison particulièrement agréable pour vraiment se reposer.',h3:'Le caractère de la maison',p3:'La terre cuite, les poutres apparentes, le mobilier et les petits détails restituent le caractère d’une authentique maison toscane, soignée sans perdre sa simplicité.'},
+      ru:{kicker:'ЧТО ЦЕНЯТ НАШИ ГОСТИ',title:'Мелочи, которые <em>имеют значение.</em>',h1:'Сразу почувствовать себя как дома',p1:'Уютная и камерная атмосфера, где легко замедлиться и почувствовать спокойствие и комфорт.',h2:'Тишина в самом сердце исторического центра',p2:'Жить в историческом центре Монтепульчано и, закрыв дверь, находить тишину и покой — особенно приятно для полноценного отдыха.',h3:'Характер дома',p3:'Терракотовые полы, открытые балки, мебель и детали создают атмосферу настоящего тосканского дома, ухоженного и при этом простого.'},
+      zh:{kicker:'住客喜欢这里的地方',title:'那些<em>真正带来不同的小细节。</em>',h1:'一进门就有家的感觉',p1:'温馨而安静的空间，让人自然放慢节奏，很快感到放松自在。',h2:'身处老城中心，却依然安静',p2:'住在蒙特普尔恰诺历史中心，关上门后却能享受宁静，这种反差尤其适合真正放松休息。',h3:'房子的托斯卡纳气质',p3:'赤陶地面、外露木梁、家具和细节，共同保留了真实的托斯卡纳住宅气息，精心而不失朴素。'}
+    };
+    const apply=()=>{
+      const sel=document.getElementById('languageSelect');
+      const lang=(sel&&sel.value)||localStorage.getItem('nidoLanguage')||'it';
+      const t=copy[lang]||copy.it;
+      document.querySelectorAll('[data-guest-voice]').forEach(el=>{
+        const k=el.dataset.guestVoice;
+        if(k==='title') el.innerHTML=t[k]; else if(t[k]) el.textContent=t[k];
+      });
+    };
+    apply();
+    document.getElementById('languageSelect')?.addEventListener('change',()=>setTimeout(apply,0));
+  });
+  </script>
+
 </body>
 </html>
