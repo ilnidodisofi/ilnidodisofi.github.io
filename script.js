@@ -9,7 +9,7 @@ window.addEventListener('pageshow',()=>{
 const translations = {
   it: {
     "nav.home":"La casa","nav.montepulciano":"Montepulciano","nav.valdorcia":"Val d'Orcia","nav.faq":"FAQ","nav.book":"Prenota direttamente","language.label":"Lingua",
-    "hero.eyebrow":"MONTEPULCIANO · TOSCANA · ITALIA","hero.title":"Una dimora<br>nel cuore di Montepulciano.","hero.subtitle":"Autentica, intima e a pochi passi da Piazza Grande.","hero.discover":"Scopri l'appartamento","hero.book":"Prenota direttamente","hero.scroll":"SCORRI ↓",
+    "hero.eyebrow":"IL NIDO DI SOFÌ · MONTEPULCIANO","hero.title":"Una dimora<br>nel cuore di Montepulciano.","hero.subtitle":"Autentica, intima e a pochi passi da Piazza Grande.","hero.discover":"Scopri l'appartamento","hero.book":"Prenota direttamente","hero.scroll":"SCORRI ↓",
     "position.kicker":"01 — LA POSIZIONE","position.title":"La Toscana<br><em>fuori dalla porta.</em>","position.lead":"Il Nido di Sofì si trova in Via del Poliziano, nel cuore di Montepulciano: una posizione da cui il borgo si scopre naturalmente a piedi.","position.body":"La Fortezza, Piazza Grande, enoteche e ristoranti sono a pochi passi. Una volta lasciata la porta di casa, non serve programmare tutto: basta uscire e lasciarsi guidare dalle strade del centro storico.",
     "facts.guests":"ospiti","facts.bedroom":"camera","facts.bathroom":"bagno","facts.center":"dal cuore del centro",
     "home.kicker":"02 — LA CASA","home.title":"Semplice, autentica,<br><em>curata nei dettagli.</em>","home.lead":"Una piccola dimora toscana pensata per vivere Montepulciano con calma, tra cotto, travi a vista e il carattere autentico di una casa nel centro storico.",
@@ -25,7 +25,7 @@ const translations = {
   },
   en: {
     "nav.home":"The home","nav.montepulciano":"Montepulciano","nav.valdorcia":"Val d'Orcia","nav.faq":"FAQ","nav.book":"Book direct","language.label":"Language",
-    "hero.eyebrow":"MONTEPULCIANO · TUSCANY · ITALY","hero.title":"A Tuscan home<br>in the heart of Montepulciano.","hero.subtitle":"Authentic, intimate and just a few steps from Piazza Grande.","hero.discover":"Discover the apartment","hero.book":"Book direct","hero.scroll":"SCROLL ↓",
+    "hero.eyebrow":"IL NIDO DI SOFÌ · MONTEPULCIANO","hero.title":"A Tuscan home<br>in the heart of Montepulciano.","hero.subtitle":"Authentic, intimate and just a few steps from Piazza Grande.","hero.discover":"Discover the apartment","hero.book":"Book direct","hero.scroll":"SCROLL ↓",
     "position.kicker":"01 — LOCATION","position.title":"Tuscany<br><em>right outside your door.</em>","position.lead":"Il Nido di Sofì is on Via del Poliziano, in the heart of Montepulciano: a place from which the town is naturally explored on foot.","position.body":"The Fortress, Piazza Grande, wine bars and restaurants are all just a short walk away. Once you step outside, there is no need to plan every detail: simply follow the streets of the historic centre.",
     "facts.guests":"guests","facts.bedroom":"bedroom","facts.bathroom":"bathroom","facts.center":"from the historic centre",
     "home.kicker":"02 — THE HOME","home.title":"Simple, authentic,<br><em>thoughtfully detailed.</em>","home.lead":"A small Tuscan home made for experiencing Montepulciano at an unhurried pace, among terracotta floors, exposed beams and the character of a genuine house in the old town.",
@@ -41,7 +41,7 @@ const translations = {
   },
   es: {
     "nav.home":"La casa","nav.montepulciano":"Montepulciano","nav.valdorcia":"Val d'Orcia","nav.faq":"FAQ","nav.book":"Reserva directa","language.label":"Idioma",
-    "hero.eyebrow":"MONTEPULCIANO · TOSCANA · ITALIA","hero.title":"Una casa toscana<br>en el corazón de Montepulciano.","hero.subtitle":"Auténtica, íntima y a pocos pasos de Piazza Grande.","hero.discover":"Descubre el apartamento","hero.book":"Reserva directa","hero.scroll":"DESLIZA ↓",
+    "hero.eyebrow":"IL NIDO DI SOFÌ · MONTEPULCIANO","hero.title":"Una casa toscana<br>en el corazón de Montepulciano.","hero.subtitle":"Auténtica, íntima y a pocos pasos de Piazza Grande.","hero.discover":"Descubre el apartamento","hero.book":"Reserva directa","hero.scroll":"DESLIZA ↓",
     "position.kicker":"01 — UBICACIÓN","position.title":"La Toscana<br><em>al otro lado de la puerta.</em>","position.lead":"Il Nido di Sofì se encuentra en Via del Poliziano, en pleno corazón de Montepulciano: una ubicación perfecta para descubrir el pueblo a pie.","position.body":"La Fortezza, Piazza Grande, vinotecas y restaurantes están a pocos pasos. Al salir de casa no hace falta planearlo todo: basta con dejarse llevar por las calles del centro histórico.",
     "facts.guests":"huéspedes","facts.bedroom":"dormitorio","facts.bathroom":"baño","facts.center":"del centro histórico",
     "home.kicker":"02 — LA CASA","home.title":"Sencilla, auténtica,<br><em>cuidada al detalle.</em>","home.lead":"Una pequeña casa toscana pensada para vivir Montepulciano sin prisas, entre suelos de terracota, vigas vistas y el carácter auténtico de una vivienda del casco histórico.",
@@ -57,7 +57,7 @@ const translations = {
   },
   de: {
     "nav.home":"Das Zuhause","nav.montepulciano":"Montepulciano","nav.valdorcia":"Val d'Orcia","nav.faq":"FAQ","nav.book":"Direkt buchen","language.label":"Sprache",
-    "hero.eyebrow":"MONTEPULCIANO · TOSKANA · ITALIEN","hero.title":"Ein Zuhause in der Toskana<br>im Herzen von Montepulciano.","hero.subtitle":"Authentisch, intim und nur wenige Schritte von der Piazza Grande entfernt.","hero.discover":"Apartment entdecken","hero.book":"Direkt buchen","hero.scroll":"SCROLLEN ↓",
+    "hero.eyebrow":"IL NIDO DI SOFÌ · MONTEPULCIANO","hero.title":"Ein Zuhause in der Toskana<br>im Herzen von Montepulciano.","hero.subtitle":"Authentisch, intim und nur wenige Schritte von der Piazza Grande entfernt.","hero.discover":"Apartment entdecken","hero.book":"Direkt buchen","hero.scroll":"SCROLLEN ↓",
     "position.kicker":"01 — LAGE","position.title":"Die Toskana<br><em>direkt vor der Tür.</em>","position.lead":"Il Nido di Sofì liegt in der Via del Poliziano, mitten im Herzen von Montepulciano – von hier lässt sich die Altstadt ganz natürlich zu Fuß entdecken.","position.body":"Die Fortezza, die Piazza Grande, Weinbars und Restaurants sind nur wenige Schritte entfernt. Draußen angekommen, muss man nicht alles planen: Lassen Sie sich einfach durch die Straßen der Altstadt treiben.",
     "facts.guests":"Gäste","facts.bedroom":"Schlafzimmer","facts.bathroom":"Bad","facts.center":"vom Altstadtzentrum",
     "home.kicker":"02 — DAS ZUHAUSE","home.title":"Schlicht, authentisch,<br><em>mit Liebe zum Detail.</em>","home.lead":"Ein kleines toskanisches Zuhause für entspannte Tage in Montepulciano – mit Terrakottaböden, sichtbaren Balken und dem authentischen Charakter eines Hauses in der Altstadt.",
@@ -73,7 +73,7 @@ const translations = {
   },
   fr: {
     "nav.home":"La maison","nav.montepulciano":"Montepulciano","nav.valdorcia":"Val d'Orcia","nav.faq":"FAQ","nav.book":"Réserver en direct","language.label":"Langue",
-    "hero.eyebrow":"MONTEPULCIANO · TOSCANE · ITALIE","hero.title":"Une maison toscane<br>au cœur de Montepulciano.","hero.subtitle":"Authentique, intime et à quelques pas de Piazza Grande.","hero.discover":"Découvrir l'appartement","hero.book":"Réserver en direct","hero.scroll":"DÉFILER ↓",
+    "hero.eyebrow":"IL NIDO DI SOFÌ · MONTEPULCIANO","hero.title":"Une maison toscane<br>au cœur de Montepulciano.","hero.subtitle":"Authentique, intime et à quelques pas de Piazza Grande.","hero.discover":"Découvrir l'appartement","hero.book":"Réserver en direct","hero.scroll":"DÉFILER ↓",
     "position.kicker":"01 — EMPLACEMENT","position.title":"La Toscane<br><em>juste derrière la porte.</em>","position.lead":"Il Nido di Sofì se trouve Via del Poliziano, au cœur de Montepulciano : un emplacement idéal pour découvrir naturellement la ville à pied.","position.body":"La Fortezza, Piazza Grande, les bars à vin et les restaurants sont à quelques pas. Une fois dehors, nul besoin de tout programmer : il suffit de se laisser guider par les rues du centre historique.",
     "facts.guests":"voyageurs","facts.bedroom":"chambre","facts.bathroom":"salle de bain","facts.center":"du cœur historique",
     "home.kicker":"02 — LA MAISON","home.title":"Simple, authentique,<br><em>soignée dans les détails.</em>","home.lead":"Une petite maison toscane pensée pour vivre Montepulciano à un rythme tranquille, entre sols en terre cuite, poutres apparentes et caractère authentique d'une demeure du centre historique.",
@@ -89,7 +89,7 @@ const translations = {
   },
   ru: {
     "nav.home":"Дом","nav.montepulciano":"Монтепульчано","nav.valdorcia":"Валь-д'Орча","nav.faq":"FAQ","nav.book":"Забронировать напрямую","language.label":"Язык",
-    "hero.eyebrow":"МОНТЕПУЛЬЧАНО · ТОСКАНА · ИТАЛИЯ","hero.title":"Тосканский дом<br>в самом сердце Монтепульчано.","hero.subtitle":"Аутентично, уютно и всего в нескольких шагах от Piazza Grande.","hero.discover":"Посмотреть апартаменты","hero.book":"Забронировать напрямую","hero.scroll":"ЛИСТАЙТЕ ↓",
+    "hero.eyebrow":"IL NIDO DI SOFÌ · MONTEPULCIANO","hero.title":"Тосканский дом<br>в самом сердце Монтепульчано.","hero.subtitle":"Аутентично, уютно и всего в нескольких шагах от Piazza Grande.","hero.discover":"Посмотреть апартаменты","hero.book":"Забронировать напрямую","hero.scroll":"ЛИСТАЙТЕ ↓",
     "position.kicker":"01 — РАСПОЛОЖЕНИЕ","position.title":"Тоскана<br><em>прямо за дверью.</em>","position.lead":"Il Nido di Sofì находится на Via del Poliziano, в самом сердце Монтепульчано — отсюда исторический центр удобно исследовать пешком.","position.body":"Крепость, Piazza Grande, винные бары и рестораны находятся всего в нескольких минутах ходьбы. Выйдя из дома, не нужно планировать каждый шаг — просто следуйте по улицам старого города.",
     "facts.guests":"гостя","facts.bedroom":"спальня","facts.bathroom":"ванная","facts.center":"от исторического центра",
     "home.kicker":"02 — ДОМ","home.title":"Просто, аутентично,<br><em>с вниманием к деталям.</em>","home.lead":"Небольшой тосканский дом для неспешного знакомства с Монтепульчано: терракотовые полы, открытые балки и подлинный характер жилья в историческом центре.",
@@ -105,7 +105,7 @@ const translations = {
   },
   zh: {
     "nav.home":"住所","nav.montepulciano":"蒙特普尔恰诺","nav.valdorcia":"奥尔恰谷","nav.faq":"常见问题","nav.book":"直接预订","language.label":"语言",
-    "hero.eyebrow":"蒙特普尔恰诺 · 托斯卡纳 · 意大利","hero.title":"一处托斯卡纳之家<br>就在蒙特普尔恰诺中心。","hero.subtitle":"真实、宁静，步行几分钟即可到达大广场。","hero.discover":"了解公寓","hero.book":"直接预订","hero.scroll":"向下浏览 ↓",
+    "hero.eyebrow":"IL NIDO DI SOFÌ · MONTEPULCIANO","hero.title":"一处托斯卡纳之家<br>就在蒙特普尔恰诺中心。","hero.subtitle":"真实、宁静，步行几分钟即可到达大广场。","hero.discover":"了解公寓","hero.book":"直接预订","hero.scroll":"向下浏览 ↓",
     "position.kicker":"01 — 位置","position.title":"托斯卡纳<br><em>就在门外。</em>","position.lead":"Il Nido di Sofì 位于 Via del Poliziano，坐落在蒙特普尔恰诺历史中心，从这里可以轻松步行探索小城。","position.body":"Fortezza、Piazza Grande、葡萄酒吧和餐厅都近在咫尺。走出家门，无需安排得太满，只需沿着历史街区慢慢走，感受这里的节奏。",
     "facts.guests":"位客人","facts.bedroom":"间卧室","facts.bathroom":"间浴室","facts.center":"到历史中心",
     "home.kicker":"02 — 住所","home.title":"简洁、真实，<br><em>细节用心。</em>","home.lead":"这是一处小巧的托斯卡纳住所，适合慢慢感受蒙特普尔恰诺：赤陶地板、外露木梁，以及老城住宅特有的真实气息。",
