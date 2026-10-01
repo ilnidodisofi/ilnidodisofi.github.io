@@ -23,3 +23,35 @@
   #bravio .bravio-actions{margin-top:20px;gap:10px}
   #bravio .bravio-actions .button{width:100%;text-align:center}
 }
+
+/* v21 - homepage rhythm and length */
+.brand-showcase{min-height:400px;padding:52px 8%}
+.brand-showcase img{width:min(700px,74vw);max-height:330px}
+.places{padding-top:96px;padding-bottom:96px}
+#valdorcia{padding-top:92px;padding-bottom:92px}
+#valdorcia .val-grid{gap:6vw}
+#valdorcia .destinations div{padding:13px 0}
+#valdorcia .destinations div:nth-child(n+5){display:none}
+.guest-voices{padding-top:80px;padding-bottom:80px}
+.guest-voices-grid{margin-top:40px}
+.guest-voice-card{min-height:230px;padding-top:26px;padding-bottom:24px}
+.contacts{padding-top:88px;padding-bottom:88px}
+@media(max-width:900px){
+  .brand-showcase{min-height:300px;padding:42px 8%}
+  .places{padding-top:72px;padding-bottom:72px}
+  #valdorcia{padding-top:70px;padding-bottom:70px}
+  .guest-voices{padding-top:68px;padding-bottom:68px}
+  .contacts{padding-top:68px;padding-bottom:68px}
+}
+@media(max-width:560px){
+  .brand-showcase{min-height:220px;padding:28px 7%}
+  .brand-showcase img{width:min(520px,88vw);max-height:270px}
+  .places{padding-top:52px;padding-bottom:52px}
+  #valdorcia{padding-top:52px;padding-bottom:52px}
+  #valdorcia .destinations div:nth-child(n+4){display:none}
+  .guest-voices{padding-top:54px;padding-bottom:54px}
+  .guest-voices-grid{margin-top:30px}
+  .guest-voice-card{padding:24px 0;min-height:0}
+  .contacts{padding-top:54px;padding-bottom:54px}
+  .host-copy{padding-top:48px;padding-bottom:48px}
+}
