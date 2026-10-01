@@ -2,6 +2,7 @@
 (() => {
   const data = {
     it: {
+      stayTitle: 'La cura si vede<br><em>nelle piccole cose.</em>',
       events: {
         bravio: 'FINE AGOSTO · CONTRADE, CORTEI E CORSA DELLE BOTTI',
         cantiere: 'LUGLIO–AGOSTO · MUSICA, TEATRO E PERFORMANCE',
@@ -15,6 +16,7 @@
       noteText: 'Prima dell’arrivo condividiamo cantine, enoteche, trattorie e botteghe che conosciamo personalmente e che sceglieremmo anche per noi.'
     },
     en: {
+      stayTitle: 'Care lives<br><em>in the small details.</em>',
       events: {
         bravio: 'LATE AUGUST · CONTRADE, PARADES AND BARREL RACE',
         cantiere: 'JULY–AUGUST · MUSIC, THEATRE AND PERFORMANCE',
@@ -28,6 +30,7 @@
       noteText: 'Before arrival we share wineries, wine bars, trattorias and small shops we know personally and would choose for ourselves.'
     },
     es: {
+      stayTitle: 'El cuidado se nota<br><em>en los pequeños detalles.</em>',
       events: {
         bravio: 'FINALES DE AGOSTO · CONTRADAS, DESFILES Y CARRERA DE BARRILES',
         cantiere: 'JULIO–AGOSTO · MÚSICA, TEATRO Y ESPECTÁCULOS',
@@ -41,6 +44,7 @@
       noteText: 'Antes de la llegada compartimos bodegas, enotecas, trattorias y tiendas que conocemos personalmente y que también elegiríamos para nosotros.'
     },
     de: {
+      stayTitle: 'Sorgfalt zeigt sich<br><em>in den kleinen Dingen.</em>',
       events: {
         bravio: 'ENDE AUGUST · CONTRADE, UMZÜGE UND FASSRENNEN',
         cantiere: 'JULI–AUGUST · MUSIK, THEATER UND PERFORMANCE',
@@ -54,6 +58,7 @@
       noteText: 'Vor der Anreise teilen wir Weingüter, Enotheken, Trattorien und kleine Läden, die wir persönlich kennen und auch selbst wählen würden.'
     },
     fr: {
+      stayTitle: 'Le soin se voit<br><em>dans les petits détails.</em>',
       events: {
         bravio: 'FIN AOÛT · CONTRADE, CORTÈGES ET COURSE DE TONNEAUX',
         cantiere: 'JUILLET–AOÛT · MUSIQUE, THÉÂTRE ET PERFORMANCES',
@@ -67,6 +72,7 @@
       noteText: 'Avant l’arrivée, nous partageons des domaines, bars à vin, trattorie et boutiques que nous connaissons personnellement et que nous choisirions aussi pour nous.'
     },
     ru: {
+      stayTitle: 'Забота заметна<br><em>в мелочах.</em>',
       events: {
         bravio: 'КОНЕЦ АВГУСТА · КОНТРАДЫ, ШЕСТВИЯ И ГОНКА БОЧЕК',
         cantiere: 'ИЮЛЬ–АВГУСТ · МУЗЫКА, ТЕАТР И ПЕРФОРМАНСЫ',
@@ -80,6 +86,7 @@
       noteText: 'Перед приездом мы делимся винодельнями, энотеками, тратториями и лавками, которые знаем лично и выбрали бы для себя.'
     },
     zh: {
+      stayTitle: '用心藏在<br><em>每一个小细节里。</em>',
       events: {
         bravio: '八月底 · 历史街区、巡游与滚酒桶赛',
         cantiere: '七月至八月 · 音乐、戏剧与表演',
@@ -112,6 +119,9 @@
   function render() {
     const t = data[currentLang()];
 
+    const stayTitle = document.querySelector('[data-value-html="title"]');
+    if (stayTitle) stayTitle.innerHTML = t.stayTitle;
+
     eventKeys.forEach(([i18nKey, key]) => {
       const title = document.querySelector(`.events-grid [data-i18n="${i18nKey}"]`);
       const article = title?.closest('article');
@@ -140,5 +150,6 @@
   }
 
   render();
+  document.addEventListener('DOMContentLoaded', render);
   document.getElementById('languageSelect')?.addEventListener('change', () => setTimeout(render, 0));
 })();
