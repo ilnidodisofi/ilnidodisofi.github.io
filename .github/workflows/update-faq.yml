@@ -16,92 +16,102 @@ jobs:
           from pathlib import Path
           import re
 
-          p=Path('index.html')
-          s=p.read_text()
-          new='''      <div class="faq-list">\n        <details><summary data-i18n="faq.checkin.q">Come funzionano check-in e check-out?</summary><p data-i18n="faq.checkin.a">Il check-in è disponibile dalle 14:00 tramite self check-in con cassetta di sicurezza. Il check-out è entro le 10:00. Le istruzioni complete per l’ingresso vengono inviate prima dell’arrivo.</p></details>\n        <details><summary data-i18n="faq.parking.q">Dove posso parcheggiare?</summary><p data-i18n="faq.parking.a">Tra le possibilità più vicine ci sono il parcheggio della Fortezza, circa 2 minuti a piedi, e i parcheggi P8 Via dei Filosofi e P7 Via dell’Oriolo, circa 5 minuti.</p></details>\n        <details><summary data-i18n="faq.mobility.q">A che piano si trova l’appartamento?</summary><p data-i18n="faq.mobility.a">Il Nido di Sofì si trova al terzo piano di un edificio storico, senza ascensore. È quindi utile tenerne conto se si viaggia con bagagli pesanti o se si preferiscono soluzioni senza scale.</p></details>\n        <details><summary data-i18n="faq.pets.q">Gli animali sono ammessi?</summary><p data-i18n="faq.pets.a">Sì, gli animali sono ammessi. Ti chiediamo semplicemente di segnalarlo nella richiesta.</p></details>\n        <details><summary data-i18n="faq.wifi.q">L’appartamento ha il Wi-Fi ed è adatto anche per lavorare?</summary><p data-i18n="faq.wifi.a">Sì. L’appartamento dispone di Wi-Fi veloce e di uno spazio adatto anche a chi ha bisogno di lavorare durante il soggiorno.</p></details>\n        <details><summary data-i18n="faq.kitchen.q">La cucina è attrezzata?</summary><p data-i18n="faq.kitchen.a">Sì. La cucina è attrezzata per preparare colazione e pasti durante il soggiorno, con gli elementi essenziali per un utilizzo quotidiano.</p></details>\n      </div>'''
-          s2,n=re.subn(r'      <div class="faq-list">.*?      </div>\n    </section>', new+'\n    </section>', s, count=1, flags=re.S)
-          if n!=1: raise SystemExit(f'FAQ block replacements: {n}')
-          s2=s2.replace('script.js?v=15','script.js?v=16')
+          p = Path('index.html')
+          s = p.read_text()
+          new = '''      <div class="faq-list">
+            <details><summary data-i18n="faq.checkin.q">Come funzionano check-in e check-out?</summary><p data-i18n="faq.checkin.a">Il check-in è disponibile dalle 14:00 tramite self check-in con cassetta di sicurezza. Il check-out è entro le 10:00. Le istruzioni complete per l’ingresso vengono inviate prima dell’arrivo.</p></details>
+            <details><summary data-i18n="faq.parking.q">Dove posso parcheggiare?</summary><p data-i18n="faq.parking.a">Tra le possibilità più vicine ci sono il parcheggio della Fortezza, circa 2 minuti a piedi, e i parcheggi P8 Via dei Filosofi e P7 Via dell’Oriolo, circa 5 minuti.</p></details>
+            <details><summary data-i18n="faq.mobility.q">A che piano si trova l’appartamento?</summary><p data-i18n="faq.mobility.a">Il Nido di Sofì si trova al terzo piano di un edificio storico, senza ascensore. È quindi utile tenerne conto se si viaggia con bagagli pesanti o se si preferiscono soluzioni senza scale.</p></details>
+            <details><summary data-i18n="faq.pets.q">Gli animali sono ammessi?</summary><p data-i18n="faq.pets.a">Sì, gli animali sono ammessi. Ti chiediamo semplicemente di segnalarlo nella richiesta.</p></details>
+            <details><summary data-i18n="faq.wifi.q">L’appartamento ha il Wi-Fi ed è adatto anche per lavorare?</summary><p data-i18n="faq.wifi.a">Sì. L’appartamento dispone di Wi-Fi veloce e di uno spazio adatto anche a chi ha bisogno di lavorare durante il soggiorno.</p></details>
+            <details><summary data-i18n="faq.kitchen.q">La cucina è attrezzata?</summary><p data-i18n="faq.kitchen.a">Sì. La cucina è attrezzata per preparare colazione e pasti durante il soggiorno, con gli elementi essenziali per un utilizzo quotidiano.</p></details>
+          </div>'''
+          s2, n = re.subn(r'      <div class="faq-list">.*?      </div>\n    </section>', new + '\n    </section>', s, count=1, flags=re.S)
+          if n != 1:
+              raise SystemExit(f'FAQ block replacements: {n}')
+          s2 = s2.replace('script.js?v=15', 'script.js?v=16')
           p.write_text(s2)
 
-          js=Path('script.js')
-          t=js.read_text()
-          marker='// v16 — FAQ content refresh'
+          js = Path('script.js')
+          t = js.read_text()
+          marker = '// v16 — FAQ content refresh'
           if marker not in t:
-            t += r'''
+              additions = """
 
-// v16 — FAQ content refresh
-Object.assign(translations.it,{
-  "faq.checkin.q":"Come funzionano check-in e check-out?",
-  "faq.checkin.a":"Il check-in è disponibile dalle 14:00 tramite self check-in con cassetta di sicurezza. Il check-out è entro le 10:00. Le istruzioni complete per l’ingresso vengono inviate prima dell’arrivo.",
-  "faq.mobility.q":"A che piano si trova l’appartamento?",
-  "faq.mobility.a":"Il Nido di Sofì si trova al terzo piano di un edificio storico, senza ascensore. È quindi utile tenerne conto se si viaggia con bagagli pesanti o se si preferiscono soluzioni senza scale.",
-  "faq.wifi.q":"L’appartamento ha il Wi-Fi ed è adatto anche per lavorare?",
-  "faq.wifi.a":"Sì. L’appartamento dispone di Wi-Fi veloce e di uno spazio adatto anche a chi ha bisogno di lavorare durante il soggiorno.",
-  "faq.kitchen.q":"La cucina è attrezzata?",
-  "faq.kitchen.a":"Sì. La cucina è attrezzata per preparare colazione e pasti durante il soggiorno, con gli elementi essenziali per un utilizzo quotidiano."
-});
-Object.assign(translations.en,{
-  "faq.checkin.q":"How do check-in and check-out work?",
-  "faq.checkin.a":"Check-in is available from 2:00 pm via self check-in with a lockbox. Check-out is by 10:00 am. Full entry instructions are sent before arrival.",
-  "faq.mobility.q":"Which floor is the apartment on?",
-  "faq.mobility.a":"Il Nido di Sofì is on the third floor of a historic building with no lift. It is worth keeping this in mind if you are travelling with heavy luggage or prefer accommodation without stairs.",
-  "faq.wifi.q":"Does the apartment have Wi-Fi and is it suitable for working?",
-  "faq.wifi.a":"Yes. The apartment has fast Wi-Fi and a space suitable for guests who need to work during their stay.",
-  "faq.kitchen.q":"Is the kitchen equipped?",
-  "faq.kitchen.a":"Yes. The kitchen is equipped for preparing breakfast and meals during your stay, with the essentials for everyday use."
-});
-Object.assign(translations.es,{
-  "faq.checkin.q":"¿Cómo funcionan el check-in y el check-out?",
-  "faq.checkin.a":"El check-in está disponible a partir de las 14:00 mediante llegada autónoma con caja de seguridad. El check-out es antes de las 10:00. Las instrucciones completas se envían antes de la llegada.",
-  "faq.mobility.q":"¿En qué planta está el apartamento?",
-  "faq.mobility.a":"Il Nido di Sofì está en la tercera planta de un edificio histórico sin ascensor. Conviene tenerlo en cuenta si se viaja con equipaje pesado o se prefieren alojamientos sin escaleras.",
-  "faq.wifi.q":"¿El apartamento tiene Wi-Fi y es adecuado para trabajar?",
-  "faq.wifi.a":"Sí. El apartamento dispone de Wi-Fi rápido y de un espacio adecuado para quienes necesiten trabajar durante la estancia.",
-  "faq.kitchen.q":"¿La cocina está equipada?",
-  "faq.kitchen.a":"Sí. La cocina está equipada para preparar desayunos y comidas durante la estancia, con lo esencial para el uso diario."
-});
-Object.assign(translations.de,{
-  "faq.checkin.q":"Wie funktionieren Check-in und Check-out?",
-  "faq.checkin.a":"Der Check-in ist ab 14:00 Uhr per Self Check-in mit Schlüsseltresor möglich. Der Check-out erfolgt bis 10:00 Uhr. Die vollständigen Zugangsinformationen werden vor der Anreise gesendet.",
-  "faq.mobility.q":"In welchem Stockwerk liegt die Wohnung?",
-  "faq.mobility.a":"Il Nido di Sofì liegt im dritten Stock eines historischen Gebäudes ohne Aufzug. Das sollte man bei schwerem Gepäck oder dem Wunsch nach einer Unterkunft ohne Treppen berücksichtigen.",
-  "faq.wifi.q":"Gibt es WLAN und eignet sich die Wohnung zum Arbeiten?",
-  "faq.wifi.a":"Ja. Die Wohnung verfügt über schnelles WLAN und einen geeigneten Platz zum Arbeiten während des Aufenthalts.",
-  "faq.kitchen.q":"Ist die Küche ausgestattet?",
-  "faq.kitchen.a":"Ja. Die Küche ist für Frühstück und Mahlzeiten während des Aufenthalts ausgestattet und bietet alles Wesentliche für den täglichen Gebrauch."
-});
-Object.assign(translations.fr,{
-  "faq.checkin.q":"Comment fonctionnent le check-in et le check-out ?",
-  "faq.checkin.a":"Le check-in est possible à partir de 14 h grâce au self check-in avec boîte à clés. Le check-out se fait avant 10 h. Les instructions complètes d’accès sont envoyées avant l’arrivée.",
-  "faq.mobility.q":"À quel étage se trouve l’appartement ?",
-  "faq.mobility.a":"Il Nido di Sofì se trouve au troisième étage d’un bâtiment historique sans ascenseur. Il est utile d’en tenir compte si vous voyagez avec des bagages lourds ou préférez un logement sans escaliers.",
-  "faq.wifi.q":"L’appartement dispose-t-il du Wi-Fi et convient-il au travail ?",
-  "faq.wifi.a":"Oui. L’appartement dispose d’un Wi-Fi rapide et d’un espace adapté aux personnes qui doivent travailler pendant leur séjour.",
-  "faq.kitchen.q":"La cuisine est-elle équipée ?",
-  "faq.kitchen.a":"Oui. La cuisine est équipée pour préparer le petit-déjeuner et les repas pendant le séjour, avec l’essentiel pour un usage quotidien."
-});
-Object.assign(translations.ru,{
-  "faq.checkin.q":"Как проходят заезд и выезд?",
-  "faq.checkin.a":"Заезд возможен с 14:00 самостоятельно через ключевой сейф. Выезд — до 10:00. Полные инструкции по входу отправляются до прибытия.",
-  "faq.mobility.q":"На каком этаже находится квартира?",
-  "faq.mobility.a":"Il Nido di Sofì находится на третьем этаже исторического здания без лифта. Это стоит учитывать, если вы путешествуете с тяжёлым багажом или предпочитаете жильё без лестниц.",
-  "faq.wifi.q":"Есть ли Wi-Fi и подходит ли квартира для работы?",
-  "faq.wifi.a":"Да. В квартире есть быстрый Wi-Fi и место, подходящее для работы во время проживания.",
-  "faq.kitchen.q":"Кухня оборудована?",
-  "faq.kitchen.a":"Да. Кухня оборудована для приготовления завтрака и еды во время проживания и содержит всё необходимое для повседневного использования."
-});
-Object.assign(translations.zh,{
-  "faq.checkin.q":"入住和退房如何安排？",
-  "faq.checkin.a":"14:00 起可通过钥匙密码盒自助入住，退房时间为 10:00 前。完整的入住说明会在抵达前发送。",
-  "faq.mobility.q":"公寓位于几楼？",
-  "faq.mobility.a":"Il Nido di Sofì 位于一栋历史建筑的三楼，楼内没有电梯。如携带较重行李或希望避免楼梯，请提前考虑这一点。",
-  "faq.wifi.q":"公寓有 Wi-Fi，适合办公吗？",
-  "faq.wifi.a":"有。公寓提供高速 Wi-Fi，并设有适合在住宿期间办公的空间。",
-  "faq.kitchen.q":"厨房设备齐全吗？",
-  "faq.kitchen.a":"是的。厨房配有住宿期间准备早餐和日常餐食所需的基本设备。"
-});
-'''
+          // v16 — FAQ content refresh
+          Object.assign(translations.it,{
+            \"faq.checkin.q\":\"Come funzionano check-in e check-out?\",
+            \"faq.checkin.a\":\"Il check-in è disponibile dalle 14:00 tramite self check-in con cassetta di sicurezza. Il check-out è entro le 10:00. Le istruzioni complete per l’ingresso vengono inviate prima dell’arrivo.\",
+            \"faq.mobility.q\":\"A che piano si trova l’appartamento?\",
+            \"faq.mobility.a\":\"Il Nido di Sofì si trova al terzo piano di un edificio storico, senza ascensore. È quindi utile tenerne conto se si viaggia con bagagli pesanti o se si preferiscono soluzioni senza scale.\",
+            \"faq.wifi.q\":\"L’appartamento ha il Wi-Fi ed è adatto anche per lavorare?\",
+            \"faq.wifi.a\":\"Sì. L’appartamento dispone di Wi-Fi veloce e di uno spazio adatto anche a chi ha bisogno di lavorare durante il soggiorno.\",
+            \"faq.kitchen.q\":\"La cucina è attrezzata?\",
+            \"faq.kitchen.a\":\"Sì. La cucina è attrezzata per preparare colazione e pasti durante il soggiorno, con gli elementi essenziali per un utilizzo quotidiano.\"
+          });
+          Object.assign(translations.en,{
+            \"faq.checkin.q\":\"How do check-in and check-out work?\",
+            \"faq.checkin.a\":\"Check-in is available from 2:00 pm via self check-in with a lockbox. Check-out is by 10:00 am. Full entry instructions are sent before arrival.\",
+            \"faq.mobility.q\":\"Which floor is the apartment on?\",
+            \"faq.mobility.a\":\"Il Nido di Sofì is on the third floor of a historic building with no lift. It is worth keeping this in mind if you are travelling with heavy luggage or prefer accommodation without stairs.\",
+            \"faq.wifi.q\":\"Does the apartment have Wi-Fi and is it suitable for working?\",
+            \"faq.wifi.a\":\"Yes. The apartment has fast Wi-Fi and a space suitable for guests who need to work during their stay.\",
+            \"faq.kitchen.q\":\"Is the kitchen equipped?\",
+            \"faq.kitchen.a\":\"Yes. The kitchen is equipped for preparing breakfast and meals during your stay, with the essentials for everyday use.\"
+          });
+          Object.assign(translations.es,{
+            \"faq.checkin.q\":\"¿Cómo funcionan el check-in y el check-out?\",
+            \"faq.checkin.a\":\"El check-in está disponible a partir de las 14:00 mediante llegada autónoma con caja de seguridad. El check-out es antes de las 10:00. Las instrucciones completas se envían antes de la llegada.\",
+            \"faq.mobility.q\":\"¿En qué planta está el apartamento?\",
+            \"faq.mobility.a\":\"Il Nido di Sofì está en la tercera planta de un edificio histórico sin ascensor. Conviene tenerlo en cuenta si se viaja con equipaje pesado o se prefieren alojamientos sin escaleras.\",
+            \"faq.wifi.q\":\"¿El apartamento tiene Wi-Fi y es adecuado para trabajar?\",
+            \"faq.wifi.a\":\"Sí. El apartamento dispone de Wi-Fi rápido y de un espacio adecuado para quienes necesiten trabajar durante la estancia.\",
+            \"faq.kitchen.q\":\"¿La cocina está equipada?\",
+            \"faq.kitchen.a\":\"Sí. La cocina está equipada para preparar desayunos y comidas durante la estancia, con lo esencial para el uso diario.\"
+          });
+          Object.assign(translations.de,{
+            \"faq.checkin.q\":\"Wie funktionieren Check-in und Check-out?\",
+            \"faq.checkin.a\":\"Der Check-in ist ab 14:00 Uhr per Self Check-in mit Schlüsseltresor möglich. Der Check-out erfolgt bis 10:00 Uhr. Die vollständigen Zugangsinformationen werden vor der Anreise gesendet.\",
+            \"faq.mobility.q\":\"In welchem Stockwerk liegt die Wohnung?\",
+            \"faq.mobility.a\":\"Il Nido di Sofì liegt im dritten Stock eines historischen Gebäudes ohne Aufzug. Das sollte man bei schwerem Gepäck oder dem Wunsch nach einer Unterkunft ohne Treppen berücksichtigen.\",
+            \"faq.wifi.q\":\"Gibt es WLAN und eignet sich die Wohnung zum Arbeiten?\",
+            \"faq.wifi.a\":\"Ja. Die Wohnung verfügt über schnelles WLAN und einen geeigneten Platz zum Arbeiten während des Aufenthalts.\",
+            \"faq.kitchen.q\":\"Ist die Küche ausgestattet?\",
+            \"faq.kitchen.a\":\"Ja. Die Küche ist für Frühstück und Mahlzeiten während des Aufenthalts ausgestattet und bietet alles Wesentliche für den täglichen Gebrauch.\"
+          });
+          Object.assign(translations.fr,{
+            \"faq.checkin.q\":\"Comment fonctionnent le check-in et le check-out ?\",
+            \"faq.checkin.a\":\"Le check-in est possible à partir de 14 h grâce au self check-in avec boîte à clés. Le check-out se fait avant 10 h. Les instructions complètes d’accès sont envoyées avant l’arrivée.\",
+            \"faq.mobility.q\":\"À quel étage se trouve l’appartement ?\",
+            \"faq.mobility.a\":\"Il Nido di Sofì se trouve au troisième étage d’un bâtiment historique sans ascenseur. Il est utile d’en tenir compte si vous voyagez avec des bagages lourds ou préférez un logement sans escaliers.\",
+            \"faq.wifi.q\":\"L’appartement dispose-t-il du Wi-Fi et convient-il au travail ?\",
+            \"faq.wifi.a\":\"Oui. L’appartement dispose d’un Wi-Fi rapide et d’un espace adapté aux personnes qui doivent travailler pendant leur séjour.\",
+            \"faq.kitchen.q\":\"La cuisine est-elle équipée ?\",
+            \"faq.kitchen.a\":\"Oui. La cuisine est équipée pour préparer le petit-déjeuner et les repas pendant le séjour, avec l’essentiel pour un usage quotidien.\"
+          });
+          Object.assign(translations.ru,{
+            \"faq.checkin.q\":\"Как проходят заезд и выезд?\",
+            \"faq.checkin.a\":\"Заезд возможен с 14:00 самостоятельно через ключевой сейф. Выезд — до 10:00. Полные инструкции по входу отправляются до прибытия.\",
+            \"faq.mobility.q\":\"На каком этаже находится квартира?\",
+            \"faq.mobility.a\":\"Il Nido di Sofì находится на третьем этаже исторического здания без лифта. Это стоит учитывать, если вы путешествуете с тяжёлым багажом или предпочитаете жильё без лестниц.\",
+            \"faq.wifi.q\":\"Есть ли Wi-Fi и подходит ли квартира для работы?\",
+            \"faq.wifi.a\":\"Да. В квартире есть быстрый Wi-Fi и место, подходящее для работы во время проживания.\",
+            \"faq.kitchen.q\":\"Кухня оборудована?\",
+            \"faq.kitchen.a\":\"Да. Кухня оборудована для приготовления завтрака и еды во время проживания и содержит всё необходимое для повседневного использования.\"
+          });
+          Object.assign(translations.zh,{
+            \"faq.checkin.q\":\"入住和退房如何安排？\",
+            \"faq.checkin.a\":\"14:00 起可通过钥匙密码盒自助入住，退房时间为 10:00 前。完整的入住说明会在抵达前发送。\",
+            \"faq.mobility.q\":\"公寓位于几楼？\",
+            \"faq.mobility.a\":\"Il Nido di Sofì 位于一栋历史建筑的三楼，楼内没有电梯。如携带较重行李或希望避免楼梯，请提前考虑这一点。\",
+            \"faq.wifi.q\":\"公寓有 Wi-Fi，适合办公吗？\",
+            \"faq.wifi.a\":\"有。公寓提供高速 Wi-Fi，并设有适合在住宿期间办公的空间。\",
+            \"faq.kitchen.q\":\"厨房设备齐全吗？\",
+            \"faq.kitchen.a\":\"是的。厨房配有住宿期间准备早餐和日常餐食所需的基本设备。\"
+          });
+          """
+              additions = '\n'.join(line[10:] if line.startswith('          ') else line for line in additions.splitlines())
+              t += additions
           js.write_text(t)
           PY
       - name: Sanity checks
