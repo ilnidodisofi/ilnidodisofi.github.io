@@ -309,9 +309,9 @@ function setDateLimits(){
   ci.addEventListener('change',()=>{
     if(!ci.value){updateSummary();return;}
     const d=new Date(`${ci.value}T12:00:00`);
-    d.setDate(d.getDate()+1);
+    d.setDate(d.getDate()+2);
     co.min=iso(d);
-    if(co.value && co.value<=ci.value) co.value='';
+    if(co.value && co.value<co.min) co.value='';
     updateSummary();
   });
   co.addEventListener('change',updateSummary);
