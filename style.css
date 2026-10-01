@@ -98,15 +98,10 @@
   .events-section,.food-section{padding-top:50px;padding-bottom:50px}
   .events-head,.food-head{margin-bottom:26px}
 
-  /* Horizontal rails on mobile: one section, one swipe instead of long vertical stacks. */
-  .stay-value-grid,
-  .place-grid,
+  /* Horizontal rails on mobile: retained only where they meaningfully shorten the page. */
   .events-grid,
   .food-grid,
-  .guest-voices-grid,
-  .booking-flow,
-  #valdorcia .destinations,
-  .facts{
+  .booking-flow{
     display:flex!important;
     grid-template-columns:none!important;
     gap:12px!important;
@@ -117,20 +112,12 @@
     scrollbar-width:none;
     padding-bottom:8px;
   }
-  .stay-value-grid::-webkit-scrollbar,
-  .place-grid::-webkit-scrollbar,
   .events-grid::-webkit-scrollbar,
   .food-grid::-webkit-scrollbar,
-  .guest-voices-grid::-webkit-scrollbar,
-  .booking-flow::-webkit-scrollbar,
-  #valdorcia .destinations::-webkit-scrollbar,
-  .facts::-webkit-scrollbar{display:none}
+  .booking-flow::-webkit-scrollbar{display:none}
 
-  .stay-value-grid>article,
-  .place-grid>article,
   .events-grid>article,
   .food-grid>article,
-  .guest-voices-grid>article,
   .booking-flow>.booking-step{
     flex:0 0 82vw!important;
     max-width:82vw!important;
@@ -140,17 +127,55 @@
   .events-grid,.food-grid{border:0!important;margin-left:0;margin-right:-7vw;padding-right:7vw}
   .events-grid article,.food-grid article{min-height:235px!important;border:1px solid rgba(37,40,33,.18)!important;padding:24px 22px 26px!important}
   .events-grid article>span,.food-grid article>span{margin-bottom:20px}
-
-  .stay-value-grid,.place-grid,.guest-voices-grid,.booking-flow{margin-right:-7vw;padding-right:7vw}
-  .stay-value-grid>article,.place-grid>article,.guest-voices-grid>article,.booking-flow>.booking-step{border:1px solid rgba(37,40,33,.16);padding:22px!important;min-height:220px}
-
-  #valdorcia .destinations{margin-right:-7vw;padding-right:7vw}
-  #valdorcia .destinations>div{display:flex!important;flex:0 0 68vw;max-width:68vw;min-height:96px;border:1px solid rgba(37,40,33,.16);padding:18px!important;align-items:center;justify-content:space-between;scroll-snap-align:start}
-  #valdorcia .destinations>div:nth-child(n+4){display:flex!important}
-
-  .facts{margin-right:-7vw;padding-right:7vw}
-  .facts>div{flex:0 0 42vw;max-width:42vw;scroll-snap-align:start}
-
-  .guest-voice-card{min-height:220px!important}
+  .booking-flow{margin-right:-7vw;padding-right:7vw}
+  .booking-flow>.booking-step{border:1px solid rgba(37,40,33,.16);padding:22px!important;min-height:220px}
   .food-grid article{min-height:280px!important}
+}
+
+/* v24 - restore the original mobile layouts for core content sections */
+@media(max-width:560px){
+  .facts,
+  .stay-value-grid,
+  .place-grid,
+  .guest-voices-grid,
+  #valdorcia .destinations{
+    overflow:visible!important;
+    scroll-snap-type:none!important;
+    padding-bottom:0!important;
+    margin-right:0!important;
+    padding-right:0!important;
+  }
+
+  .facts{display:grid!important}
+  .facts>div{max-width:none!important;flex:none!important}
+
+  .stay-value-grid,
+  .place-grid,
+  .guest-voices-grid{display:grid!important;grid-template-columns:1fr!important;gap:0!important}
+  .stay-value-grid>article,
+  .place-grid>article,
+  .guest-voices-grid>article{
+    max-width:none!important;
+    flex:none!important;
+    min-height:0!important;
+    border-left:0!important;
+    border-right:0!important;
+    padding-left:0!important;
+    padding-right:0!important;
+  }
+
+  #valdorcia .destinations{display:block!important}
+  #valdorcia .destinations>div{
+    display:flex!important;
+    max-width:none!important;
+    min-height:0!important;
+    flex:none!important;
+    border-left:0!important;
+    border-right:0!important;
+    padding-left:0!important;
+    padding-right:0!important;
+  }
+  #valdorcia .destinations>div:nth-child(n+4){display:none!important}
+
+  .guest-voice-card{padding-top:24px!important;padding-bottom:24px!important}
 }
