@@ -1,4 +1,4 @@
-// Editorial refinements for homepage copy. Loaded after script.js.
+// Homepage editorial layers. Loaded after script.js.
 (() => {
   if (typeof translations === 'undefined') return;
 
@@ -10,162 +10,134 @@
       "home.lead":"Pavimenti in terracotta, travi a vista e spazi raccolti: una dimora toscana da vivere con calma, nel centro storico di Montepulciano.",
       "village.lead":"Dal Nido raggiungi facilmente alcuni dei luoghi e degli indirizzi che rendono speciale Montepulciano.",
       "host.p2":"Abbiamo conservato il carattere della casa, aggiungendo ciò che serve per viverla con naturalezza, senza snaturarla.",
-      "surroundings.title":"La Val d'Orcia<br><em>oltre Montepulciano.</em>",
+      "events.kicker":"04 — EVENTI A MONTEPULCIANO",
+      "events.title":"Un borgo,<br><em>molti appuntamenti.</em>",
+      "events.lead":"Tradizioni, vino, musica e cultura accompagnano Montepulciano durante tutto l’anno.",
+      "events.cantiere.title":"Cantiere Internazionale d’Arte","events.cantiere.text":"Musica, teatro e performance trasformano Montepulciano e la Valdichiana in un palcoscenico estivo diffuso.",
+      "events.calici.title":"Calici di Stelle","events.calici.text":"Una serata dedicata al Vino Nobile e al Rosso di Montepulciano, tra degustazioni, musica e centro storico.",
+      "events.bravio.title":"Bravìo delle Botti","events.bravio.text":"La storica corsa delle otto contrade: botti di circa 80 kg vengono spinte in salita fino a Piazza Grande.",
+      "events.live.title":"Live Rock Festival","events.live.text":"Ad Acquaviva di Montepulciano, musica indipendente con artisti italiani e internazionali.",
+      "events.cantine.title":"Cantine Aperte","events.cantine.text":"Cantine visitabili, incontri con i produttori e degustazioni direttamente nei luoghi in cui nasce il vino.",
+      "events.natale.title":"Natale a Montepulciano","events.natale.text":"Mercatini, casette in legno e atmosfera natalizia animano la parte alta del borgo durante le festività.",
+      "events.ruscello.title":"Ruscello · tradizione contadina","events.ruscello.text":"Una rievocazione della civiltà rurale tra mietitura, battitura del grano, cucina tradizionale e spettacoli.",
+      "food.kicker":"05 — ENOGASTRONOMIA",
+      "food.title":"Un territorio da bere<br><em>e da assaggiare.</em>",
+      "food.lead":"Il vino e la tavola sono due modi diversi di conoscere la stessa Toscana.",
+      "food.wine.title":"ENO · VINI E CANTINE","food.wine.text":"Vino Nobile di Montepulciano e Rosso di Montepulciano sono protagonisti del territorio. Poco più lontano, Montalcino porta con sé il Brunello. Cantine nel centro storico e aziende tra le colline permettono di alternare degustazioni, visite e paesaggio.",
+      "food.table.title":"GASTRO · SAPORI DEL TERRITORIO","food.table.text":"Pici, Pecorino di Pienza, carne di razza Chianina e cucina toscana raccontano il territorio a tavola. Una gastronomia semplice e riconoscibile, legata ai prodotti e alle ricette della zona.",
+      "surroundings.kicker":"07 — DINTORNI","surroundings.title":"La Val d'Orcia<br><em>oltre Montepulciano.</em>",
       "surroundings.lead":"Da Montepulciano, borghi, colline e terme diventano tappe naturali per una giornata fuori porta.",
-      "booking.title":"Scegli le tue date.<br><em>Al resto pensiamo noi.</em>",
+      "booking.kicker":"08 — PRENOTA DIRETTAMENTE","booking.title":"Scegli le tue date.<br><em>Al resto pensiamo noi.</em>",
       "booking.intro":"Indica il periodo desiderato. Verificheremo personalmente disponibilità e totale; dopo la conferma riceverai un link Stripe sicuro con l’importo esatto concordato.",
-      "events.kicker":"04 — EVENTI A MONTEPULCIANO E DINTORNI",
-      "events.title":"Ogni stagione ha<br><em>il suo appuntamento.</em>",
-      "events.lead":"Vino, musica, tradizioni e feste popolari: alcuni degli appuntamenti che scandiscono l’anno tra Montepulciano e il territorio vicino.",
-      "events.bravio.title":"Bravìo delle Botti",
-      "events.bravio.text":"La corsa storica tra le otto contrade di Montepulciano: due spingitori per contrada fanno rotolare botti di circa 80 kg in salita fino a Piazza Grande.",
-      "events.calici.title":"Calici di Stelle",
-      "events.calici.text":"La notte di San Lorenzo dedicata al Vino Nobile e al Rosso di Montepulciano, con degustazioni, musica e prodotti del territorio nel centro storico.",
-      "events.cantiere.title":"Cantiere Internazionale d’Arte",
-      "events.cantiere.text":"Musica, teatro e performance trasformano Montepulciano e la Valdichiana in un grande palcoscenico estivo diffuso.",
-      "events.live.title":"Live Rock Festival",
-      "events.live.text":"Ad Acquaviva di Montepulciano, uno storico festival di musica indipendente con artisti italiani e internazionali.",
-      "events.cantine.title":"Cantine Aperte",
-      "events.cantine.text":"Un’occasione per entrare nelle cantine del territorio, incontrare i produttori e vivere il vino direttamente nei luoghi in cui nasce.",
-      "events.natale.title":"Natale a Montepulciano",
-      "events.natale.text":"Mercatini, casette in legno e atmosfera natalizia animano la parte alta del borgo durante l’Avvento e le festività.",
-      "events.ruscello.title":"Ruscello · rievocazione contadina",
-      "events.ruscello.text":"Nei dintorni di Arezzo, una festa dedicata alla civiltà contadina, alla mietitura e alla battitura del grano, con cucina tradizionale e spettacoli."
+      "faq.kicker":"10 — FAQ"
     },
     en: {
       "hero.subtitle":"An intimate home within the historic walls, just a few steps from Piazza Grande.",
-      "position.lead":"Il Nido di Sofì is on Via del Poliziano, in the upper part of Montepulciano’s old town: a place from which the town is naturally explored on foot.",
       "home.title":"Simple, intimate,<br><em>thoughtfully detailed.</em>",
-      "home.lead":"Terracotta floors, exposed beams and intimate spaces: a Tuscan home made to be enjoyed slowly, in Montepulciano’s old town.",
-      "village.lead":"From Il Nido, some of the places and addresses that define Montepulciano are within easy walking distance.",
-      "host.p2":"We have preserved the character of the house, adding what is needed to make it easy to live in without changing its nature.",
-      "surroundings.title":"The Val d'Orcia<br><em>beyond Montepulciano.</em>",
-      "surroundings.lead":"From Montepulciano, villages, hills and thermal baths become natural day-trip destinations.",
-      "booking.title":"Choose your dates.<br><em>We’ll take care of the rest.</em>",
-      "booking.intro":"Tell us your preferred dates. We will personally confirm availability and the total price; once confirmed, you will receive a secure Stripe link for the exact agreed amount.",
-      "events.kicker":"04 — EVENTS IN MONTEPULCIANO & AROUND",
-      "events.title":"Every season has<br><em>its own occasion.</em>",
-      "events.lead":"Wine, music, traditions and local festivals: some of the events that shape the year in Montepulciano and nearby.",
-      "events.bravio.title":"Bravìo delle Botti",
-      "events.bravio.text":"The historic race between Montepulciano’s eight contrade, with teams pushing roughly 80 kg barrels uphill to Piazza Grande.",
-      "events.calici.title":"Calici di Stelle",
-      "events.calici.text":"A San Lorenzo night devoted to Vino Nobile and Rosso di Montepulciano, with tastings, music and local food in the old town.",
-      "events.cantiere.title":"Cantiere Internazionale d’Arte",
-      "events.cantiere.text":"Music, theatre and performance turn Montepulciano and the Valdichiana into a widespread summer stage.",
-      "events.live.title":"Live Rock Festival",
-      "events.live.text":"In Acquaviva di Montepulciano, a long-running independent music festival with Italian and international artists.",
-      "events.cantine.title":"Cantine Aperte",
-      "events.cantine.text":"A chance to step inside local wineries, meet producers and experience wine where it is actually made.",
-      "events.natale.title":"Christmas in Montepulciano",
-      "events.natale.text":"Markets, wooden chalets and Christmas atmosphere fill the upper part of the old town during Advent and the festive season.",
-      "events.ruscello.title":"Ruscello · rural traditions",
-      "events.ruscello.text":"Near Arezzo, a celebration of rural life, harvest and grain threshing, with traditional food and entertainment."
+      "home.lead":"Terracotta floors, exposed beams and intimate spaces: a Tuscan home made to be enjoyed slowly in Montepulciano’s old town.",
+      "events.kicker":"04 — EVENTS IN MONTEPULCIANO","events.title":"One town,<br><em>many occasions.</em>","events.lead":"Traditions, wine, music and culture accompany Montepulciano throughout the year.",
+      "events.cantiere.title":"Cantiere Internazionale d’Arte","events.cantiere.text":"Music, theatre and performance turn Montepulciano and the Valdichiana into a summer stage.",
+      "events.calici.title":"Calici di Stelle","events.calici.text":"An evening devoted to Vino Nobile and Rosso di Montepulciano, with tastings, music and the old town as a backdrop.",
+      "events.bravio.title":"Bravìo delle Botti","events.bravio.text":"The historic race of the eight contrade, pushing roughly 80 kg barrels uphill to Piazza Grande.",
+      "events.live.title":"Live Rock Festival","events.live.text":"Independent music in Acquaviva di Montepulciano with Italian and international artists.",
+      "events.cantine.title":"Cantine Aperte","events.cantine.text":"Open wineries, meetings with producers and tastings where the wine is made.",
+      "events.natale.title":"Christmas in Montepulciano","events.natale.text":"Markets, wooden chalets and festive atmosphere fill the upper old town during the Christmas season.",
+      "events.ruscello.title":"Ruscello · rural traditions","events.ruscello.text":"A celebration of rural life, harvesting and threshing, with traditional food and entertainment.",
+      "food.kicker":"05 — WINE & FOOD","food.title":"A territory to drink<br><em>and to taste.</em>","food.lead":"Wine and food are two different ways to discover the same Tuscany.",
+      "food.wine.title":"WINE · CELLARS & VINEYARDS","food.wine.text":"Vino Nobile and Rosso di Montepulciano define the local wine culture. Nearby Montalcino adds Brunello, while historic cellars and countryside estates offer tastings, visits and landscape.",
+      "food.table.title":"FOOD · LOCAL FLAVOURS","food.table.text":"Pici, Pecorino di Pienza, Chianina beef and Tuscan cooking tell the story of the area at the table, through distinctive local ingredients and recipes.",
+      "surroundings.kicker":"07 — SURROUNDINGS","surroundings.title":"The Val d'Orcia<br><em>beyond Montepulciano.</em>",
+      "booking.kicker":"08 — BOOK DIRECT","booking.title":"Choose your dates.<br><em>We’ll take care of the rest.</em>","faq.kicker":"10 — FAQ"
     },
     es: {
-      "hero.subtitle":"Una casa íntima dentro de las murallas históricas, a pocos pasos de Piazza Grande.",
-      "home.title":"Sencilla, íntima,<br><em>cuidada al detalle.</em>",
-      "home.lead":"Suelos de terracota, vigas vistas y espacios recogidos: una casa toscana para disfrutar sin prisas, en el centro histórico de Montepulciano.",
-      "surroundings.title":"La Val d'Orcia<br><em>más allá de Montepulciano.</em>",
-      "booking.title":"Elige tus fechas.<br><em>Del resto nos ocupamos nosotros.</em>",
-      "events.kicker":"04 — EVENTOS EN MONTEPULCIANO Y ALREDEDORES",
-      "events.title":"Cada estación tiene<br><em>su cita.</em>",
-      "events.lead":"Vino, música, tradiciones y fiestas populares marcan el año entre Montepulciano y su entorno.",
-      "events.bravio.title":"Bravìo delle Botti","events.bravio.text":"La histórica carrera entre las ocho contradas de Montepulciano, empujando barriles de unos 80 kg cuesta arriba hasta Piazza Grande.",
-      "events.calici.title":"Calici di Stelle","events.calici.text":"La noche de San Lorenzo dedicada al Vino Nobile y al Rosso di Montepulciano, con catas, música y productos locales.",
-      "events.cantiere.title":"Cantiere Internazionale d’Arte","events.cantiere.text":"Música, teatro y espectáculos convierten Montepulciano y la Valdichiana en un gran escenario de verano.",
-      "events.live.title":"Live Rock Festival","events.live.text":"En Acquaviva di Montepulciano, un histórico festival de música independiente con artistas italianos e internacionales.",
-      "events.cantine.title":"Cantine Aperte","events.cantine.text":"Una oportunidad para entrar en las bodegas, conocer a los productores y vivir el vino en el lugar donde nace.",
-      "events.natale.title":"Navidad en Montepulciano","events.natale.text":"Mercados, casetas de madera y ambiente navideño animan la parte alta del pueblo durante el Adviento.",
-      "events.ruscello.title":"Ruscello · tradición rural","events.ruscello.text":"Cerca de Arezzo, una fiesta dedicada a la vida campesina, la siega y la trilla, con cocina tradicional y espectáculos."
+      "events.kicker":"04 — EVENTOS EN MONTEPULCIANO","events.title":"Un pueblo,<br><em>muchas citas.</em>","events.lead":"Tradiciones, vino, música y cultura acompañan Montepulciano durante todo el año.",
+      "events.cantiere.title":"Cantiere Internazionale d’Arte","events.cantiere.text":"Música, teatro y espectáculos convierten Montepulciano y la Valdichiana en un escenario de verano.",
+      "events.calici.title":"Calici di Stelle","events.calici.text":"Una noche dedicada al Vino Nobile y al Rosso di Montepulciano, entre catas, música y casco histórico.",
+      "events.bravio.title":"Bravìo delle Botti","events.bravio.text":"La carrera histórica de las ocho contradas, empujando barriles de unos 80 kg cuesta arriba hasta Piazza Grande.",
+      "events.live.title":"Live Rock Festival","events.live.text":"Música independiente en Acquaviva di Montepulciano con artistas italianos e internacionales.",
+      "events.cantine.title":"Cantine Aperte","events.cantine.text":"Bodegas abiertas, encuentros con productores y catas en los lugares donde nace el vino.",
+      "events.natale.title":"Navidad en Montepulciano","events.natale.text":"Mercados, casetas de madera y ambiente navideño animan la parte alta del pueblo.",
+      "events.ruscello.title":"Ruscello · tradición rural","events.ruscello.text":"Una recreación de la vida campesina, la siega y la trilla, con cocina tradicional y espectáculos.",
+      "food.kicker":"05 — ENOGASTRONOMÍA","food.title":"Un territorio para beber<br><em>y saborear.</em>","food.lead":"El vino y la mesa son dos formas de descubrir la misma Toscana.",
+      "food.wine.title":"VINO · BODEGAS Y VIÑEDOS","food.wine.text":"Vino Nobile y Rosso di Montepulciano protagonizan el territorio. Cerca, Montalcino aporta el Brunello, entre bodegas históricas, fincas y catas.",
+      "food.table.title":"GASTRO · SABORES LOCALES","food.table.text":"Pici, Pecorino di Pienza, carne Chianina y cocina toscana cuentan el territorio a través de productos y recetas locales.",
+      "surroundings.kicker":"07 — ALREDEDORES","booking.kicker":"08 — RESERVA DIRECTA","faq.kicker":"10 — FAQ"
     },
     de: {
-      "hero.subtitle":"Ein persönliches Zuhause innerhalb der historischen Stadtmauern, nur wenige Schritte von der Piazza Grande entfernt.",
-      "home.title":"Schlicht, persönlich,<br><em>mit Liebe zum Detail.</em>",
-      "home.lead":"Terrakottaböden, Sichtbalken und gemütliche Räume: ein toskanisches Zuhause für entspannte Tage in der Altstadt von Montepulciano.",
-      "surroundings.title":"Das Val d'Orcia<br><em>jenseits von Montepulciano.</em>",
-      "booking.title":"Wählen Sie Ihre Daten.<br><em>Um den Rest kümmern wir uns.</em>",
-      "events.kicker":"04 — VERANSTALTUNGEN IN MONTEPULCIANO & UMGEBUNG",
-      "events.title":"Jede Jahreszeit hat<br><em>ihren eigenen Termin.</em>",
-      "events.lead":"Wein, Musik, Traditionen und Volksfeste prägen das Jahr in Montepulciano und der Umgebung.",
-      "events.bravio.title":"Bravìo delle Botti","events.bravio.text":"Das historische Fassrennen der acht Contrade von Montepulciano, bei dem rund 80 kg schwere Fässer bergauf bis zur Piazza Grande gerollt werden.",
-      "events.calici.title":"Calici di Stelle","events.calici.text":"Die Nacht von San Lorenzo mit Vino Nobile, Rosso di Montepulciano, Verkostungen, Musik und regionalen Produkten.",
-      "events.cantiere.title":"Cantiere Internazionale d’Arte","events.cantiere.text":"Musik, Theater und Performances verwandeln Montepulciano und die Valdichiana in eine sommerliche Kulturbühne.",
-      "events.live.title":"Live Rock Festival","events.live.text":"In Acquaviva di Montepulciano findet ein traditionsreiches Independent-Festival mit italienischen und internationalen Künstlern statt.",
-      "events.cantine.title":"Cantine Aperte","events.cantine.text":"Eine Gelegenheit, Weingüter zu besuchen, Produzenten kennenzulernen und Wein direkt an seinem Entstehungsort zu erleben.",
-      "events.natale.title":"Weihnachten in Montepulciano","events.natale.text":"Märkte, Holzhütten und Weihnachtsstimmung beleben während der Adventszeit den oberen Teil der Altstadt.",
-      "events.ruscello.title":"Ruscello · ländliche Tradition","events.ruscello.text":"Bei Arezzo erinnert ein Fest mit traditioneller Küche und Unterhaltung an Ernte, Dreschen und bäuerliches Leben."
+      "events.kicker":"04 — VERANSTALTUNGEN IN MONTEPULCIANO","events.title":"Eine Stadt,<br><em>viele Erlebnisse.</em>","events.lead":"Traditionen, Wein, Musik und Kultur begleiten Montepulciano durch das ganze Jahr.",
+      "events.cantiere.title":"Cantiere Internazionale d’Arte","events.cantiere.text":"Musik, Theater und Performances machen Montepulciano und die Valdichiana zur sommerlichen Bühne.",
+      "events.calici.title":"Calici di Stelle","events.calici.text":"Ein Abend mit Vino Nobile, Rosso di Montepulciano, Verkostungen, Musik und Altstadtatmosphäre.",
+      "events.bravio.title":"Bravìo delle Botti","events.bravio.text":"Das historische Rennen der acht Contrade mit rund 80 kg schweren Fässern bergauf bis zur Piazza Grande.",
+      "events.live.title":"Live Rock Festival","events.live.text":"Independent-Musik in Acquaviva di Montepulciano mit italienischen und internationalen Künstlern.",
+      "events.cantine.title":"Cantine Aperte","events.cantine.text":"Offene Weingüter, Treffen mit Produzenten und Verkostungen direkt am Entstehungsort des Weins.",
+      "events.natale.title":"Weihnachten in Montepulciano","events.natale.text":"Märkte, Holzhütten und Weihnachtsstimmung beleben die obere Altstadt.",
+      "events.ruscello.title":"Ruscello · bäuerliche Tradition","events.ruscello.text":"Eine Erinnerung an ländliches Leben, Ernte und Dreschen mit traditioneller Küche und Unterhaltung.",
+      "food.kicker":"05 — WEIN & KULINARIK","food.title":"Eine Region zum Trinken<br><em>und Genießen.</em>","food.lead":"Wein und Küche sind zwei Wege, dieselbe Toskana kennenzulernen.",
+      "food.wine.title":"WEIN · KELLER & REBEN","food.wine.text":"Vino Nobile und Rosso di Montepulciano prägen die Region. In der Nähe ergänzt Montalcino mit Brunello das Erlebnis aus Kellern, Gütern und Verkostungen.",
+      "food.table.title":"KÜCHE · REGIONALE AROMEN","food.table.text":"Pici, Pecorino di Pienza, Chianina-Rind und toskanische Küche erzählen die Region über Produkte und Rezepte.",
+      "surroundings.kicker":"07 — UMGEBUNG","booking.kicker":"08 — DIREKT BUCHEN","faq.kicker":"10 — FAQ"
     },
     fr: {
-      "hero.subtitle":"Une maison intime à l’intérieur des remparts historiques, à quelques pas de Piazza Grande.",
-      "home.title":"Simple, intime,<br><em>soignée dans les détails.</em>",
-      "home.lead":"Sols en terre cuite, poutres apparentes et espaces intimes : une maison toscane à vivre tranquillement, dans le centre historique de Montepulciano.",
-      "surroundings.title":"Le Val d'Orcia<br><em>au-delà de Montepulciano.</em>",
-      "booking.title":"Choisissez vos dates.<br><em>Nous nous occupons du reste.</em>",
-      "events.kicker":"04 — ÉVÉNEMENTS À MONTEPULCIANO ET ALENTOURS",
-      "events.title":"Chaque saison a<br><em>son rendez-vous.</em>",
-      "events.lead":"Vin, musique, traditions et fêtes populaires rythment l’année à Montepulciano et dans les environs.",
-      "events.bravio.title":"Bravìo delle Botti","events.bravio.text":"La course historique des huit contrade de Montepulciano, avec des tonneaux d’environ 80 kg poussés en montée jusqu’à Piazza Grande.",
-      "events.calici.title":"Calici di Stelle","events.calici.text":"La nuit de San Lorenzo consacrée au Vino Nobile et au Rosso di Montepulciano, avec dégustations, musique et produits locaux.",
-      "events.cantiere.title":"Cantiere Internazionale d’Arte","events.cantiere.text":"Musique, théâtre et performances transforment Montepulciano et la Valdichiana en grande scène estivale.",
-      "events.live.title":"Live Rock Festival","events.live.text":"À Acquaviva di Montepulciano, un festival historique de musique indépendante avec des artistes italiens et internationaux.",
-      "events.cantine.title":"Cantine Aperte","events.cantine.text":"Une occasion d’entrer dans les domaines, de rencontrer les producteurs et de vivre le vin là où il naît.",
-      "events.natale.title":"Noël à Montepulciano","events.natale.text":"Marchés, chalets en bois et ambiance de Noël animent la partie haute de la ville pendant l’Avent.",
-      "events.ruscello.title":"Ruscello · traditions rurales","events.ruscello.text":"Près d’Arezzo, une fête consacrée à la vie rurale, à la moisson et au battage, avec cuisine traditionnelle et spectacles."
+      "events.kicker":"04 — ÉVÉNEMENTS À MONTEPULCIANO","events.title":"Un bourg,<br><em>de nombreux rendez-vous.</em>","events.lead":"Traditions, vin, musique et culture accompagnent Montepulciano toute l’année.",
+      "events.cantiere.title":"Cantiere Internazionale d’Arte","events.cantiere.text":"Musique, théâtre et performances transforment Montepulciano et la Valdichiana en scène estivale.",
+      "events.calici.title":"Calici di Stelle","events.calici.text":"Une soirée consacrée au Vino Nobile et au Rosso di Montepulciano, entre dégustations, musique et centre historique.",
+      "events.bravio.title":"Bravìo delle Botti","events.bravio.text":"La course historique des huit contrade, avec des tonneaux d’environ 80 kg poussés jusqu’à Piazza Grande.",
+      "events.live.title":"Live Rock Festival","events.live.text":"Musique indépendante à Acquaviva di Montepulciano avec artistes italiens et internationaux.",
+      "events.cantine.title":"Cantine Aperte","events.cantine.text":"Domaines ouverts, rencontres avec les producteurs et dégustations là où le vin est produit.",
+      "events.natale.title":"Noël à Montepulciano","events.natale.text":"Marchés, chalets en bois et ambiance de Noël animent la partie haute du bourg.",
+      "events.ruscello.title":"Ruscello · tradition rurale","events.ruscello.text":"Une évocation de la vie rurale, de la moisson et du battage avec cuisine traditionnelle et spectacles.",
+      "food.kicker":"05 — VIN & GASTRONOMIE","food.title":"Un territoire à boire<br><em>et à savourer.</em>","food.lead":"Le vin et la table sont deux façons de découvrir la même Toscane.",
+      "food.wine.title":"VIN · CAVES & VIGNOBLES","food.wine.text":"Vino Nobile et Rosso di Montepulciano dominent le territoire. À proximité, Montalcino ajoute le Brunello, entre caves historiques, domaines et dégustations.",
+      "food.table.title":"TABLE · SAVEURS LOCALES","food.table.text":"Pici, Pecorino di Pienza, viande Chianina et cuisine toscane racontent le territoire à travers ses produits et recettes.",
+      "surroundings.kicker":"07 — ALENTOURS","booking.kicker":"08 — RÉSERVER EN DIRECT","faq.kicker":"10 — FAQ"
     },
-    ru: {
-      "events.kicker":"04 — СОБЫТИЯ В МОНТЕПУЛЬЧАНО И ОКРЕСТНОСТЯХ",
-      "events.title":"У каждого сезона<br><em>своё событие.</em>",
-      "events.lead":"Вино, музыка, традиции и народные праздники задают ритм году в Монтепульчано и окрестностях.",
-      "events.bravio.title":"Bravìo delle Botti","events.bravio.text":"Историческая гонка восьми контрад Монтепульчано: тяжёлые бочки катят в гору до Piazza Grande.",
-      "events.calici.title":"Calici di Stelle","events.calici.text":"Ночь Сан-Лоренцо с Vino Nobile, Rosso di Montepulciano, дегустациями, музыкой и местными продуктами.",
-      "events.cantiere.title":"Cantiere Internazionale d’Arte","events.cantiere.text":"Музыка, театр и перформансы превращают Монтепульчано и Вальдикьяну в летнюю культурную сцену.",
-      "events.live.title":"Live Rock Festival","events.live.text":"В Аквавиве-ди-Монтепульчано проходит известный фестиваль независимой музыки с итальянскими и международными артистами.",
-      "events.cantine.title":"Cantine Aperte","events.cantine.text":"Возможность посетить винодельни, встретиться с производителями и познакомиться с вином там, где оно рождается.",
-      "events.natale.title":"Рождество в Монтепульчано","events.natale.text":"Рождественские ярмарки и деревянные домики оживляют верхнюю часть старого города в период Адвента.",
-      "events.ruscello.title":"Ruscello · сельские традиции","events.ruscello.text":"Недалеко от Ареццо проходит праздник сельской жизни, жатвы и молотьбы с традиционной кухней и развлечениями."
-    },
-    zh: {
-      "events.kicker":"04 — 蒙特普尔恰诺及周边活动",
-      "events.title":"每个季节，<br><em>都有值得期待的活动。</em>",
-      "events.lead":"葡萄酒、音乐、传统与民俗节庆，让蒙特普尔恰诺及周边地区全年都有不同节奏。",
-      "events.bravio.title":"Bravìo delle Botti 滚酒桶赛","events.bravio.text":"蒙特普尔恰诺八个历史街区之间的传统比赛，参赛者将约80公斤的酒桶沿上坡街道推至 Piazza Grande。",
-      "events.calici.title":"Calici di Stelle","events.calici.text":"圣洛伦佐之夜以 Vino Nobile、Rosso di Montepulciano、品鉴、音乐和当地美食为主题。",
-      "events.cantiere.title":"Cantiere Internazionale d’Arte","events.cantiere.text":"音乐、戏剧与表演让蒙特普尔恰诺和 Valdichiana 在夏季化身为一座开放舞台。",
-      "events.live.title":"Live Rock Festival","events.live.text":"在 Acquaviva di Montepulciano 举办的独立音乐节，汇集意大利和国际艺术家。",
-      "events.cantine.title":"Cantine Aperte 酒庄开放日","events.cantine.text":"走进当地酒庄、认识酿酒者，并在葡萄酒诞生的地方亲自体验它。",
-      "events.natale.title":"蒙特普尔恰诺圣诞季","events.natale.text":"降临节和圣诞假期期间，木屋市集与节日氛围会装点老城上部。",
-      "events.ruscello.title":"Ruscello · 乡村传统节","events.ruscello.text":"阿雷佐附近的乡村节庆，围绕收割、打谷和传统农耕生活展开，并设有地方美食与演出。"
-    }
+    ru: {"events.kicker":"04 — СОБЫТИЯ В МОНТЕПУЛЬЧАНО","food.kicker":"05 — ВИНО И ГАСТРОНОМИЯ","surroundings.kicker":"07 — ОКРЕСТНОСТИ","booking.kicker":"08 — ПРЯМОЕ БРОНИРОВАНИЕ","faq.kicker":"10 — FAQ"},
+    zh: {"events.kicker":"04 — 蒙特普尔恰诺活动","food.kicker":"05 — 葡萄酒与美食","surroundings.kicker":"07 — 周边","booking.kicker":"08 — 直接预订","faq.kicker":"10 — 常见问题"}
   };
 
   Object.entries(copy).forEach(([lang, values]) => {
     if (translations[lang]) Object.assign(translations[lang], values);
   });
 
-  const oldTaste = document.querySelector('.taste-section');
-  if (oldTaste) oldTaste.remove();
-  const bravio = document.querySelector('#bravio');
-  const host = document.querySelector('.host.section');
-  if (bravio) bravio.remove();
+  document.querySelector('.taste-section')?.remove();
+  document.querySelector('#bravio')?.remove();
+  document.querySelector('.events-section')?.remove();
+  document.querySelector('.food-section')?.remove();
 
-  if (host && !document.querySelector('.events-section')) {
-    const section = document.createElement('section');
-    section.className = 'events-section section';
-    section.innerHTML = `
-      <div class="section-kicker" data-i18n="events.kicker">04 — EVENTI A MONTEPULCIANO E DINTORNI</div>
-      <div class="events-head">
-        <h2 data-i18n-html="events.title">Ogni stagione ha<br><em>il suo appuntamento.</em></h2>
-        <p class="lead" data-i18n="events.lead">Vino, musica, tradizioni e feste popolari: alcuni degli appuntamenti che scandiscono l’anno tra Montepulciano e il territorio vicino.</p>
-      </div>
-      <div class="events-grid">
-        <article><span>01</span><h3 data-i18n="events.bravio.title">Bravìo delle Botti</h3><p data-i18n="events.bravio.text">La corsa storica tra le otto contrade di Montepulciano: due spingitori per contrada fanno rotolare botti di circa 80 kg in salita fino a Piazza Grande.</p></article>
-        <article><span>02</span><h3 data-i18n="events.calici.title">Calici di Stelle</h3><p data-i18n="events.calici.text">La notte di San Lorenzo dedicata al Vino Nobile e al Rosso di Montepulciano, con degustazioni, musica e prodotti del territorio nel centro storico.</p></article>
-        <article><span>03</span><h3 data-i18n="events.cantiere.title">Cantiere Internazionale d’Arte</h3><p data-i18n="events.cantiere.text">Musica, teatro e performance trasformano Montepulciano e la Valdichiana in un grande palcoscenico estivo diffuso.</p></article>
-        <article><span>04</span><h3 data-i18n="events.live.title">Live Rock Festival</h3><p data-i18n="events.live.text">Ad Acquaviva di Montepulciano, uno storico festival di musica indipendente con artisti italiani e internazionali.</p></article>
-        <article><span>05</span><h3 data-i18n="events.cantine.title">Cantine Aperte</h3><p data-i18n="events.cantine.text">Un’occasione per entrare nelle cantine del territorio, incontrare i produttori e vivere il vino direttamente nei luoghi in cui nasce.</p></article>
-        <article><span>06</span><h3 data-i18n="events.natale.title">Natale a Montepulciano</h3><p data-i18n="events.natale.text">Mercatini, casette in legno e atmosfera natalizia animano la parte alta del borgo durante l’Avvento e le festività.</p></article>
-        <article><span>07</span><h3 data-i18n="events.ruscello.title">Ruscello · rievocazione contadina</h3><p data-i18n="events.ruscello.text">Nei dintorni di Arezzo, una festa dedicata alla civiltà contadina, alla mietitura e alla battitura del grano, con cucina tradizionale e spettacoli.</p></article>
+  const host = document.querySelector('.host.section');
+  if (host) {
+    const events = document.createElement('section');
+    events.className = 'events-section section';
+    events.innerHTML = `
+      <div class="section-kicker" data-i18n="events.kicker">04 — EVENTI A MONTEPULCIANO</div>
+      <div class="events-head"><h2 data-i18n-html="events.title">Un borgo,<br><em>molti appuntamenti.</em></h2><p class="lead" data-i18n="events.lead">Tradizioni, vino, musica e cultura accompagnano Montepulciano durante tutto l’anno.</p></div>
+      <div class="events-grid mobile-rail">
+        <article><span>01</span><h3 data-i18n="events.cantiere.title">Cantiere Internazionale d’Arte</h3><p data-i18n="events.cantiere.text">Musica, teatro e performance trasformano Montepulciano e la Valdichiana in un palcoscenico estivo diffuso.</p></article>
+        <article><span>02</span><h3 data-i18n="events.calici.title">Calici di Stelle</h3><p data-i18n="events.calici.text">Una serata dedicata al Vino Nobile e al Rosso di Montepulciano.</p></article>
+        <article><span>03</span><h3 data-i18n="events.bravio.title">Bravìo delle Botti</h3><p data-i18n="events.bravio.text">La storica corsa delle otto contrade con botti spinte fino a Piazza Grande.</p></article>
+        <article><span>04</span><h3 data-i18n="events.live.title">Live Rock Festival</h3><p data-i18n="events.live.text">Musica indipendente ad Acquaviva di Montepulciano.</p></article>
+        <article><span>05</span><h3 data-i18n="events.cantine.title">Cantine Aperte</h3><p data-i18n="events.cantine.text">Cantine visitabili, produttori e degustazioni.</p></article>
+        <article><span>06</span><h3 data-i18n="events.natale.title">Natale a Montepulciano</h3><p data-i18n="events.natale.text">Mercatini e atmosfera natalizia nel borgo.</p></article>
+        <article><span>07</span><h3 data-i18n="events.ruscello.title">Ruscello · tradizione contadina</h3><p data-i18n="events.ruscello.text">Una rievocazione della civiltà rurale e delle sue tradizioni.</p></article>
       </div>`;
-    host.parentNode.insertBefore(section, host);
+
+    const food = document.createElement('section');
+    food.className = 'food-section section';
+    food.innerHTML = `
+      <div class="section-kicker" data-i18n="food.kicker">05 — ENOGASTRONOMIA</div>
+      <div class="food-head"><h2 data-i18n-html="food.title">Un territorio da bere<br><em>e da assaggiare.</em></h2><p class="lead" data-i18n="food.lead">Il vino e la tavola sono due modi diversi di conoscere la stessa Toscana.</p></div>
+      <div class="food-grid mobile-rail">
+        <article class="food-wine"><span>ENO</span><h3 data-i18n="food.wine.title">ENO · VINI E CANTINE</h3><p data-i18n="food.wine.text">Vino Nobile di Montepulciano, Rosso di Montepulciano, Brunello di Montalcino, cantine e degustazioni.</p></article>
+        <article class="food-table"><span>GASTRO</span><h3 data-i18n="food.table.title">GASTRO · SAPORI DEL TERRITORIO</h3><p data-i18n="food.table.text">Pici, Pecorino di Pienza, Chianina e cucina toscana.</p></article>
+      </div>`;
+
+    host.parentNode.insertBefore(events, host);
+    host.parentNode.insertBefore(food, host);
+
+    const hostKicker = host.querySelector('.section-kicker');
+    if (hostKicker) hostKicker.textContent = '06 — ROSARIO & SOFIA';
   }
+
+  const contactsKicker = document.querySelector('.contacts .section-kicker');
+  if (contactsKicker) contactsKicker.textContent = '09 — CONTATTI';
 })();
