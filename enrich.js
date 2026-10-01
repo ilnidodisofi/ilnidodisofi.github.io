@@ -1,155 +1,25 @@
 // Extra editorial detail for sections 04 and 05. Loaded after editorial.js.
 (() => {
   const data = {
-    it: {
-      stayTitle: 'La cura si vede<br><em>nelle piccole cose.</em>',
-      events: {
-        bravio: 'FINE AGOSTO · CONTRADE, CORTEI E CORSA DELLE BOTTI',
-        cantiere: 'LUGLIO–AGOSTO · MUSICA, TEATRO E PERFORMANCE',
-        calici: '10 AGOSTO · VINO, DEGUSTAZIONI E CENTRO STORICO',
-        live: 'SETTEMBRE · MUSICA INDIPENDENTE AD ACQUAVIVA',
-        cantine: 'FINE MAGGIO · CANTINE, PRODUTTORI E DEGUSTAZIONI',
-        natale: 'NOVEMBRE–GENNAIO · MERCATINI E ATMOSFERA NATALIZIA',
-        ruscello: 'METÀ AGOSTO · TEATRO POPOLARE IN PIAZZA GRANDE'
-      },
-      noteTitle: 'Dove ci piace tornare',
-      noteText: 'Prima dell’arrivo condividiamo cantine, enoteche, trattorie e botteghe che conosciamo personalmente e che sceglieremmo anche per noi.'
-    },
-    en: {
-      stayTitle: 'Care lives<br><em>in the small details.</em>',
-      events: {
-        bravio: 'LATE AUGUST · CONTRADE, PARADES AND BARREL RACE',
-        cantiere: 'JULY–AUGUST · MUSIC, THEATRE AND PERFORMANCE',
-        calici: '10 AUGUST · WINE, TASTINGS AND THE OLD TOWN',
-        live: 'SEPTEMBER · INDEPENDENT MUSIC IN ACQUAVIVA',
-        cantine: 'LATE MAY · WINERIES, PRODUCERS AND TASTINGS',
-        natale: 'NOVEMBER–JANUARY · MARKETS AND FESTIVE ATMOSPHERE',
-        ruscello: 'MID-AUGUST · FOLK THEATRE IN PIAZZA GRANDE'
-      },
-      noteTitle: 'Places we return to',
-      noteText: 'Before arrival we share wineries, wine bars, trattorias and small shops we know personally and would choose for ourselves.'
-    },
-    es: {
-      stayTitle: 'El cuidado se nota<br><em>en los pequeños detalles.</em>',
-      events: {
-        bravio: 'FINALES DE AGOSTO · CONTRADAS, DESFILES Y CARRERA DE BARRILES',
-        cantiere: 'JULIO–AGOSTO · MÚSICA, TEATRO Y ESPECTÁCULOS',
-        calici: '10 DE AGOSTO · VINO, CATAS Y CENTRO HISTÓRICO',
-        live: 'SEPTIEMBRE · MÚSICA INDEPENDIENTE EN ACQUAVIVA',
-        cantine: 'FINALES DE MAYO · BODEGAS, PRODUCTORES Y CATAS',
-        natale: 'NOVIEMBRE–ENERO · MERCADOS Y AMBIENTE NAVIDEÑO',
-        ruscello: 'MEDIADOS DE AGOSTO · TEATRO POPULAR EN PIAZZA GRANDE'
-      },
-      noteTitle: 'Lugares a los que volvemos',
-      noteText: 'Antes de la llegada compartimos bodegas, enotecas, trattorias y tiendas que conocemos personalmente y que también elegiríamos para nosotros.'
-    },
-    de: {
-      stayTitle: 'Sorgfalt zeigt sich<br><em>in den kleinen Dingen.</em>',
-      events: {
-        bravio: 'ENDE AUGUST · CONTRADE, UMZÜGE UND FASSRENNEN',
-        cantiere: 'JULI–AUGUST · MUSIK, THEATER UND PERFORMANCE',
-        calici: '10. AUGUST · WEIN, VERKOSTUNGEN UND ALTSTADT',
-        live: 'SEPTEMBER · INDEPENDENT-MUSIK IN ACQUAVIVA',
-        cantine: 'ENDE MAI · WEINGÜTER, PRODUZENTEN UND VERKOSTUNGEN',
-        natale: 'NOVEMBER–JANUAR · MÄRKTE UND WEIHNACHTSSTIMMUNG',
-        ruscello: 'MITTE AUGUST · VOLKSTHEATER AUF DER PIAZZA GRANDE'
-      },
-      noteTitle: 'Orte, zu denen wir zurückkehren',
-      noteText: 'Vor der Anreise teilen wir Weingüter, Enotheken, Trattorien und kleine Läden, die wir persönlich kennen und auch selbst wählen würden.'
-    },
-    fr: {
-      stayTitle: 'Le soin se voit<br><em>dans les petits détails.</em>',
-      events: {
-        bravio: 'FIN AOÛT · CONTRADE, CORTÈGES ET COURSE DE TONNEAUX',
-        cantiere: 'JUILLET–AOÛT · MUSIQUE, THÉÂTRE ET PERFORMANCES',
-        calici: '10 AOÛT · VIN, DÉGUSTATIONS ET CENTRE HISTORIQUE',
-        live: 'SEPTEMBRE · MUSIQUE INDÉPENDANTE À ACQUAVIVA',
-        cantine: 'FIN MAI · DOMAINES, PRODUCTEURS ET DÉGUSTATIONS',
-        natale: 'NOVEMBRE–JANVIER · MARCHÉS ET AMBIANCE DE NOËL',
-        ruscello: 'MI-AOÛT · THÉÂTRE POPULAIRE SUR PIAZZA GRANDE'
-      },
-      noteTitle: 'Les adresses où nous revenons',
-      noteText: 'Avant l’arrivée, nous partageons des domaines, bars à vin, trattorie et boutiques que nous connaissons personnellement et que nous choisirions aussi pour nous.'
-    },
-    ru: {
-      stayTitle: 'Забота заметна<br><em>в мелочах.</em>',
-      events: {
-        bravio: 'КОНЕЦ АВГУСТА · КОНТРАДЫ, ШЕСТВИЯ И ГОНКА БОЧЕК',
-        cantiere: 'ИЮЛЬ–АВГУСТ · МУЗЫКА, ТЕАТР И ПЕРФОРМАНСЫ',
-        calici: '10 АВГУСТА · ВИНО, ДЕГУСТАЦИИ И СТАРЫЙ ГОРОД',
-        live: 'СЕНТЯБРЬ · НЕЗАВИСИМАЯ МУЗЫКА В АККВАВИВЕ',
-        cantine: 'КОНЕЦ МАЯ · ВИНОДЕЛЬНИ, ПРОИЗВОДИТЕЛИ И ДЕГУСТАЦИИ',
-        natale: 'НОЯБРЬ–ЯНВАРЬ · ЯРМАРКИ И РОЖДЕСТВЕНСКАЯ АТМОСФЕРА',
-        ruscello: 'СЕРЕДИНА АВГУСТА · НАРОДНЫЙ ТЕАТР НА PIAZZA GRANDE'
-      },
-      noteTitle: 'Места, куда мы возвращаемся',
-      noteText: 'Перед приездом мы делимся винодельнями, энотеками, тратториями и лавками, которые знаем лично и выбрали бы для себя.'
-    },
-    zh: {
-      stayTitle: '用心藏在<br><em>每一个小细节里。</em>',
-      events: {
-        bravio: '八月底 · 历史街区、巡游与滚酒桶赛',
-        cantiere: '七月至八月 · 音乐、戏剧与表演',
-        calici: '8月10日 · 葡萄酒、品鉴与老城氛围',
-        live: '九月 · 阿夸维瓦独立音乐节',
-        cantine: '五月底 · 酒庄、酿酒人和品鉴活动',
-        natale: '十一月至一月 · 圣诞市集与节日氛围',
-        ruscello: '八月中旬 · 大广场上的民间戏剧'
-      },
-      noteTitle: '我们会再次光顾的地方',
-      noteText: '抵达前，我们会分享一些自己熟悉、也愿意亲自再去的酒庄、葡萄酒吧、托斯卡纳餐馆和小店。'
-    }
+    it: {stayTitle:'La cura si vede<br><em>nelle piccole cose.</em>', events:{bravio:'FINE AGOSTO · CONTRADE, CORTEI E CORSA DELLE BOTTI',cantiere:'LUGLIO–AGOSTO · MUSICA, TEATRO E PERFORMANCE',calici:'10 AGOSTO · VINO, DEGUSTAZIONI E CENTRO STORICO',live:'SETTEMBRE · MUSICA INDIPENDENTE AD ACQUAVIVA',cantine:'FINE MAGGIO · CANTINE, PRODUTTORI E DEGUSTAZIONI',natale:'NOVEMBRE–GENNAIO · MERCATINI E ATMOSFERA NATALIZIA',ruscello:'METÀ AGOSTO · TEATRO POPOLARE IN PIAZZA GRANDE',anteprima:'FEBBRAIO · NUOVE ANNATE E DEGUSTAZIONI ALLA FORTEZZA',brunello:'NOVEMBRE · MONTALCINO · NUOVE ANNATE E DEGUSTAZIONI'}, noteTitle:'Dove ci piace tornare',noteText:'Prima dell’arrivo condividiamo cantine, enoteche, trattorie e botteghe che conosciamo personalmente e che sceglieremmo anche per noi.'},
+    en: {stayTitle:'Care lives<br><em>in the small details.</em>',events:{bravio:'LATE AUGUST · CONTRADE, PARADES AND BARREL RACE',cantiere:'JULY–AUGUST · MUSIC, THEATRE AND PERFORMANCE',calici:'10 AUGUST · WINE, TASTINGS AND THE OLD TOWN',live:'SEPTEMBER · INDEPENDENT MUSIC IN ACQUAVIVA',cantine:'LATE MAY · WINERIES, PRODUCERS AND TASTINGS',natale:'NOVEMBER–JANUARY · MARKETS AND FESTIVE ATMOSPHERE',ruscello:'MID-AUGUST · FOLK THEATRE IN PIAZZA GRANDE',anteprima:'FEBRUARY · NEW VINTAGES AND TASTINGS AT THE FORTEZZA',brunello:'NOVEMBER · MONTALCINO · NEW VINTAGES AND TASTINGS'},noteTitle:'Places we return to',noteText:'Before arrival we share wineries, wine bars, trattorias and small shops we know personally and would choose for ourselves.'},
+    es: {stayTitle:'El cuidado se nota<br><em>en los pequeños detalles.</em>',events:{bravio:'FINALES DE AGOSTO · CONTRADAS, DESFILES Y CARRERA DE BARRILES',cantiere:'JULIO–AGOSTO · MÚSICA, TEATRO Y ESPECTÁCULOS',calici:'10 DE AGOSTO · VINO, CATAS Y CENTRO HISTÓRICO',live:'SEPTIEMBRE · MÚSICA INDEPENDIENTE EN ACQUAVIVA',cantine:'FINALES DE MAYO · BODEGAS, PRODUCTORES Y CATAS',natale:'NOVIEMBRE–ENERO · MERCADOS Y AMBIENTE NAVIDEÑO',ruscello:'MEDIADOS DE AGOSTO · TEATRO POPULAR EN PIAZZA GRANDE',anteprima:'FEBRERO · NUEVAS AÑADAS Y CATAS EN LA FORTEZZA',brunello:'NOVIEMBRE · MONTALCINO · NUEVAS AÑADAS Y CATAS'},noteTitle:'Lugares a los que volvemos',noteText:'Antes de la llegada compartimos bodegas, enotecas, trattorias y tiendas que conocemos personalmente y que también elegiríamos para nosotros.'},
+    de: {stayTitle:'Sorgfalt zeigt sich<br><em>in den kleinen Dingen.</em>',events:{bravio:'ENDE AUGUST · CONTRADE, UMZÜGE UND FASSRENNEN',cantiere:'JULI–AUGUST · MUSIK, THEATER UND PERFORMANCE',calici:'10. AUGUST · WEIN, VERKOSTUNGEN UND ALTSTADT',live:'SEPTEMBER · INDEPENDENT-MUSIK IN ACQUAVIVA',cantine:'ENDE MAI · WEINGÜTER, PRODUZENTEN UND VERKOSTUNGEN',natale:'NOVEMBER–JANUAR · MÄRKTE UND WEIHNACHTSSTIMMUNG',ruscello:'MITTE AUGUST · VOLKSTHEATER AUF DER PIAZZA GRANDE',anteprima:'FEBRUAR · NEUE JAHRGÄNGE UND VERKOSTUNGEN IN DER FORTEZZA',brunello:'NOVEMBER · MONTALCINO · NEUE JAHRGÄNGE UND VERKOSTUNGEN'},noteTitle:'Orte, zu denen wir zurückkehren',noteText:'Vor der Anreise teilen wir Weingüter, Enotheken, Trattorien und kleine Läden, die wir persönlich kennen und auch selbst wählen würden.'},
+    fr: {stayTitle:'Le soin se voit<br><em>dans les petits détails.</em>',events:{bravio:'FIN AOÛT · CONTRADE, CORTÈGES ET COURSE DE TONNEAUX',cantiere:'JUILLET–AOÛT · MUSIQUE, THÉÂTRE ET PERFORMANCES',calici:'10 AOÛT · VIN, DÉGUSTATIONS ET CENTRE HISTORIQUE',live:'SEPTEMBRE · MUSIQUE INDÉPENDANTE À ACQUAVIVA',cantine:'FIN MAI · DOMAINES, PRODUCTEURS ET DÉGUSTATIONS',natale:'NOVEMBRE–JANVIER · MARCHÉS ET AMBIANCE DE NOËL',ruscello:'MI-AOÛT · THÉÂTRE POPULAIRE SUR PIAZZA GRANDE',anteprima:'FÉVRIER · NOUVEAUX MILLÉSIMES ET DÉGUSTATIONS À LA FORTEZZA',brunello:'NOVEMBRE · MONTALCINO · NOUVEAUX MILLÉSIMES ET DÉGUSTATIONS'},noteTitle:'Les adresses où nous revenons',noteText:'Avant l’arrivée, nous partageons des domaines, bars à vin, trattorie et boutiques que nous connaissons personnellement et que nous choisirions aussi pour nous.'},
+    ru: {stayTitle:'Забота заметна<br><em>в мелочах.</em>',events:{bravio:'КОНЕЦ АВГУСТА · КОНТРАДЫ, ШЕСТВИЯ И ГОНКА БОЧЕК',cantiere:'ИЮЛЬ–АВГУСТ · МУЗЫКА, ТЕАТР И ПЕРФОРМАНСЫ',calici:'10 АВГУСТА · ВИНО, ДЕГУСТАЦИИ И СТАРЫЙ ГОРОД',live:'СЕНТЯБРЬ · НЕЗАВИСИМАЯ МУЗЫКА В АККВАВИВЕ',cantine:'КОНЕЦ МАЯ · ВИНОДЕЛЬНИ, ПРОИЗВОДИТЕЛИ И ДЕГУСТАЦИИ',natale:'НОЯБРЬ–ЯНВАРЬ · ЯРМАРКИ И РОЖДЕСТВЕНСКАЯ АТМОСФЕРА',ruscello:'СЕРЕДИНА АВГУСТА · НАРОДНЫЙ ТЕАТР НА PIAZZA GRANDE',anteprima:'ФЕВРАЛЬ · НОВЫЕ ВИНТАЖИ И ДЕГУСТАЦИИ В ФОРТЕЦЦЕ',brunello:'НОЯБРЬ · МОНТАЛЬЧИНО · НОВЫЕ ВИНТАЖИ И ДЕГУСТАЦИИ'},noteTitle:'Места, куда мы возвращаемся',noteText:'Перед приездом мы делимся винодельнями, энотеками, тратториями и лавками, которые знаем лично и выбрали бы для себя.'},
+    zh: {stayTitle:'用心藏在<br><em>每一个小细节里。</em>',events:{bravio:'八月底 · 历史街区、巡游与滚酒桶赛',cantiere:'七月至八月 · 音乐、戏剧与表演',calici:'8月10日 · 葡萄酒、品鉴与老城氛围',live:'九月 · 阿夸维瓦独立音乐节',cantine:'五月底 · 酒庄、酿酒人和品鉴活动',natale:'十一月至一月 · 圣诞市集与节日氛围',ruscello:'八月中旬 · 大广场上的民间戏剧',anteprima:'二月 · 新年份葡萄酒与城堡品鉴',brunello:'十一月 · 蒙塔尔奇诺 · 新年份葡萄酒与品鉴'},noteTitle:'我们会再次光顾的地方',noteText:'抵达前，我们会分享一些自己熟悉、也愿意亲自再去的酒庄、葡萄酒吧、托斯卡纳餐馆和小店。'}
   };
-
-  const eventKeys = [
-    ['events.bravio.title', 'bravio'],
-    ['events.cantiere.title', 'cantiere'],
-    ['events.calici.title', 'calici'],
-    ['events.live.title', 'live'],
-    ['events.cantine.title', 'cantine'],
-    ['events.natale.title', 'natale'],
-    ['events.ruscello.title', 'ruscello']
-  ];
-
-  function currentLang() {
-    const selected = document.getElementById('languageSelect')?.value || document.documentElement.lang || 'it';
-    return data[selected] ? selected : 'en';
-  }
-
-  function render() {
-    const t = data[currentLang()];
-
-    const stayTitle = document.querySelector('[data-value-html="title"]');
-    if (stayTitle) stayTitle.innerHTML = t.stayTitle;
-
-    eventKeys.forEach(([i18nKey, key]) => {
-      const title = document.querySelector(`.events-grid [data-i18n="${i18nKey}"]`);
-      const article = title?.closest('article');
-      if (!article) return;
-      let meta = article.querySelector('.event-meta');
-      if (!meta) {
-        meta = document.createElement('p');
-        meta.className = 'event-meta';
-        title.insertAdjacentElement('afterend', meta);
-      }
-      meta.textContent = t.events[key];
-    });
-
-    document.querySelectorAll('.food-highlights').forEach(el => el.remove());
-
-    const grid = document.querySelector('.food-grid');
-    if (grid) {
-      let note = document.querySelector('.food-note');
-      if (!note) {
-        note = document.createElement('div');
-        note.className = 'food-note';
-        grid.insertAdjacentElement('afterend', note);
-      }
-      note.innerHTML = `<strong>${t.noteTitle}</strong><p>${t.noteText}</p>`;
+  const eventKeys=[['events.bravio.title','bravio'],['events.cantiere.title','cantiere'],['events.calici.title','calici'],['events.live.title','live'],['events.cantine.title','cantine'],['events.natale.title','natale'],['events.ruscello.title','ruscello'],['events.anteprima.title','anteprima'],['events.brunello.title','brunello']];
+  function currentLang(){const selected=document.getElementById('languageSelect')?.value||document.documentElement.lang||'it';return data[selected]?selected:'en';}
+  function ensureNewEvents(){
+    const grid=document.querySelector('.events-grid'); if(!grid)return;
+    if(!grid.querySelector('[data-i18n="events.anteprima.title"]')) grid.insertAdjacentHTML('beforeend','<article><span>08</span><h3 data-i18n="events.anteprima.title">Anteprima del Vino Nobile</h3><p data-i18n="events.anteprima.text">Alla Fortezza, produttori e appassionati scoprono le nuove annate del Vino Nobile di Montepulciano attraverso degustazioni e incontri.</p></article>');
+    if(!grid.querySelector('[data-i18n="events.brunello.title"]')) grid.insertAdjacentHTML('beforeend','<article><span>09</span><h3 data-i18n="events.brunello.title">Benvenuto Brunello · Montalcino</h3><p data-i18n="events.brunello.text">A Montalcino, le nuove annate del Brunello sono protagoniste di uno degli appuntamenti più conosciuti del calendario enologico toscano.</p></article>');
+    if(typeof translations!=='undefined'){
+      const copy={it:['Anteprima del Vino Nobile','Alla Fortezza, produttori e appassionati scoprono le nuove annate del Vino Nobile di Montepulciano attraverso degustazioni e incontri.','Benvenuto Brunello · Montalcino','A Montalcino, le nuove annate del Brunello sono protagoniste di uno degli appuntamenti più conosciuti del calendario enologico toscano.'],en:['Vino Nobile Preview','At the Fortezza, producers and wine lovers discover the new Vino Nobile di Montepulciano vintages through tastings and encounters.','Benvenuto Brunello · Montalcino','In Montalcino, new Brunello vintages take centre stage at one of Tuscany’s best-known wine events.'],es:['Anteprima del Vino Nobile','En la Fortezza, productores y aficionados descubren las nuevas añadas de Vino Nobile di Montepulciano entre catas y encuentros.','Benvenuto Brunello · Montalcino','En Montalcino, las nuevas añadas de Brunello protagonizan una de las citas vinícolas más conocidas de Toscana.'],de:['Anteprima del Vino Nobile','In der Fortezza entdecken Produzenten und Weinliebhaber die neuen Jahrgänge des Vino Nobile di Montepulciano bei Verkostungen und Begegnungen.','Benvenuto Brunello · Montalcino','In Montalcino stehen die neuen Brunello-Jahrgänge bei einem der bekanntesten Weintermine der Toskana im Mittelpunkt.'],fr:['Anteprima del Vino Nobile','À la Fortezza, producteurs et amateurs découvrent les nouveaux millésimes du Vino Nobile di Montepulciano lors de dégustations et rencontres.','Benvenuto Brunello · Montalcino','À Montalcino, les nouveaux millésimes de Brunello sont au cœur de l’un des rendez-vous viticoles les plus connus de Toscane.'],ru:['Anteprima del Vino Nobile','В Фортецце производители и любители вина знакомятся с новыми винтажами Vino Nobile di Montepulciano на дегустациях и встречах.','Benvenuto Brunello · Монтальчино','В Монтальчино новые винтажи Brunello становятся центром одного из самых известных винных событий Тосканы.'],zh:['贵族葡萄酒新年份预览','在城堡，酒庄与葡萄酒爱好者通过品鉴和交流了解 Vino Nobile di Montepulciano 的新年份。','Benvenuto Brunello · 蒙塔尔奇诺','在蒙塔尔奇诺，Brunello 新年份葡萄酒成为托斯卡纳知名葡萄酒活动的主角。']};
+      Object.entries(copy).forEach(([lang,v])=>{if(translations[lang])Object.assign(translations[lang],{'events.anteprima.title':v[0],'events.anteprima.text':v[1],'events.brunello.title':v[2],'events.brunello.text':v[3]});});
     }
   }
-
-  render();
-  document.addEventListener('DOMContentLoaded', render);
-  document.getElementById('languageSelect')?.addEventListener('change', () => setTimeout(render, 0));
+  function render(){ensureNewEvents();const t=data[currentLang()];const stayTitle=document.querySelector('[data-value-html="title"]');if(stayTitle)stayTitle.innerHTML=t.stayTitle;eventKeys.forEach(([i18nKey,key])=>{const title=document.querySelector(`.events-grid [data-i18n="${i18nKey}"]`);const article=title?.closest('article');if(!article)return;let meta=article.querySelector('.event-meta');if(!meta){meta=document.createElement('p');meta.className='event-meta';title.insertAdjacentElement('afterend',meta);}meta.textContent=t.events[key];});document.querySelectorAll('.food-highlights').forEach(el=>el.remove());const grid=document.querySelector('.food-grid');if(grid){let note=document.querySelector('.food-note');if(!note){note=document.createElement('div');note.className='food-note';grid.insertAdjacentElement('afterend',note);}note.innerHTML=`<strong>${t.noteTitle}</strong><p>${t.noteText}</p>`;}}
+  ensureNewEvents();render();document.addEventListener('DOMContentLoaded',render);document.getElementById('languageSelect')?.addEventListener('change',()=>setTimeout(render,0));
 })();
