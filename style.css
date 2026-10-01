@@ -66,6 +66,10 @@
 .food-grid .food-table h3::after{content:"Sapori del territorio";font:500 clamp(25px,2.2vw,34px)/1.05 var(--serif)}
 .food-grid p{margin:0;line-height:1.72;max-width:620px}
 
+/* Section 02: keep only the most useful amenity chips. */
+.amenities [data-i18n="amenities.checkin"],
+.amenities [data-i18n="amenities.workspace"]{display:none!important}
+
 @media(max-width:900px){
   .brand-showcase{min-height:300px;padding:42px 8%}
   .places{padding-top:72px;padding-bottom:72px}
@@ -88,6 +92,10 @@
   .guest-voice-card{padding:24px 0;min-height:0}
   .contacts{padding-top:54px;padding-bottom:54px}
   .host-copy{padding-top:48px;padding-bottom:48px}
+
+  /* Remove the olive gap above the host image on phones. */
+  .host-image{min-height:0!important;height:auto!important;background:none!important}
+  .host-image img{display:block!important;width:100%!important;height:auto!important;object-fit:cover!important}
 
   /* Keep only Events as a horizontal rail. */
   .events-section,.food-section{padding:50px 7%}
