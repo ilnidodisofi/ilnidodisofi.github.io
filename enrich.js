@@ -4,67 +4,93 @@
     it: {
       events: {
         bravio: 'FINE AGOSTO · CONTRADE, CORTEI E CORSA DELLE BOTTI',
-        cantiere: 'LUGLIO · MUSICA, TEATRO E PERFORMANCE',
-        calici: 'AGOSTO · VINO, DEGUSTAZIONI E CENTRO STORICO',
+        cantiere: 'LUGLIO–AGOSTO · MUSICA, TEATRO E PERFORMANCE',
+        calici: '10 AGOSTO · VINO, DEGUSTAZIONI E CENTRO STORICO',
         live: 'SETTEMBRE · MUSICA INDIPENDENTE AD ACQUAVIVA',
-        cantine: 'PRIMAVERA E AUTUNNO · VISITE E DEGUSTAZIONI',
+        cantine: 'FINE MAGGIO · CANTINE, PRODUTTORI E DEGUSTAZIONI',
         natale: 'NOVEMBRE–GENNAIO · MERCATINI E ATMOSFERA NATALIZIA',
-        ruscello: 'TRADIZIONE POPOLARE · TEATRO E CULTURA CONTADINA'
+        ruscello: 'METÀ AGOSTO · TEATRO POPOLARE IN PIAZZA GRANDE'
       },
-      noteTitle: 'I nostri indirizzi',
-      noteText: 'Prima dell’arrivo condividiamo alcuni luoghi che conosciamo personalmente: cantine, enoteche, trattorie e botteghe da cui partire per scoprire il territorio con più gusto.'
+      noteTitle: 'Dove ci piace tornare',
+      noteText: 'Prima dell’arrivo condividiamo cantine, enoteche, trattorie e botteghe che conosciamo personalmente e che sceglieremmo anche per noi.'
     },
     en: {
       events: {
         bravio: 'LATE AUGUST · CONTRADE, PARADES AND BARREL RACE',
-        cantiere: 'JULY · MUSIC, THEATRE AND PERFORMANCE',
-        calici: 'AUGUST · WINE, TASTINGS AND THE OLD TOWN',
+        cantiere: 'JULY–AUGUST · MUSIC, THEATRE AND PERFORMANCE',
+        calici: '10 AUGUST · WINE, TASTINGS AND THE OLD TOWN',
         live: 'SEPTEMBER · INDEPENDENT MUSIC IN ACQUAVIVA',
-        cantine: 'SPRING & AUTUMN · WINERY VISITS AND TASTINGS',
+        cantine: 'LATE MAY · WINERIES, PRODUCERS AND TASTINGS',
         natale: 'NOVEMBER–JANUARY · MARKETS AND FESTIVE ATMOSPHERE',
-        ruscello: 'FOLK TRADITION · THEATRE AND RURAL CULTURE'
+        ruscello: 'MID-AUGUST · FOLK THEATRE IN PIAZZA GRANDE'
       },
-      noteTitle: 'Our places',
-      noteText: 'Before arrival we share a few places we know personally: wineries, wine bars, trattorias and small shops that are a good starting point for discovering the area through food and wine.'
+      noteTitle: 'Places we return to',
+      noteText: 'Before arrival we share wineries, wine bars, trattorias and small shops we know personally and would choose for ourselves.'
     },
     es: {
       events: {
         bravio: 'FINALES DE AGOSTO · CONTRADAS, DESFILES Y CARRERA DE BARRILES',
-        cantiere: 'JULIO · MÚSICA, TEATRO Y ESPECTÁCULOS',
-        calici: 'AGOSTO · VINO, CATAS Y CENTRO HISTÓRICO',
+        cantiere: 'JULIO–AGOSTO · MÚSICA, TEATRO Y ESPECTÁCULOS',
+        calici: '10 DE AGOSTO · VINO, CATAS Y CENTRO HISTÓRICO',
         live: 'SEPTIEMBRE · MÚSICA INDEPENDIENTE EN ACQUAVIVA',
-        cantine: 'PRIMAVERA Y OTOÑO · VISITAS Y CATAS',
+        cantine: 'FINALES DE MAYO · BODEGAS, PRODUCTORES Y CATAS',
         natale: 'NOVIEMBRE–ENERO · MERCADOS Y AMBIENTE NAVIDEÑO',
-        ruscello: 'TRADICIÓN POPULAR · TEATRO Y CULTURA CAMPESINA'
+        ruscello: 'MEDIADOS DE AGOSTO · TEATRO POPULAR EN PIAZZA GRANDE'
       },
-      noteTitle: 'Nuestros sitios',
-      noteText: 'Antes de la llegada compartimos algunos lugares que conocemos personalmente: bodegas, enotecas, trattorias y tiendas para descubrir mejor el territorio.'
+      noteTitle: 'Lugares a los que volvemos',
+      noteText: 'Antes de la llegada compartimos bodegas, enotecas, trattorias y tiendas que conocemos personalmente y que también elegiríamos para nosotros.'
     },
     de: {
       events: {
         bravio: 'ENDE AUGUST · CONTRADE, UMZÜGE UND FASSRENNEN',
-        cantiere: 'JULI · MUSIK, THEATER UND PERFORMANCE',
-        calici: 'AUGUST · WEIN, VERKOSTUNGEN UND ALTSTADT',
+        cantiere: 'JULI–AUGUST · MUSIK, THEATER UND PERFORMANCE',
+        calici: '10. AUGUST · WEIN, VERKOSTUNGEN UND ALTSTADT',
         live: 'SEPTEMBER · INDEPENDENT-MUSIK IN ACQUAVIVA',
-        cantine: 'FRÜHLING & HERBST · BESUCHE UND VERKOSTUNGEN',
+        cantine: 'ENDE MAI · WEINGÜTER, PRODUZENTEN UND VERKOSTUNGEN',
         natale: 'NOVEMBER–JANUAR · MÄRKTE UND WEIHNACHTSSTIMMUNG',
-        ruscello: 'VOLKSTRADITION · THEATER UND LÄNDLICHE KULTUR'
+        ruscello: 'MITTE AUGUST · VOLKSTHEATER AUF DER PIAZZA GRANDE'
       },
-      noteTitle: 'Unsere Adressen',
-      noteText: 'Vor der Anreise teilen wir einige Orte, die wir persönlich kennen: Weingüter, Enotheken, Trattorien und kleine Läden als guter Ausgangspunkt für Genuss im Gebiet.'
+      noteTitle: 'Orte, zu denen wir zurückkehren',
+      noteText: 'Vor der Anreise teilen wir Weingüter, Enotheken, Trattorien und kleine Läden, die wir persönlich kennen und auch selbst wählen würden.'
     },
     fr: {
       events: {
         bravio: 'FIN AOÛT · CONTRADE, CORTÈGES ET COURSE DE TONNEAUX',
-        cantiere: 'JUILLET · MUSIQUE, THÉÂTRE ET PERFORMANCES',
-        calici: 'AOÛT · VIN, DÉGUSTATIONS ET CENTRE HISTORIQUE',
+        cantiere: 'JUILLET–AOÛT · MUSIQUE, THÉÂTRE ET PERFORMANCES',
+        calici: '10 AOÛT · VIN, DÉGUSTATIONS ET CENTRE HISTORIQUE',
         live: 'SEPTEMBRE · MUSIQUE INDÉPENDANTE À ACQUAVIVA',
-        cantine: 'PRINTEMPS & AUTOMNE · VISITES ET DÉGUSTATIONS',
+        cantine: 'FIN MAI · DOMAINES, PRODUCTEURS ET DÉGUSTATIONS',
         natale: 'NOVEMBRE–JANVIER · MARCHÉS ET AMBIANCE DE NOËL',
-        ruscello: 'TRADITION POPULAIRE · THÉÂTRE ET CULTURE RURALE'
+        ruscello: 'MI-AOÛT · THÉÂTRE POPULAIRE SUR PIAZZA GRANDE'
       },
-      noteTitle: 'Nos adresses',
-      noteText: 'Avant l’arrivée, nous partageons quelques adresses que nous connaissons personnellement : domaines, bars à vin, trattorie et boutiques pour découvrir le territoire par le goût.'
+      noteTitle: 'Les adresses où nous revenons',
+      noteText: 'Avant l’arrivée, nous partageons des domaines, bars à vin, trattorie et boutiques que nous connaissons personnellement et que nous choisirions aussi pour nous.'
+    },
+    ru: {
+      events: {
+        bravio: 'КОНЕЦ АВГУСТА · КОНТРАДЫ, ШЕСТВИЯ И ГОНКА БОЧЕК',
+        cantiere: 'ИЮЛЬ–АВГУСТ · МУЗЫКА, ТЕАТР И ПЕРФОРМАНСЫ',
+        calici: '10 АВГУСТА · ВИНО, ДЕГУСТАЦИИ И СТАРЫЙ ГОРОД',
+        live: 'СЕНТЯБРЬ · НЕЗАВИСИМАЯ МУЗЫКА В АККВАВИВЕ',
+        cantine: 'КОНЕЦ МАЯ · ВИНОДЕЛЬНИ, ПРОИЗВОДИТЕЛИ И ДЕГУСТАЦИИ',
+        natale: 'НОЯБРЬ–ЯНВАРЬ · ЯРМАРКИ И РОЖДЕСТВЕНСКАЯ АТМОСФЕРА',
+        ruscello: 'СЕРЕДИНА АВГУСТА · НАРОДНЫЙ ТЕАТР НА PIAZZA GRANDE'
+      },
+      noteTitle: 'Места, куда мы возвращаемся',
+      noteText: 'Перед приездом мы делимся винодельнями, энотеками, тратториями и лавками, которые знаем лично и выбрали бы для себя.'
+    },
+    zh: {
+      events: {
+        bravio: '八月底 · 历史街区、巡游与滚酒桶赛',
+        cantiere: '七月至八月 · 音乐、戏剧与表演',
+        calici: '8月10日 · 葡萄酒、品鉴与老城氛围',
+        live: '九月 · 阿夸维瓦独立音乐节',
+        cantine: '五月底 · 酒庄、酿酒人和品鉴活动',
+        natale: '十一月至一月 · 圣诞市集与节日氛围',
+        ruscello: '八月中旬 · 大广场上的民间戏剧'
+      },
+      noteTitle: '我们会再次光顾的地方',
+      noteText: '抵达前，我们会分享一些自己熟悉、也愿意亲自再去的酒庄、葡萄酒吧、托斯卡纳餐馆和小店。'
     }
   };
 
@@ -84,8 +110,7 @@
   }
 
   function render() {
-    const lang = currentLang();
-    const t = data[lang];
+    const t = data[currentLang()];
 
     eventKeys.forEach(([i18nKey, key]) => {
       const title = document.querySelector(`.events-grid [data-i18n="${i18nKey}"]`);
