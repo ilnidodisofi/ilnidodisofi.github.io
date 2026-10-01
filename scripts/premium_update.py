@@ -1,0 +1,100 @@
+from pathlib import Path
+
+index=Path('index.html')
+s=index.read_text()
+marker='    <section class="places section" id="montepulciano">'
+if marker not in s:
+    raise SystemExit('Montepulciano section marker not found')
+
+section='''    <section class="stay-value section" id="pensato-per-due">
+      <div class="section-kicker" data-value="kicker">UN SOGGIORNO PENSATO PER DUE</div>
+      <div class="stay-value-head">
+        <h2 data-value-html="title">La cura si vede<br><em>nelle piccole cose.</em></h2>
+        <p class="lead" data-value="lead">Il Nido di Sofì è una casa raccolta per due persone, preparata con attenzione perché all'arrivo tutto sia semplice, naturale e già pronto.</p>
+      </div>
+      <div class="stay-value-grid">
+        <article><span>01</span><h3 data-value="c1t">Pensato per due</h3><p data-value="c1p">Spazi intimi e funzionali, una camera matrimoniale e il ritmo tranquillo di una casa pensata per essere vissuta in coppia.</p></article>
+        <article><span>02</span><h3 data-value="c2t">Tutto pronto all'arrivo</h3><p data-value="c2p">Letto preparato, biancheria da bagno completa e prodotti essenziali per bagno e doccia. In cucina, una piccola selezione di caffè, tè e tisane per i primi momenti in casa.</p></article>
+        <article><span>03</span><h3 data-value="c3t">Un piccolo gesto di benvenuto</h3><p data-value="c3p">Tra i piccoli gesti di benvenuto, per chi lo gradisce, lasciamo anche un assaggio di vino rosso di Montepulciano.</p></article>
+        <article><span>04</span><h3 data-value="c4t">Montepulciano, secondo noi</h3><p data-value="c4p">Prima dell'arrivo inviamo una guida privata con parcheggi, luoghi da vedere e indirizzi che conosciamo e consigliamo personalmente.</p></article>
+      </div>
+      <div class="stay-value-history">
+        <div><span class="eyebrow" data-value="historyKicker">VIA DEL POLIZIANO</span><h3 data-value="historyTitle">Una strada che racconta il borgo.</h3></div>
+        <p data-value="historyText">Il palazzo si trova nel cuore della parte alta di Montepulciano, di fronte alla storica Casa del Poliziano, lungo la strada legata ad Agnolo Poliziano. Un punto del borgo in cui ancora oggi le guide si fermano a raccontarne la storia.</p>
+      </div>
+      <div class="stay-value-essentials"><span data-value="essentialsLabel">In casa trovi anche</span><p data-value="essentials">Wi-Fi veloce · Smart TV · cucina attrezzata · macchina espresso · bollitore · asciugacapelli · ferro da stiro · ventilatore · kit di primo soccorso · kit da cucito</p></div>
+    </section>
+
+'''
+if 'id="pensato-per-due"' not in s:
+    s=s.replace(marker,section+marker,1)
+
+old='''          <div class="booking-summary" id="bookingSummary" hidden aria-live="polite"></div>\n          <button class="button button-dark" type="submit" data-i18n="form.submit">Prepara email</button>'''
+new='''          <div class="booking-summary" id="bookingSummary" hidden aria-live="polite"></div>\n          <p class="minimum-stay-note" data-value="minimumStay">Soggiorno minimo: 2 notti.</p>\n          <button class="button button-dark" type="submit" data-i18n="form.submit">Prepara email</button>'''
+if old in s and 'minimum-stay-note' not in s:
+    s=s.replace(old,new,1)
+s=s.replace('style.css?v=16','style.css?v=17').replace('script.js?v=16','script.js?v=17')
+
+if 'const valueCopy=' not in s:
+    inline='''
+  <script>
+  document.addEventListener('DOMContentLoaded',()=>{
+    const valueCopy={
+      it:{kicker:'UN SOGGIORNO PENSATO PER DUE',title:'La cura si vede<br><em>nelle piccole cose.</em>',lead:"Il Nido di Sofì è una casa raccolta per due persone, preparata con attenzione perché all’arrivo tutto sia semplice, naturale e già pronto.",c1t:'Pensato per due',c1p:'Spazi intimi e funzionali, una camera matrimoniale e il ritmo tranquillo di una casa pensata per essere vissuta in coppia.',c2t:'Tutto pronto all’arrivo',c2p:'Letto preparato, biancheria da bagno completa e prodotti essenziali per bagno e doccia. In cucina, una piccola selezione di caffè, tè e tisane per i primi momenti in casa.',c3t:'Un piccolo gesto di benvenuto',c3p:'Tra i piccoli gesti di benvenuto, per chi lo gradisce, lasciamo anche un assaggio di vino rosso di Montepulciano.',c4t:'Montepulciano, secondo noi',c4p:'Prima dell’arrivo inviamo una guida privata con parcheggi, luoghi da vedere e indirizzi che conosciamo e consigliamo personalmente.',historyKicker:'VIA DEL POLIZIANO',historyTitle:'Una strada che racconta il borgo.',historyText:'Il palazzo si trova nel cuore della parte alta di Montepulciano, di fronte alla storica Casa del Poliziano, lungo la strada legata ad Agnolo Poliziano. Un punto del borgo in cui ancora oggi le guide si fermano a raccontarne la storia.',essentialsLabel:'In casa trovi anche',essentials:'Wi-Fi veloce · Smart TV · cucina attrezzata · macchina espresso · bollitore · asciugacapelli · ferro da stiro · ventilatore · kit di primo soccorso · kit da cucito',minimumStay:'Soggiorno minimo: 2 notti.'},
+      en:{kicker:'A STAY DESIGNED FOR TWO',title:'Care shows<br><em>in the small details.</em>',lead:'Il Nido di Sofì is an intimate home for two, prepared with care so that everything feels simple, natural and ready when you arrive.',c1t:'Designed for two',c1p:'Intimate, functional spaces, a double bedroom and the unhurried feel of a home intended to be enjoyed as a couple.',c2t:'Ready when you arrive',c2p:'A made-up bed, a complete set of bathroom linen and essential bath products. In the kitchen, a small selection of coffee, tea and herbal infusions for your first moments at home.',c3t:'A small welcome gesture',c3p:'Among our small welcome gestures, for those who enjoy it, we also leave a taste of local red wine from Montepulciano.',c4t:'Montepulciano, our way',c4p:'Before arrival, we send a private guide with parking information, places to see and addresses we personally know and recommend.',historyKicker:'VIA DEL POLIZIANO',historyTitle:'A street that tells the story of the town.',historyText:'The building is in the upper heart of Montepulciano, opposite the historic Casa del Poliziano, on the street associated with Agnolo Poliziano. It is still a place where local guides stop to tell part of the town’s story.',essentialsLabel:'You will also find',essentials:'Fast Wi-Fi · Smart TV · equipped kitchen · espresso machine · kettle · hairdryer · iron · fan · first-aid kit · sewing kit',minimumStay:'Minimum stay: 2 nights.'},
+      es:{kicker:'UNA ESTANCIA PENSADA PARA DOS',title:'El cuidado se nota<br><em>en las pequeñas cosas.</em>',lead:'Il Nido di Sofì es una casa íntima para dos personas, preparada con atención para que al llegar todo resulte sencillo, natural y listo.',c1t:'Pensado para dos',c1p:'Espacios íntimos y funcionales, dormitorio doble y el ritmo tranquilo de una casa pensada para disfrutar en pareja.',c2t:'Todo listo al llegar',c2p:'Cama preparada, juego completo de toallas y productos esenciales para el baño. En la cocina, una pequeña selección de café, té e infusiones para los primeros momentos en casa.',c3t:'Un pequeño gesto de bienvenida',c3p:'Entre nuestros pequeños gestos de bienvenida, para quien lo desee, dejamos también una degustación de vino tinto de Montepulciano.',c4t:'Montepulciano, según nosotros',c4p:'Antes de la llegada enviamos una guía privada con aparcamientos, lugares que visitar y direcciones que conocemos y recomendamos personalmente.',historyKicker:'VIA DEL POLIZIANO',historyTitle:'Una calle que cuenta la historia del pueblo.',historyText:'El edificio se encuentra en la parte alta del centro de Montepulciano, frente a la histórica Casa del Poliziano, en la calle vinculada a Agnolo Poliziano. Todavía hoy es uno de los puntos donde los guías se detienen a contar la historia del pueblo.',essentialsLabel:'También encontrarás',essentials:'Wi-Fi rápido · Smart TV · cocina equipada · cafetera espresso · hervidor · secador · plancha · ventilador · botiquín · kit de costura',minimumStay:'Estancia mínima: 2 noches.'},
+      de:{kicker:'EIN AUFENTHALT FÜR ZWEI',title:'Sorgfalt zeigt sich<br><em>in den kleinen Dingen.</em>',lead:'Il Nido di Sofì ist ein intimes Zuhause für zwei, mit Sorgfalt vorbereitet, damit bei der Ankunft alles unkompliziert, selbstverständlich und bereit ist.',c1t:'Für zwei gedacht',c1p:'Intime, funktionale Räume, ein Doppelzimmer und die ruhige Atmosphäre eines Zuhauses, das man zu zweit genießen kann.',c2t:'Bei Ankunft alles bereit',c2p:'Ein vorbereitetes Bett, komplette Badwäsche und grundlegende Pflegeprodukte. In der Küche gibt es eine kleine Auswahl an Kaffee, Tee und Kräutertee für die ersten Momente im Haus.',c3t:'Eine kleine Willkommensgeste',c3p:'Als kleine Willkommensgeste stellen wir für alle, die es mögen, auch eine Kostprobe roten Weins aus Montepulciano bereit.',c4t:'Montepulciano aus unserer Sicht',c4p:'Vor der Ankunft senden wir einen privaten Guide mit Parkhinweisen, Sehenswürdigkeiten und Adressen, die wir persönlich kennen und empfehlen.',historyKicker:'VIA DEL POLIZIANO',historyTitle:'Eine Straße, die vom Ort erzählt.',historyText:'Das Haus liegt im oberen Herzen von Montepulciano, gegenüber der historischen Casa del Poliziano, an der mit Agnolo Poliziano verbundenen Straße. Noch heute halten hier Stadtführer an, um von der Geschichte des Ortes zu erzählen.',essentialsLabel:'Außerdem vorhanden',essentials:'Schnelles WLAN · Smart TV · ausgestattete Küche · Espressomaschine · Wasserkocher · Haartrockner · Bügeleisen · Ventilator · Erste-Hilfe-Set · Nähset',minimumStay:'Mindestaufenthalt: 2 Nächte.'},
+      fr:{kicker:'UN SÉJOUR PENSÉ POUR DEUX',title:'Le soin se révèle<br><em>dans les petits détails.</em>',lead:'Il Nido di Sofì est une maison intime pour deux, préparée avec soin pour que tout soit simple, naturel et prêt dès votre arrivée.',c1t:'Pensé pour deux',c1p:'Des espaces intimes et fonctionnels, une chambre double et le rythme paisible d’une maison conçue pour être vécue à deux.',c2t:'Tout est prêt à votre arrivée',c2p:'Lit préparé, linge de bain complet et produits essentiels pour la salle de bain. Dans la cuisine, une petite sélection de café, thé et infusions pour les premiers moments dans la maison.',c3t:'Un petit geste de bienvenue',c3p:'Parmi nos petites attentions de bienvenue, pour ceux qui l’apprécient, nous laissons aussi une dégustation de vin rouge de Montepulciano.',c4t:'Montepulciano, selon nous',c4p:'Avant l’arrivée, nous envoyons un guide privé avec les parkings, les lieux à voir et des adresses que nous connaissons et recommandons personnellement.',historyKicker:'VIA DEL POLIZIANO',historyTitle:'Une rue qui raconte le village.',historyText:'L’immeuble se trouve dans la partie haute du centre de Montepulciano, face à la Casa del Poliziano historique, dans la rue liée à Agnolo Poliziano. Les guides locaux s’y arrêtent encore aujourd’hui pour raconter une partie de l’histoire du village.',essentialsLabel:'Vous trouverez aussi',essentials:'Wi-Fi rapide · Smart TV · cuisine équipée · machine espresso · bouilloire · sèche-cheveux · fer à repasser · ventilateur · trousse de premiers secours · kit de couture',minimumStay:'Séjour minimum : 2 nuits.'},
+      ru:{kicker:'ПРОЖИВАНИЕ, ПРОДУМАННОЕ ДЛЯ ДВОИХ',title:'Забота заметна<br><em>в мелочах.</em>',lead:'Il Nido di Sofì — камерный дом для двоих, подготовленный с вниманием, чтобы к вашему приезду всё было просто, естественно и готово.',c1t:'Для двоих',c1p:'Уютные функциональные пространства, двуспальная кровать и спокойный ритм дома, созданного для отдыха вдвоём.',c2t:'Всё готово к приезду',c2p:'Заправленная кровать, полный комплект банных полотенец и основные средства для ванной. На кухне — небольшой выбор кофе, чая и травяных настоев для первых минут дома.',c3t:'Небольшой знак гостеприимства',c3p:'В качестве небольшого приветственного жеста для тех, кто любит вино, мы также оставляем немного красного вина из Монтепульчано.',c4t:'Монтепульчано нашими глазами',c4p:'Перед приездом мы отправляем личный гид с информацией о парковках, местах для посещения и адресах, которые знаем и рекомендуем сами.',historyKicker:'VIA DEL POLIZIANO',historyTitle:'Улица, которая рассказывает историю города.',historyText:'Дом находится в верхней части исторического центра Монтепульчано, напротив исторического Casa del Poliziano, на улице, связанной с Аньоло Полициано. Здесь и сегодня останавливаются местные гиды, рассказывая историю города.',essentialsLabel:'Также в доме',essentials:'Быстрый Wi-Fi · Smart TV · оборудованная кухня · кофемашина эспрессо · чайник · фен · утюг · вентилятор · аптечка · швейный набор',minimumStay:'Минимальное проживание: 2 ночи.'},
+      zh:{kicker:'专为两人设计的住宿体验',title:'用心，体现在<br><em>细节之中。</em>',lead:'Il Nido di Sofì 是一间适合两人入住的温馨住所，我们会提前用心准备，让你抵达时一切都简单、自然、就绪。',c1t:'专为两人',c1p:'温馨实用的空间、双人卧室，以及适合两人慢慢享受蒙特普尔恰诺的宁静节奏。',c2t:'抵达时一切就绪',c2p:'铺好的床、完整浴巾套装和基本洗浴用品。厨房还备有少量咖啡、茶和花草茶，方便刚到家的片刻休息。',c3t:'一个小小的欢迎心意',c3p:'作为小小的欢迎心意，如果你喜欢葡萄酒，我们也会留一份蒙特普尔恰诺当地红酒供品尝。',c4t:'我们眼中的蒙特普尔恰诺',c4p:'入住前，我们会发送一份私人指南，包含停车、值得看的地方，以及我们亲自了解和推荐的地址。',historyKicker:'VIA DEL POLIZIANO',historyTitle:'一条讲述小城故事的街道。',historyText:'公寓所在建筑位于蒙特普尔恰诺老城上部核心区域，正对历史悠久的 Casa del Poliziano，所在街道与 Agnolo Poliziano 密切相关。直到今天，当地导游仍会在这里停下来讲述小城的历史。',essentialsLabel:'屋内还提供',essentials:'高速 Wi-Fi · Smart TV · 设备齐全的厨房 · 意式咖啡机 · 电热水壶 · 吹风机 · 熨斗 · 风扇 · 急救包 · 针线包',minimumStay:'至少入住 2 晚。'}
+    };
+    const applyValueCopy=()=>{
+      const lang=document.getElementById('languageSelect')?.value||localStorage.getItem('nidoLanguage')||'it';
+      const t=valueCopy[lang]||valueCopy.it;
+      document.querySelectorAll('[data-value]').forEach(el=>{const k=el.dataset.value;if(t[k])el.textContent=t[k]});
+      document.querySelectorAll('[data-value-html]').forEach(el=>{const k=el.dataset.valueHtml;if(t[k])el.innerHTML=t[k]});
+    };
+    applyValueCopy();
+    document.getElementById('languageSelect')?.addEventListener('change',()=>setTimeout(applyValueCopy,0));
+  });
+  </script>
+'''
+    s=s.replace('\n</body>',inline+'\n</body>',1)
+index.write_text(s)
+
+css=Path('style.css')
+c=css.read_text()
+if '/* v17 — discreet value section */' not in c:
+    c+='''
+
+/* v17 — discreet value section */
+.stay-value{padding-top:105px;padding-bottom:105px}
+.stay-value-head{display:grid;grid-template-columns:1.05fr .95fr;gap:9vw;align-items:end;margin-top:28px}
+.stay-value-head .lead{margin:0;max-width:520px}
+.stay-value-grid{display:grid;grid-template-columns:repeat(4,1fr);margin-top:70px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stay-value-grid article{padding:28px 26px 30px 0;margin-right:26px;border-right:1px solid var(--line)}
+.stay-value-grid article:last-child{border-right:0;margin-right:0}
+.stay-value-grid article>span{font-size:9px;letter-spacing:.14em;color:var(--brand)}
+.stay-value-grid h3,.stay-value-history h3{font:500 30px/1.05 var(--serif);margin:20px 0 13px}
+.stay-value-grid p,.stay-value-history p{font-size:13px;margin:0;color:rgba(37,40,33,.8)}
+.stay-value-history{display:grid;grid-template-columns:.8fr 1.2fr;gap:9vw;align-items:center;padding:48px 0;border-bottom:1px solid var(--line)}
+.stay-value-history .eyebrow{color:var(--brand)}
+.stay-value-history h3{font-size:38px;margin:12px 0 0}
+.stay-value-essentials{display:grid;grid-template-columns:.34fr 1.66fr;gap:30px;padding-top:30px}
+.stay-value-essentials span{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--brand)}
+.stay-value-essentials p{font-size:12px;margin:0;letter-spacing:.01em;color:rgba(37,40,33,.72)}
+.minimum-stay-note{margin:11px 0 18px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(37,40,33,.62)}
+@media(max-width:900px){.stay-value-head{grid-template-columns:1fr;gap:20px}.stay-value-grid{grid-template-columns:1fr 1fr}.stay-value-grid article{border-bottom:1px solid var(--line)}.stay-value-grid article:nth-child(2){border-right:0;margin-right:0}.stay-value-grid article:nth-child(3),.stay-value-grid article:nth-child(4){border-bottom:0}.stay-value-history{grid-template-columns:1fr;gap:18px}.stay-value-essentials{grid-template-columns:1fr;gap:10px}}
+@media(max-width:560px){.stay-value{padding-top:64px;padding-bottom:64px}.stay-value-grid{grid-template-columns:1fr;margin-top:42px}.stay-value-grid article{border-right:0;border-bottom:1px solid var(--line);margin:0;padding:24px 0}.stay-value-grid article:nth-child(3){border-bottom:1px solid var(--line)}.stay-value-grid article:last-child{border-bottom:0}.stay-value-history{padding:36px 0}.stay-value-history h3{font-size:32px}.stay-value-essentials{padding-top:24px}.stay-value-essentials p{line-height:1.8}}
+'''
+css.write_text(c)
+
+js=Path('script.js')
+j=js.read_text()
+old="""    d.setDate(d.getDate()+1);\n    co.min=iso(d);\n    if(co.value && co.value<=ci.value) co.value='';"""
+new="""    d.setDate(d.getDate()+2);\n    co.min=iso(d);\n    if(co.value && co.value<co.min) co.value='';"""
+if old in j:
+    j=j.replace(old,new,1)
+elif 'd.setDate(d.getDate()+2);' not in j:
+    raise SystemExit('Date-limit logic not found')
+js.write_text(j)
