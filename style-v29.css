@@ -1,0 +1,96 @@
+@import url('style-base.css');
+
+/* Homepage rhythm */
+.brand-showcase{min-height:400px;padding:52px 8%}
+.brand-showcase img{width:min(700px,74vw);max-height:330px}
+.places{padding-top:96px;padding-bottom:96px}
+#valdorcia{padding-top:92px;padding-bottom:92px}
+#valdorcia .val-grid{gap:6vw}
+#valdorcia .destinations div{padding:13px 0}
+#valdorcia .destinations div:nth-child(n+5){display:none}
+.guest-voices{padding-top:80px;padding-bottom:80px}
+.guest-voices-grid{margin-top:40px}
+.guest-voice-card{min-height:230px;padding-top:26px;padding-bottom:24px}
+.contacts{padding-top:88px;padding-bottom:88px}
+
+/* 04 — Events: full-bleed background, contained content */
+.events-section{width:100%;max-width:none;margin:0;padding:92px 6%;background:linear-gradient(180deg,#f1e7dc 0%,#e8dbce 100%)}
+.events-head{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr);gap:8vw;align-items:end;margin-bottom:54px}
+.events-head h2{margin:0}.events-head .lead{margin:0;max-width:560px}
+.events-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid rgba(73,52,38,.18);border-left:1px solid rgba(73,52,38,.18)}
+.events-grid article{padding:28px 26px 30px;border-right:1px solid rgba(73,52,38,.18);border-bottom:1px solid rgba(73,52,38,.18);min-height:230px;background:rgba(255,255,255,.46)}
+.events-grid article>span{display:block;font:500 0/1 Inter,sans-serif;letter-spacing:.13em;color:var(--brand);margin-bottom:28px}
+.events-grid article>span::after{font:500 12px/1 Inter,sans-serif;letter-spacing:.13em}
+.events-grid h3{font-size:clamp(23px,2vw,31px);line-height:1.02;margin:0 0 16px}.events-grid p{margin:0;line-height:1.65}
+.events-grid article:has([data-i18n="events.bravio.title"]){order:-1}
+.events-grid article:nth-child(3)>span::after{content:"01"}.events-grid article:nth-child(1)>span::after{content:"02"}.events-grid article:nth-child(2)>span::after{content:"03"}.events-grid article:nth-child(4)>span::after{content:"04"}.events-grid article:nth-child(5)>span::after{content:"05"}.events-grid article:nth-child(6)>span::after{content:"06"}.events-grid article:nth-child(7)>span::after{content:"07"}
+.events-grid h3[data-i18n="events.ruscello.title"]{font-size:0}.events-grid h3[data-i18n="events.ruscello.title"]::after{content:"Bruscello · tradizione popolare";font-size:clamp(23px,2vw,31px);line-height:1.02}
+
+/* 05 — Enogastronomy: full-bleed band with two balanced columns */
+.food-section{width:100%;max-width:none;margin:0;padding:92px 6%;background:#faf6f0}
+.food-head{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(260px,.9fr);gap:8vw;align-items:end;margin-bottom:50px}
+.food-head h2,.food-head .lead{margin:0}
+.food-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(37,40,33,.18);border-left:1px solid rgba(37,40,33,.18)}
+.food-grid article{padding:34px 32px 38px;border-right:1px solid rgba(37,40,33,.18);border-bottom:1px solid rgba(37,40,33,.18);min-height:300px;background:rgba(255,255,255,.5)}
+.food-grid article>span{display:block;font:600 0/1 Inter,sans-serif;letter-spacing:.16em;color:var(--brand);margin-bottom:30px}.food-grid article>span::after{font:600 11px/1 Inter,sans-serif;letter-spacing:.16em}.food-grid .food-wine>span::after{content:"VINO"}.food-grid .food-table>span::after{content:"CIBO"}
+.food-grid h3{font-size:0;line-height:1.05;margin:0 0 18px}.food-grid .food-wine h3::after{content:"Cantine e grandi rossi";font:500 clamp(25px,2.2vw,34px)/1.05 var(--serif)}.food-grid .food-table h3::after{content:"Sapori del territorio";font:500 clamp(25px,2.2vw,34px)/1.05 var(--serif)}.food-grid p{margin:0;line-height:1.72;max-width:620px}
+
+.amenities [data-i18n="amenities.checkin"],.amenities [data-i18n="amenities.workspace"]{display:none!important}
+
+/* Distinct color bands in the same brand palette */
+.host.section{background:#4d5846}
+.contacts.section{width:100%;max-width:none;margin:0;padding-left:6%;padding-right:6%;background:#f1e8dc;border-top:0}
+.contacts .contact-list{border-top-color:rgba(110,50,24,.2)}
+.contacts .contact-row{border-bottom-color:rgba(110,50,24,.18)}
+.faq.section{width:100%;max-width:none;margin:0;padding-left:6%;padding-right:6%;background:#e8ece4}
+.faq .faq-list{border-top-color:rgba(77,88,70,.26)}
+.faq details{border-bottom-color:rgba(77,88,70,.24)}
+
+@media(max-width:900px){
+  .brand-showcase{min-height:300px;padding:42px 8%}.places{padding-top:72px;padding-bottom:72px}#valdorcia{padding-top:70px;padding-bottom:70px}.guest-voices{padding-top:68px;padding-bottom:68px}.contacts{padding-top:68px;padding-bottom:68px}.events-section,.food-section{padding-top:72px;padding-bottom:72px}.events-head,.food-head{grid-template-columns:1fr;gap:20px;margin-bottom:40px}.events-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+@media(max-width:560px){
+  .brand-showcase{min-height:220px;padding:28px 7%}.brand-showcase img{width:min(520px,88vw);max-height:270px}.places{padding-top:52px;padding-bottom:52px}#valdorcia{padding-top:52px;padding-bottom:52px}#valdorcia .destinations div:nth-child(n+4){display:none}.guest-voices{padding-top:54px;padding-bottom:54px}.guest-voices-grid{margin-top:30px}.guest-voice-card{padding:24px 0;min-height:0}.contacts{padding-top:54px;padding-bottom:54px}.host-copy{padding-top:48px;padding-bottom:48px}
+
+  .host.section{padding:0!important}
+  .host-image{min-height:0!important;height:auto!important;background:none!important}
+  .host-image img{display:block!important;width:100%!important;height:72vw!important;max-height:420px!important;object-fit:cover!important;object-position:center!important}
+
+  .events-section,.food-section{padding:50px 7%}.events-head,.food-head{margin-bottom:26px}
+  .events-grid{display:flex!important;gap:12px!important;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;border:0!important;margin-right:-7vw;padding-right:7vw;padding-bottom:8px}.events-grid::-webkit-scrollbar{display:none}.events-grid>article{flex:0 0 82vw!important;max-width:82vw!important;scroll-snap-align:start;min-height:235px!important;border:1px solid rgba(73,52,38,.18)!important;padding:24px 22px 26px!important;background:rgba(255,255,255,.62)}.events-grid article>span{margin-bottom:20px}.events-grid h3[data-i18n="events.ruscello.title"]::after{font-size:23px}
+
+  .food-grid{display:grid!important;grid-template-columns:1fr 1fr!important;gap:0!important;overflow:visible!important;border-top:1px solid rgba(37,40,33,.18)!important;border-left:1px solid rgba(37,40,33,.18)!important}.food-grid>article{min-width:0!important;width:auto!important;min-height:0!important;padding:20px 14px 22px!important;border:0!important;border-right:1px solid rgba(37,40,33,.18)!important;border-bottom:1px solid rgba(37,40,33,.18)!important}.food-grid article>span{margin-bottom:15px!important}.food-grid .food-wine h3::after,.food-grid .food-table h3::after{font-size:20px}.food-grid p{font-size:13px;line-height:1.55}
+
+  .booking-flow{display:grid!important;grid-template-columns:1fr!important;gap:0!important;overflow:visible!important;scroll-snap-type:none!important;margin-right:0!important;padding-right:0!important;padding-bottom:0!important}.booking-flow>.booking-step{flex:none!important;max-width:none!important;min-height:0!important;padding:20px 0!important;border-left:0!important;border-right:0!important}
+  .facts,.stay-value-grid,.guest-voices-grid,#valdorcia .destinations{overflow:visible!important;scroll-snap-type:none!important;padding-bottom:0!important;margin-right:0!important;padding-right:0!important}.facts{display:grid!important}.facts>div{max-width:none!important;flex:none!important}.stay-value-grid,.guest-voices-grid{display:grid!important;grid-template-columns:1fr!important;gap:0!important}.stay-value-grid>article,.guest-voices-grid>article{max-width:none!important;flex:none!important;min-height:0!important;border-left:0!important;border-right:0!important;padding-left:0!important;padding-right:0!important}#valdorcia .destinations{display:block!important}#valdorcia .destinations>div{display:flex!important;max-width:none!important;min-height:0!important;flex:none!important;border-left:0!important;border-right:0!important;padding-left:0!important;padding-right:0!important}#valdorcia .destinations>div:nth-child(n+4){display:none!important}.guest-voice-card{padding-top:24px!important;padding-bottom:24px!important}
+
+  /* 03 — Montepulciano becomes a compact horizontal rail on phones. */
+  .place-grid{display:flex!important;gap:12px!important;overflow-x:auto!important;overflow-y:hidden!important;scroll-snap-type:x mandatory!important;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin-right:-7vw!important;padding-right:7vw!important;padding-bottom:8px!important;border-top:0!important}
+  .place-grid::-webkit-scrollbar{display:none}
+  .place-grid>article{flex:0 0 76vw!important;max-width:76vw!important;scroll-snap-align:start;min-height:190px!important;margin:0!important;padding:20px 18px!important;border:1px solid var(--line)!important;background:rgba(255,255,255,.5)}
+  .place-grid>article:nth-child(odd),.place-grid>article:nth-child(even){padding-left:18px!important;padding-right:18px!important;border:1px solid var(--line)!important}
+
+  .contacts.section,.faq.section{padding-left:7%!important;padding-right:7%!important}
+}
+
+/* v27 — compact mobile rhythm without turning sections into carousels */
+@media(max-width:560px){
+  .hero{height:82svh!important;min-height:520px!important}.hero-content{padding-top:34px!important}.hero-sub{margin-bottom:18px!important}.scroll-note{bottom:12px!important}
+  .brand-showcase{min-height:180px!important;padding:18px 7%!important}.brand-showcase img{max-height:220px!important}
+  .section{padding-top:46px!important;padding-bottom:46px!important}
+  .host.section{padding:0!important}
+  .story,.valdorcia{padding-top:48px!important;padding-bottom:48px!important}.section h2{font-size:40px!important}.lead{font-size:19px!important}.intro-grid,.story-grid,.val-grid{gap:14px!important;margin-top:15px!important}
+  .facts{margin-top:28px!important}.facts div{padding:14px 6px!important}.facts strong{font-size:24px!important}
+  .gallery-v2{padding-bottom:6px!important}.gallery-photo,.gallery-photo--wide,.gallery-photo--tall,.gallery-photo--feature{flex-basis:68vw!important;width:68vw!important;aspect-ratio:4/5!important}
+  .stay-value{padding-top:48px!important;padding-bottom:48px!important}.stay-value-head{gap:12px!important;margin-top:18px!important}.stay-value-grid{margin-top:30px!important}.stay-value-grid article{padding:18px 0!important}.stay-value-grid h3{font-size:26px!important;margin:12px 0 8px!important}.stay-value-history{padding:26px 0!important;gap:10px!important}.stay-value-history h3{font-size:29px!important;margin-top:8px!important}.stay-value-essentials{padding-top:18px!important}
+  .places{padding-top:46px!important;padding-bottom:46px!important}.places-head{margin-top:18px!important}.place-grid{margin-top:28px!important}.place-grid article{padding-top:16px!important;padding-bottom:16px!important}.place-grid h3{font-size:25px!important;margin:10px 0 6px!important}
+  .events-section,.food-section{padding-top:42px!important;padding-bottom:42px!important}.events-head,.food-head{margin-bottom:20px!important;gap:12px!important}.events-grid>article{min-height:205px!important;padding:20px 18px 22px!important}.events-grid article>span{margin-bottom:14px!important}.events-grid h3{margin-bottom:10px!important}.food-grid>article{padding:16px 11px 18px!important}.food-grid article>span{margin-bottom:10px!important}.food-grid .food-wine h3::after,.food-grid .food-table h3::after{font-size:18px!important}.food-grid p{font-size:12px!important;line-height:1.45!important}
+  .host-image img{height:72vw!important;max-height:420px!important;object-fit:cover!important;object-position:center!important}.host-copy{padding-top:40px!important;padding-bottom:40px!important}.host-copy h2{margin:18px 0 20px!important}.host-copy p{margin-top:8px!important;margin-bottom:8px!important}
+  #valdorcia .destinations div{padding:11px 0!important}#valdorcia .destinations strong{font-size:20px!important}
+  .booking{padding-top:46px!important}.booking-card{padding:30px 6%!important}.booking-card h2{margin:18px 0!important}.booking-flow{margin-top:20px!important}.booking-flow>.booking-step{padding:12px 0!important}.booking-step strong{font-size:20px!important;margin-bottom:4px!important}.form-grid{margin:24px 0 20px!important;gap:14px!important}
+  .contacts{padding-top:46px!important;padding-bottom:46px!important}.contacts-grid{margin-top:18px!important;gap:18px!important}.contact-row{padding:14px 0!important}
+  .guest-voices{padding-top:46px!important;padding-bottom:46px!important}.guest-voices-head{margin-top:16px!important}.guest-voices-grid{margin-top:24px!important}.guest-voice-card{padding:18px 0!important}.guest-voice-card h3{font-size:27px!important;margin-bottom:10px!important}.guest-voice-card .guest-voice-name{padding-top:14px!important}
+  .faq{padding-top:46px!important;padding-bottom:46px!important}.faq h2{margin:18px 0 28px!important}summary{padding:14px 0!important;font-size:20px!important}details p{margin-bottom:18px!important}
+  footer{padding-top:28px!important;padding-bottom:28px!important;gap:16px!important}
+}
