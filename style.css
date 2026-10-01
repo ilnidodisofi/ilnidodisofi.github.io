@@ -31,6 +31,11 @@
 .food-note strong{font:500 25px/1.05 var(--serif)}
 .food-note p{margin:0;max-width:760px;font-size:15px;line-height:1.65;color:rgba(37,40,33,.8)}
 
+/* Footer brand: same visual identity as the header */
+.footer-brand>div>strong{font-size:0!important;line-height:0!important;margin:0}
+.footer-brand>div>strong::before{content:"";display:block;width:170px;height:34px;background:url('assets/logo-wordmark.png') left center/contain no-repeat;filter:brightness(0) invert(1);opacity:.94}
+.footer-brand>div>span{margin-top:7px}
+
 a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--brand);outline-offset:3px}
 .events-grid,.place-grid{-webkit-overflow-scrolling:touch}
 
@@ -38,7 +43,6 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,su
 
 @media(max-width:560px){
   .stay-value.section,.places.section{padding-left:7%!important;padding-right:7%!important}
-  /* keep section 03 as the requested horizontal mobile carousel */
   .places .place-grid{display:flex!important;gap:12px!important;overflow-x:auto!important;overflow-y:hidden!important;scroll-snap-type:x mandatory!important;margin-right:-7vw!important;padding-right:7vw!important;padding-bottom:8px!important;border:0!important}
   .places .place-grid>article,.places .place-grid>article:nth-child(odd),.places .place-grid>article:nth-child(even){flex:0 0 76vw!important;max-width:76vw!important;min-height:190px!important;padding:20px 18px!important;border:1px solid var(--line)!important;background:rgba(255,255,255,.55)!important;scroll-snap-align:start}
   .events-grid{display:flex!important;grid-template-columns:none!important}
@@ -47,4 +51,5 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,su
   .events-grid article>p:not(.event-meta){font-size:15px!important;line-height:1.55!important}
   .food-grid h3{font-size:20px!important}.food-grid p{font-size:15px!important;line-height:1.5!important}
   .food-note{grid-template-columns:1fr;gap:8px;margin-top:20px;padding-top:18px}.food-note strong{font-size:23px}.food-note p{font-size:15px;line-height:1.55}
+  .footer-brand>div>strong::before{width:145px;height:30px}
 }
