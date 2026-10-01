@@ -1,30 +1,6 @@
 @import url('style-base.css');
 
-/* v20 - compact Bravio homepage */
-#bravio .bravio-copy > p:not(.lead){display:none}
-#bravio .bravio-grid{gap:5vw}
-#bravio .bravio-visual{min-height:330px}
-#bravio .barrel-graphic{width:min(245px,58vw)}
-#bravio .bravio-stats{bottom:8px}
-#bravio .bravio-stats div{padding:10px 12px}
-#bravio .bravio-stats strong{font-size:24px}
-#bravio .bravio-actions{margin-top:24px}
-@media(max-width:900px){
-  #bravio .bravio-grid{grid-template-columns:1fr auto;gap:24px}
-  #bravio .bravio-visual{min-height:250px;width:230px}
-  #bravio .barrel-graphic{width:180px}
-  #bravio .bravio-stats{display:none}
-}
-@media(max-width:560px){
-  #bravio{padding-top:52px;padding-bottom:52px}
-  #bravio .bravio-grid{grid-template-columns:1fr;gap:16px}
-  #bravio .bravio-visual{display:none}
-  #bravio .bravio-copy .lead{margin-bottom:0}
-  #bravio .bravio-actions{margin-top:20px;gap:10px}
-  #bravio .bravio-actions .button{width:100%;text-align:center}
-}
-
-/* v21 - homepage rhythm and length */
+/* Homepage rhythm */
 .brand-showcase{min-height:400px;padding:52px 8%}
 .brand-showcase img{width:min(700px,74vw);max-height:330px}
 .places{padding-top:96px;padding-bottom:96px}
@@ -36,13 +12,71 @@
 .guest-voices-grid{margin-top:40px}
 .guest-voice-card{min-height:230px;padding-top:26px;padding-bottom:24px}
 .contacts{padding-top:88px;padding-bottom:88px}
+
+/* 04 — Events: full-bleed background, contained content */
+.events-section{
+  width:100%;
+  max-width:none;
+  margin:0;
+  padding:92px 6%;
+  background:linear-gradient(180deg,#f1e7dc 0%,#e8dbce 100%);
+}
+.events-head{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr);gap:8vw;align-items:end;margin-bottom:54px}
+.events-head h2{margin:0}
+.events-head .lead{margin:0;max-width:560px}
+.events-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid rgba(73,52,38,.18);border-left:1px solid rgba(73,52,38,.18)}
+.events-grid article{padding:28px 26px 30px;border-right:1px solid rgba(73,52,38,.18);border-bottom:1px solid rgba(73,52,38,.18);min-height:230px;background:rgba(255,255,255,.46)}
+.events-grid article>span{display:block;font:500 0/1 Inter,sans-serif;letter-spacing:.13em;color:var(--brand);margin-bottom:28px}
+.events-grid article>span::after{font:500 12px/1 Inter,sans-serif;letter-spacing:.13em}
+.events-grid h3{font-size:clamp(23px,2vw,31px);line-height:1.02;margin:0 0 16px}
+.events-grid p{margin:0;line-height:1.65}
+
+/* Bravìo first, then the other events in their natural sequence. */
+.events-grid article:has([data-i18n="events.bravio.title"]){order:-1}
+.events-grid article:nth-child(3)>span::after{content:"01"}
+.events-grid article:nth-child(1)>span::after{content:"02"}
+.events-grid article:nth-child(2)>span::after{content:"03"}
+.events-grid article:nth-child(4)>span::after{content:"04"}
+.events-grid article:nth-child(5)>span::after{content:"05"}
+.events-grid article:nth-child(6)>span::after{content:"06"}
+.events-grid article:nth-child(7)>span::after{content:"07"}
+
+/* Correct event name visually in every language without duplicating the card. */
+.events-grid h3[data-i18n="events.ruscello.title"]{font-size:0}
+.events-grid h3[data-i18n="events.ruscello.title"]::after{content:"Bruscello · tradizione popolare";font-size:clamp(23px,2vw,31px);line-height:1.02}
+
+/* 05 — Enogastronomy: full-bleed band with two balanced columns */
+.food-section{
+  width:100%;
+  max-width:none;
+  margin:0;
+  padding:92px 6%;
+  background:#faf6f0;
+}
+.food-head{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(260px,.9fr);gap:8vw;align-items:end;margin-bottom:50px}
+.food-head h2,.food-head .lead{margin:0}
+.food-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(37,40,33,.18);border-left:1px solid rgba(37,40,33,.18)}
+.food-grid article{padding:34px 32px 38px;border-right:1px solid rgba(37,40,33,.18);border-bottom:1px solid rgba(37,40,33,.18);min-height:300px;background:rgba(255,255,255,.5)}
+.food-grid article>span{display:block;font:600 0/1 Inter,sans-serif;letter-spacing:.16em;color:var(--brand);margin-bottom:30px}
+.food-grid article>span::after{font:600 11px/1 Inter,sans-serif;letter-spacing:.16em}
+.food-grid .food-wine>span::after{content:"VINO"}
+.food-grid .food-table>span::after{content:"CIBO"}
+.food-grid h3{font-size:0;line-height:1.05;margin:0 0 18px}
+.food-grid .food-wine h3::after{content:"Cantine e grandi rossi";font:500 clamp(25px,2.2vw,34px)/1.05 var(--serif)}
+.food-grid .food-table h3::after{content:"Sapori del territorio";font:500 clamp(25px,2.2vw,34px)/1.05 var(--serif)}
+.food-grid p{margin:0;line-height:1.72;max-width:620px}
+
 @media(max-width:900px){
   .brand-showcase{min-height:300px;padding:42px 8%}
   .places{padding-top:72px;padding-bottom:72px}
   #valdorcia{padding-top:70px;padding-bottom:70px}
   .guest-voices{padding-top:68px;padding-bottom:68px}
   .contacts{padding-top:68px;padding-bottom:68px}
+  .events-section,.food-section{padding-top:72px;padding-bottom:72px}
+  .events-head,.food-head{grid-template-columns:1fr;gap:20px;margin-bottom:40px}
+  .events-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
+
 @media(max-width:560px){
   .brand-showcase{min-height:220px;padding:28px 7%}
   .brand-showcase img{width:min(520px,88vw);max-height:270px}
@@ -54,185 +88,46 @@
   .guest-voice-card{padding:24px 0;min-height:0}
   .contacts{padding-top:54px;padding-bottom:54px}
   .host-copy{padding-top:48px;padding-bottom:48px}
-}
 
-/* v22 - balanced events section */
-.events-section{padding-top:92px;padding-bottom:92px;background:var(--cream)}
-.events-head{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr);gap:8vw;align-items:end;margin-bottom:54px}
-.events-head h2{margin:0}
-.events-head .lead{margin:0;max-width:560px}
-.events-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid rgba(37,40,33,.18);border-left:1px solid rgba(37,40,33,.18)}
-.events-grid article{padding:28px 26px 30px;border-right:1px solid rgba(37,40,33,.18);border-bottom:1px solid rgba(37,40,33,.18);min-height:230px}
-.events-grid article>span{display:block;font:500 12px/1 Inter,sans-serif;letter-spacing:.13em;color:var(--brand);margin-bottom:28px}
-.events-grid h3{font-size:clamp(23px,2vw,31px);line-height:1.02;margin:0 0 16px}
-.events-grid p{margin:0;line-height:1.65}
-@media(max-width:900px){
-  .events-section{padding-top:72px;padding-bottom:72px}
-  .events-head{grid-template-columns:1fr;gap:20px;margin-bottom:40px}
-  .events-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-}
-@media(max-width:560px){
-  .events-section{padding-top:52px;padding-bottom:52px}
-  .events-head{margin-bottom:30px}
-  .events-grid{grid-template-columns:1fr}
-  .events-grid article{min-height:0;padding:24px 20px 26px}
-  .events-grid article>span{margin-bottom:20px}
-}
-
-/* v23 - events rail, enogastronomy and shorter mobile page */
-.food-section{padding-top:92px;padding-bottom:92px;background:#fff}
-.food-head{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(260px,.9fr);gap:8vw;align-items:end;margin-bottom:50px}
-.food-head h2,.food-head .lead{margin:0}
-.food-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(37,40,33,.18);border-left:1px solid rgba(37,40,33,.18)}
-.food-grid article{padding:34px 32px 38px;border-right:1px solid rgba(37,40,33,.18);border-bottom:1px solid rgba(37,40,33,.18);min-height:300px}
-.food-grid article>span{display:block;font:600 11px/1 Inter,sans-serif;letter-spacing:.16em;color:var(--brand);margin-bottom:34px}
-.food-grid h3{font-size:clamp(25px,2.2vw,34px);line-height:1.05;margin:0 0 18px}
-.food-grid p{margin:0;line-height:1.72;max-width:620px}
-
-@media(max-width:900px){
-  .food-section{padding-top:72px;padding-bottom:72px}
-  .food-head{grid-template-columns:1fr;gap:20px;margin-bottom:38px}
-}
-
-@media(max-width:560px){
-  .events-section,.food-section{padding-top:50px;padding-bottom:50px}
+  /* Keep only Events as a horizontal rail. */
+  .events-section,.food-section{padding:50px 7%}
   .events-head,.food-head{margin-bottom:26px}
-
-  .events-grid,
-  .food-grid,
-  .booking-flow{
+  .events-grid{
     display:flex!important;
-    grid-template-columns:none!important;
     gap:12px!important;
     overflow-x:auto;
     overflow-y:hidden;
     scroll-snap-type:x mandatory;
     -webkit-overflow-scrolling:touch;
     scrollbar-width:none;
+    border:0!important;
+    margin-right:-7vw;
+    padding-right:7vw;
     padding-bottom:8px;
   }
-  .events-grid::-webkit-scrollbar,
-  .food-grid::-webkit-scrollbar,
-  .booking-flow::-webkit-scrollbar{display:none}
+  .events-grid::-webkit-scrollbar{display:none}
+  .events-grid>article{flex:0 0 82vw!important;max-width:82vw!important;scroll-snap-align:start;min-height:235px!important;border:1px solid rgba(73,52,38,.18)!important;padding:24px 22px 26px!important;background:rgba(255,255,255,.62)}
+  .events-grid article>span{margin-bottom:20px}
+  .events-grid h3[data-i18n="events.ruscello.title"]::after{font-size:23px}
 
-  .events-grid>article,
-  .food-grid>article,
-  .booking-flow>.booking-step{
-    flex:0 0 82vw!important;
-    max-width:82vw!important;
-    scroll-snap-align:start;
-  }
-
-  .events-grid,.food-grid{border:0!important;margin-left:0;margin-right:-7vw;padding-right:7vw}
-  .events-grid article,.food-grid article{min-height:235px!important;border:1px solid rgba(37,40,33,.18)!important;padding:24px 22px 26px!important}
-  .events-grid article>span,.food-grid article>span{margin-bottom:20px}
-  .booking-flow{margin-right:-7vw;padding-right:7vw}
-  .booking-flow>.booking-step{border:1px solid rgba(37,40,33,.16);padding:22px!important;min-height:220px}
-  .food-grid article{min-height:280px!important}
-}
-
-/* v24 - restore the original mobile layouts for core content sections */
-@media(max-width:560px){
-  .facts,
-  .stay-value-grid,
-  .place-grid,
-  .guest-voices-grid,
-  #valdorcia .destinations{
-    overflow:visible!important;
-    scroll-snap-type:none!important;
-    padding-bottom:0!important;
-    margin-right:0!important;
-    padding-right:0!important;
-  }
-
-  .facts{display:grid!important}
-  .facts>div{max-width:none!important;flex:none!important}
-
-  .stay-value-grid,
-  .place-grid,
-  .guest-voices-grid{display:grid!important;grid-template-columns:1fr!important;gap:0!important}
-  .stay-value-grid>article,
-  .place-grid>article,
-  .guest-voices-grid>article{
-    max-width:none!important;
-    flex:none!important;
-    min-height:0!important;
-    border-left:0!important;
-    border-right:0!important;
-    padding-left:0!important;
-    padding-right:0!important;
-  }
-
-  #valdorcia .destinations{display:block!important}
-  #valdorcia .destinations>div{
-    display:flex!important;
-    max-width:none!important;
-    min-height:0!important;
-    flex:none!important;
-    border-left:0!important;
-    border-right:0!important;
-    padding-left:0!important;
-    padding-right:0!important;
-  }
-  #valdorcia .destinations>div:nth-child(n+4){display:none!important}
-
-  .guest-voice-card{padding-top:24px!important;padding-bottom:24px!important}
-}
-
-/* v25 - requested mobile refinements */
-.events-section{background:linear-gradient(180deg,#f3ece4 0%,#eadfd4 100%)}
-.events-grid article{background:rgba(255,255,255,.42)}
-.events-grid article:has([data-i18n="events.bravio.title"]){order:-1}
-.events-grid h3[data-i18n="events.ruscello.title"]{font-size:0}
-.events-grid h3[data-i18n="events.ruscello.title"]::after{content:"Bruscello · tradizione popolare";font-size:clamp(23px,2vw,31px);line-height:1.02}
-
-@media(max-width:560px){
-  .booking-flow{
-    display:grid!important;
-    grid-template-columns:1fr!important;
-    gap:0!important;
-    overflow:visible!important;
-    scroll-snap-type:none!important;
-    margin-right:0!important;
-    padding-right:0!important;
-    padding-bottom:0!important;
-  }
-  .booking-flow>.booking-step{
-    flex:none!important;
-    max-width:none!important;
-    min-height:0!important;
-    padding:20px 0!important;
-    border-left:0!important;
-    border-right:0!important;
-  }
-
-  .food-grid{
-    display:grid!important;
-    grid-template-columns:1fr 1fr!important;
-    gap:0!important;
-    overflow:visible!important;
-    scroll-snap-type:none!important;
-    margin-right:0!important;
-    padding-right:0!important;
-    padding-bottom:0!important;
-    border-top:1px solid rgba(37,40,33,.18)!important;
-    border-left:1px solid rgba(37,40,33,.18)!important;
-  }
-  .food-grid>article{
-    flex:none!important;
-    max-width:none!important;
-    width:auto!important;
-    min-height:0!important;
-    padding:20px 14px 22px!important;
-    border:0!important;
-    border-right:1px solid rgba(37,40,33,.18)!important;
-    border-bottom:1px solid rgba(37,40,33,.18)!important;
-  }
-  .food-grid article>span{margin-bottom:15px!important;font-size:10px}
-  .food-grid h3{font-size:20px;line-height:1.05;margin-bottom:12px}
+  /* Enogastronomy remains two visible columns, no swipe. */
+  .food-grid{display:grid!important;grid-template-columns:1fr 1fr!important;gap:0!important;overflow:visible!important;border-top:1px solid rgba(37,40,33,.18)!important;border-left:1px solid rgba(37,40,33,.18)!important}
+  .food-grid>article{min-width:0!important;width:auto!important;min-height:0!important;padding:20px 14px 22px!important;border:0!important;border-right:1px solid rgba(37,40,33,.18)!important;border-bottom:1px solid rgba(37,40,33,.18)!important}
+  .food-grid article>span{margin-bottom:15px!important}
+  .food-grid .food-wine h3::after,.food-grid .food-table h3::after{font-size:20px}
   .food-grid p{font-size:13px;line-height:1.55}
 
-  .events-section{background:linear-gradient(180deg,#f3ece4 0%,#e8dccf 100%)}
-  .events-grid article{background:rgba(255,255,255,.58)!important;border-color:rgba(73,52,38,.18)!important}
-  .events-grid h3[data-i18n="events.ruscello.title"]::after{font-size:23px}
+  /* Booking and the established content sections keep their original vertical layouts. */
+  .booking-flow{display:grid!important;grid-template-columns:1fr!important;gap:0!important;overflow:visible!important;scroll-snap-type:none!important;margin-right:0!important;padding-right:0!important;padding-bottom:0!important}
+  .booking-flow>.booking-step{flex:none!important;max-width:none!important;min-height:0!important;padding:20px 0!important;border-left:0!important;border-right:0!important}
+
+  .facts,.stay-value-grid,.place-grid,.guest-voices-grid,#valdorcia .destinations{overflow:visible!important;scroll-snap-type:none!important;padding-bottom:0!important;margin-right:0!important;padding-right:0!important}
+  .facts{display:grid!important}
+  .facts>div{max-width:none!important;flex:none!important}
+  .stay-value-grid,.place-grid,.guest-voices-grid{display:grid!important;grid-template-columns:1fr!important;gap:0!important}
+  .stay-value-grid>article,.place-grid>article,.guest-voices-grid>article{max-width:none!important;flex:none!important;min-height:0!important;border-left:0!important;border-right:0!important;padding-left:0!important;padding-right:0!important}
+  #valdorcia .destinations{display:block!important}
+  #valdorcia .destinations>div{display:flex!important;max-width:none!important;min-height:0!important;flex:none!important;border-left:0!important;border-right:0!important;padding-left:0!important;padding-right:0!important}
+  #valdorcia .destinations>div:nth-child(n+4){display:none!important}
+  .guest-voice-card{padding-top:24px!important;padding-bottom:24px!important}
 }
