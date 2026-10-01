@@ -98,7 +98,6 @@
   .events-section,.food-section{padding-top:50px;padding-bottom:50px}
   .events-head,.food-head{margin-bottom:26px}
 
-  /* Horizontal rails on mobile: retained only where they meaningfully shorten the page. */
   .events-grid,
   .food-grid,
   .booking-flow{
@@ -178,4 +177,62 @@
   #valdorcia .destinations>div:nth-child(n+4){display:none!important}
 
   .guest-voice-card{padding-top:24px!important;padding-bottom:24px!important}
+}
+
+/* v25 - requested mobile refinements */
+.events-section{background:linear-gradient(180deg,#f3ece4 0%,#eadfd4 100%)}
+.events-grid article{background:rgba(255,255,255,.42)}
+.events-grid article:has([data-i18n="events.bravio.title"]){order:-1}
+.events-grid h3[data-i18n="events.ruscello.title"]{font-size:0}
+.events-grid h3[data-i18n="events.ruscello.title"]::after{content:"Bruscello · tradizione popolare";font-size:clamp(23px,2vw,31px);line-height:1.02}
+
+@media(max-width:560px){
+  .booking-flow{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:0!important;
+    overflow:visible!important;
+    scroll-snap-type:none!important;
+    margin-right:0!important;
+    padding-right:0!important;
+    padding-bottom:0!important;
+  }
+  .booking-flow>.booking-step{
+    flex:none!important;
+    max-width:none!important;
+    min-height:0!important;
+    padding:20px 0!important;
+    border-left:0!important;
+    border-right:0!important;
+  }
+
+  .food-grid{
+    display:grid!important;
+    grid-template-columns:1fr 1fr!important;
+    gap:0!important;
+    overflow:visible!important;
+    scroll-snap-type:none!important;
+    margin-right:0!important;
+    padding-right:0!important;
+    padding-bottom:0!important;
+    border-top:1px solid rgba(37,40,33,.18)!important;
+    border-left:1px solid rgba(37,40,33,.18)!important;
+  }
+  .food-grid>article{
+    flex:none!important;
+    max-width:none!important;
+    width:auto!important;
+    min-height:0!important;
+    padding:20px 14px 22px!important;
+    border:0!important;
+    border-right:1px solid rgba(37,40,33,.18)!important;
+    border-bottom:1px solid rgba(37,40,33,.18)!important;
+  }
+  .food-grid article>span{margin-bottom:15px!important;font-size:10px}
+  .food-grid h3{font-size:20px;line-height:1.05;margin-bottom:12px}
+  .food-grid p{font-size:13px;line-height:1.55}
+
+  .events-section{background:linear-gradient(180deg,#f3ece4 0%,#e8dccf 100%)}
+  .events-grid article{background:rgba(255,255,255,.58)!important;border-color:rgba(73,52,38,.18)!important}
+  .events-grid h3[data-i18n="events.ruscello.title"]::after{font-size:23px}
 }
