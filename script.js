@@ -314,7 +314,20 @@ function setDateLimits(){
     if(co.value && co.value<co.min) co.value='';
     updateSummary();
   });
-  co.addEventListener('change',updateSummary);
+  co.addEventListener('change',()=>{
+    if(ci.value && co.value){
+      const minCheckout=new Date(`${ci.value}T12:00:00`);
+      minCheckout.setDate(minCheckout.getDate()+2);
+      const minValue=iso(minCheckout);
+      co.min=minValue;
+      if(co.value<minValue){
+        co.value='';
+        updateSummary();
+        return;
+      }
+    }
+    updateSummary();
+  });
   updateSummary();
 }
 

@@ -486,3 +486,10 @@ body.lightbox-open{overflow:hidden}
 .minimum-stay-note{margin:11px 0 18px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(37,40,33,.62)}
 @media(max-width:900px){.stay-value-head{grid-template-columns:1fr;gap:20px}.stay-value-grid{grid-template-columns:1fr 1fr}.stay-value-grid article{border-bottom:1px solid var(--line)}.stay-value-grid article:nth-child(2){border-right:0;margin-right:0}.stay-value-grid article:nth-child(3),.stay-value-grid article:nth-child(4){border-bottom:0}.stay-value-history{grid-template-columns:1fr;gap:18px}.stay-value-essentials{grid-template-columns:1fr;gap:10px}}
 @media(max-width:560px){.stay-value{padding-top:64px;padding-bottom:64px}.stay-value-grid{grid-template-columns:1fr;margin-top:42px}.stay-value-grid article{border-right:0;border-bottom:1px solid var(--line);margin:0;padding:24px 0}.stay-value-grid article:nth-child(3){border-bottom:1px solid var(--line)}.stay-value-grid article:last-child{border-bottom:0}.stay-value-history{padding:36px 0}.stay-value-history h3{font-size:32px}.stay-value-essentials{padding-top:24px}.stay-value-essentials p{line-height:1.8}}
+
+
+/* v18 — mobile polish */
+@media(max-width:560px){
+  .gallery-v2{border-top:0!important;outline:0!important;box-shadow:none!important;}
+  .gallery-v2::before{display:none!important;}
+}
