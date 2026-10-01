@@ -1,0 +1,65 @@
+/* v25 - mobile layout refinements */
+.events-section{
+  background:linear-gradient(180deg,#f3ece4 0%,#eadfd4 100%);
+}
+.events-grid article{
+  background:rgba(255,255,255,.42);
+}
+
+@media(max-width:560px){
+  /* Booking steps: restore the original vertical layout. */
+  .booking-flow{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:0!important;
+    overflow:visible!important;
+    scroll-snap-type:none!important;
+    margin-right:0!important;
+    padding-right:0!important;
+    padding-bottom:0!important;
+  }
+  .booking-flow>.booking-step{
+    flex:none!important;
+    max-width:none!important;
+    min-height:0!important;
+    padding:20px 0!important;
+    border-left:0!important;
+    border-right:0!important;
+  }
+
+  /* Enogastronomy: two columns visible together, no horizontal swipe. */
+  .food-grid{
+    display:grid!important;
+    grid-template-columns:1fr 1fr!important;
+    gap:0!important;
+    overflow:visible!important;
+    scroll-snap-type:none!important;
+    margin-right:0!important;
+    padding-right:0!important;
+    padding-bottom:0!important;
+    border-top:1px solid rgba(37,40,33,.18)!important;
+    border-left:1px solid rgba(37,40,33,.18)!important;
+  }
+  .food-grid>article{
+    flex:none!important;
+    max-width:none!important;
+    width:auto!important;
+    min-height:0!important;
+    padding:20px 14px 22px!important;
+    border:0!important;
+    border-right:1px solid rgba(37,40,33,.18)!important;
+    border-bottom:1px solid rgba(37,40,33,.18)!important;
+  }
+  .food-grid article>span{margin-bottom:15px!important;font-size:10px}
+  .food-grid h3{font-size:20px;line-height:1.05;margin-bottom:12px}
+  .food-grid p{font-size:13px;line-height:1.55}
+
+  /* Events stay as the only horizontal content rail. */
+  .events-section{
+    background:linear-gradient(180deg,#f3ece4 0%,#e8dccf 100%);
+  }
+  .events-grid article{
+    background:rgba(255,255,255,.58)!important;
+    border-color:rgba(73,52,38,.18)!important;
+  }
+}
