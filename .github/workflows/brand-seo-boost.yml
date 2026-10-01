@@ -1,0 +1,60 @@
+name: Brand SEO boost
+on:
+  push:
+    paths:
+      - '.github/workflows/brand-seo-boost.yml'
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Strengthen brand SEO signals
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          p=Path('index.html')
+          s=p.read_text()
+          s=s.replace('<title>Il Nido di Sofì | Appartamento a Montepulciano</title>','<title>Il Nido di Sofì a Montepulciano | Appartamento nel centro storico</title>')
+          s=s.replace('<meta name="description" content="Soggiorna nel cuore del centro storico di Montepulciano. Appartamento per 2 persone, a pochi passi da Piazza Grande, con prenotazione diretta.">','<meta name="description" content="Il Nido di Sofì a Montepulciano è un appartamento per 2 persone nel centro storico, a pochi passi da Piazza Grande e dalla Fortezza, con prenotazione diretta.">')
+          s=s.replace('<meta property="og:title" content="Il Nido di Sofì | Appartamento a Montepulciano">','<meta property="og:title" content="Il Nido di Sofì a Montepulciano | Appartamento nel centro storico">')
+          s=s.replace('<meta property="og:description" content="Soggiorna nel cuore del centro storico di Montepulciano. Appartamento per 2 persone, a pochi passi da Piazza Grande, con prenotazione diretta.">','<meta property="og:description" content="Il Nido di Sofì a Montepulciano è un appartamento per 2 persone nel centro storico, vicino a Piazza Grande e alla Fortezza.">')
+          s=s.replace('<meta name="twitter:title" content="Il Nido di Sofì | Appartamento a Montepulciano">','<meta name="twitter:title" content="Il Nido di Sofì a Montepulciano | Appartamento nel centro storico">')
+          s=s.replace('<meta name="twitter:description" content="Appartamento per 2 persone nel centro storico di Montepulciano, a pochi passi da Piazza Grande.">','<meta name="twitter:description" content="Il Nido di Sofì a Montepulciano: appartamento per 2 persone nel centro storico, a pochi passi da Piazza Grande.">')
+          s=s.replace('<p class="eyebrow light" data-i18n="hero.eyebrow">MONTEPULCIANO · TOSCANA · ITALIA</p>','<p class="eyebrow light" data-i18n="hero.eyebrow">IL NIDO DI SOFÌ · MONTEPULCIANO</p>')
+
+          new_schema='''  <script type="application/ld+json">\n  {\n    "@context": "https://schema.org",\n    "@graph": [\n      {\n        "@type": "WebSite",\n        "@id": "https://ilnidodisofi.github.io/#website",\n        "url": "https://ilnidodisofi.github.io/",\n        "name": "Il Nido di Sofì",\n        "alternateName": "Il Nido di Sofì Montepulciano",\n        "inLanguage": "it"\n      },\n      {\n        "@type": "WebPage",\n        "@id": "https://ilnidodisofi.github.io/#webpage",\n        "url": "https://ilnidodisofi.github.io/",\n        "name": "Il Nido di Sofì a Montepulciano | Appartamento nel centro storico",\n        "isPartOf": {"@id": "https://ilnidodisofi.github.io/#website"},\n        "about": {"@id": "https://ilnidodisofi.github.io/#lodging"},\n        "inLanguage": "it"\n      },\n      {\n        "@type": "LodgingBusiness",\n        "@id": "https://ilnidodisofi.github.io/#lodging",\n        "name": "Il Nido di Sofì",\n        "alternateName": "Il Nido di Sofì Montepulciano",\n        "url": "https://ilnidodisofi.github.io/",\n        "image": "https://ilnidodisofi.github.io/assets/photos/hero.jpg",\n        "description": "Il Nido di Sofì è un appartamento per 2 persone nel cuore del centro storico di Montepulciano, a pochi passi da Piazza Grande e dalla Fortezza.",\n        "telephone": "+39 334 209 1777",\n        "email": "ilnidodisofi@gmail.com",\n        "sameAs": ["https://www.airbnb.it/rooms/1741914713406474771"],\n        "address": {\n          "@type": "PostalAddress",\n          "streetAddress": "Via del Poliziano 12",\n          "postalCode": "53045",\n          "addressLocality": "Montepulciano",\n          "addressRegion": "Toscana",\n          "addressCountry": "IT"\n        },\n        "amenityFeature": [\n          {"@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true},\n          {"@type": "LocationFeatureSpecification", "name": "Cucina attrezzata", "value": true},\n          {"@type": "LocationFeatureSpecification", "name": "Self check-in", "value": true},\n          {"@type": "LocationFeatureSpecification", "name": "Animali ammessi", "value": true}\n        ]\n      }\n    ]\n  }\n  </script>'''
+          s=re.sub(r'  <script type="application/ld\+json">.*?</script>',new_schema,s,count=1,flags=re.S)
+          p.write_text(s)
+
+          p=Path('script.js')
+          s=p.read_text()
+          s=re.sub(r'"hero\.eyebrow":"[^"]*"', '"hero.eyebrow":"IL NIDO DI SOFÌ · MONTEPULCIANO"', s)
+          p.write_text(s)
+
+          p=Path('sitemap.xml')
+          s=p.read_text().replace('<lastmod>2026-09-30</lastmod>','<lastmod>2026-10-01</lastmod>')
+          p.write_text(s)
+          PY
+      - name: Sanity checks
+        run: |
+          grep -q 'Il Nido di Sofì a Montepulciano | Appartamento nel centro storico' index.html
+          grep -q 'alternateName.*Il Nido di Sofì Montepulciano' index.html
+          grep -q 'IL NIDO DI SOFÌ · MONTEPULCIANO' script.js
+          grep -q '<lastmod>2026-10-01</lastmod>' sitemap.xml
+      - name: Commit changes
+        run: |
+          git config user.name 'Il Nido di Sofì'
+          git config user.email 'ilnidodisofi@gmail.com'
+          git add index.html script.js sitemap.xml
+          git commit -m 'Strengthen Il Nido di Sofì Montepulciano brand SEO' || exit 0
+          git push
+      - name: Remove temporary workflow
+        run: |
+          git pull --rebase
+          git rm .github/workflows/brand-seo-boost.yml
+          git commit -m 'Remove temporary brand SEO workflow'
+          git push
