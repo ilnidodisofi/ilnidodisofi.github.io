@@ -31,10 +31,11 @@
 .food-note strong{font:500 25px/1.05 var(--serif)}
 .food-note p{margin:0;max-width:760px;font-size:15px;line-height:1.65;color:rgba(37,40,33,.8)}
 
-/* Footer brand: same visual identity as the header */
+/* Footer brand: compact white lockup, aligned with the cypress mark */
 .footer-brand>div>strong{font-size:0!important;line-height:0!important;margin:0}
 .footer-brand>div>strong::before{content:"";display:block;width:170px;height:34px;background:url('assets/logo-wordmark.png') left center/contain no-repeat;filter:brightness(0) invert(1);opacity:.94}
 .footer-brand>div>span{margin-top:7px}
+.footer-wordmark{display:block!important;width:170px!important;max-width:170px!important;height:34px!important;object-fit:contain!important;object-position:left center!important;filter:brightness(0) invert(1)!important;opacity:.94!important}
 
 a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--brand);outline-offset:3px}
 .events-grid,.place-grid{-webkit-overflow-scrolling:touch}
@@ -52,4 +53,5 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,su
   .food-grid h3{font-size:20px!important}.food-grid p{font-size:15px!important;line-height:1.5!important}
   .food-note{grid-template-columns:1fr;gap:8px;margin-top:20px;padding-top:18px}.food-note strong{font-size:23px}.food-note p{font-size:15px;line-height:1.55}
   .footer-brand>div>strong::before{width:145px;height:30px}
+  .footer-wordmark{width:145px!important;max-width:145px!important;height:30px!important}
 }
