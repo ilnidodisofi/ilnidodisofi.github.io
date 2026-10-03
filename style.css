@@ -37,6 +37,17 @@
 .footer-brand>div>span{margin-top:7px}
 .footer-wordmark{display:block!important;width:170px!important;max-width:170px!important;height:34px!important;object-fit:contain!important;object-position:left center!important;filter:brightness(0) invert(1)!important;opacity:.94!important}
 
+/* FAQ answers: one consistent type treatment, including dynamically added items */
+.faq .faq-list details>p,
+.faq .faq-list details>p.faq-tax-note{
+  font-family:Inter,sans-serif!important;
+  font-size:16px!important;
+  font-weight:400!important;
+  line-height:1.65!important;
+  letter-spacing:0!important;
+  color:rgba(37,40,33,.72)!important;
+}
+
 a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--brand);outline-offset:3px}
 .events-grid,.place-grid{-webkit-overflow-scrolling:touch}
 
@@ -54,4 +65,6 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,su
   .food-note{grid-template-columns:1fr;gap:8px;margin-top:20px;padding-top:18px}.food-note strong{font-size:23px}.food-note p{font-size:15px;line-height:1.55}
   .footer-brand>div>strong::before{width:145px;height:30px}
   .footer-wordmark{width:145px!important;max-width:145px!important;height:30px!important}
+  .faq .faq-list details>p,
+  .faq .faq-list details>p.faq-tax-note{font-size:16px!important;line-height:1.6!important}
 }
