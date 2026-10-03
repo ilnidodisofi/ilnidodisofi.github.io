@@ -247,7 +247,7 @@
       `${c.duration}: ${n} ${word}`,
       `${c.guests}: ${field(form,'Ospiti')}`,'',
       line,c.priceSection,line,
-      `${c.rateLine}: ${euro(NIGHTLY_RATE)} / ${c.perNight}`,
+      `${c.rateLine}: ${euro(NIGHTLY_RATE)} ${c.perNight}`,
       `${c.calc}: ${euro(NIGHTLY_RATE)} × ${n} ${word} = ${euro(total)}`,
       `${c.total}: ${euro(total)}`,'',
       c.note1,
