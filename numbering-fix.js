@@ -112,3 +112,19 @@
     console.error('Unable to load preserved booking script',err);
   }
 })();
+
+// CIN disclosure in the public homepage footer.
+(() => {
+  const CIN = 'IT052015C2A28Z8NIT';
+  function ensureCin(){
+    const footer = document.querySelector('footer');
+    if(!footer || document.getElementById('cinDisclosure')) return;
+    const cin = document.createElement('div');
+    cin.id = 'cinDisclosure';
+    cin.textContent = `CIN: ${CIN}`;
+    cin.style.cssText = 'width:100%;margin-top:10px;font-size:10px;line-height:1.4;letter-spacing:.04em;opacity:.7;text-align:center;';
+    footer.appendChild(cin);
+  }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded',ensureCin);
+  else ensureCin();
+})();
