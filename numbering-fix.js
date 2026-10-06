@@ -233,7 +233,6 @@
     }
 
     const word = n===1 ? c.night : c.nights;
-    const total = n*NIGHTLY_RATE;
     const line = '────────────────────────';
     const body = [
       'IL NIDO DI SOFÌ',c.place,'',line,c.request,line,'',
@@ -246,12 +245,6 @@
       `${c.checkout}: ${formatDate(end,lang)}`,
       `${c.duration}: ${n} ${word}`,
       `${c.guests}: ${field(form,'Ospiti')}`,'',
-      line,c.priceSection,line,
-      `${c.rateLine}: ${euro(NIGHTLY_RATE)} ${c.perNight}`,
-      `${c.calc}: ${euro(NIGHTLY_RATE)} × ${n} ${word} = ${euro(total)}`,
-      `${c.total}: ${euro(total)}`,'',
-      c.note1,
-      c.note2,'',
       c.message,
       field(form,'Messaggio') || '—','',
       line,
