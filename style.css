@@ -68,3 +68,26 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,su
   .faq .faq-list details>p,
   .faq .faq-list details>p.faq-tax-note{font-size:16px!important;line-height:1.6!important}
 }
+
+/* CIN: integrated into the identity block of the footer */
+.footer-brand > div{display:flex;flex-direction:column;align-items:flex-start}
+.footer-cin{
+  display:block;
+  margin-top:4px;
+  font-family:Inter,sans-serif;
+  font-size:9px;
+  line-height:1.35;
+  letter-spacing:.045em;
+  font-weight:400;
+  color:rgba(255,255,255,.58);
+  white-space:nowrap;
+}
+@media(max-width:560px){
+  .footer-cin{
+    margin-top:4px;
+    font-size:8px;
+    line-height:1.35;
+    letter-spacing:.035em;
+    white-space:normal;
+  }
+}
