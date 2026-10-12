@@ -269,7 +269,7 @@ function setLanguage(lang){
   const select=document.getElementById('languageSelect');
   if(select) select.value=lang;
   const next=document.getElementById('nextUrl');
-  if(next) next.value=`https://ilnidodisofi.github.io/grazie.html?lang=${lang}`;
+  if(next) next.value=`https://ilnidodisofi.it/grazie.html?lang=${lang}`;
   localStorage.setItem('nidoLanguage',lang);
 }
 
