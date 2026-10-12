@@ -1,7 +1,7 @@
 // Booking terms enhancement. The previous booking/pricing script is preserved byte-for-byte
 // in numbering-fix-core.js and is executed synchronously below.
 (() => {
-  const TERMS_URL = 'https://ilnidodisofi.github.io/condizioni-prenotazione/';
+  const TERMS_URL = 'https://ilnidodisofi.it/condizioni-prenotazione/';
 
   const copy = {
     it:{place:'Montepulciano · Toscana',request:'RICHIESTA DI SOGGIORNO',guest:'OSPITE',stay:'SOGGIORNO',name:'Nome e cognome',email:'Email',phone:'Telefono',checkin:'Check-in',checkout:'Check-out',duration:'Durata',guests:'Ospiti',message:'MESSAGGIO',nights:'notti',night:'notte',subject:'Richiesta di soggiorno — Il Nido di Sofì',open:'Si sta aprendo la tua app email. Controlla la richiesta e premi Invia.',minError:'Il soggiorno minimo è di 2 notti.',requestNote:'La presente è una richiesta di disponibilità pre-compilata.',confirmNote:'La prenotazione sarà confermata solo dopo la nostra verifica e il successivo pagamento tramite link Stripe personale.',termsSite:'Prima di inviare la richiesta, consulta le',termsLink:'condizioni della prenotazione diretta',termsEmail:'La richiesta è soggetta alle condizioni della prenotazione diretta disponibili qui:'},
