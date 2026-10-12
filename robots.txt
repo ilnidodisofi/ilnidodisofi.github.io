@@ -3,4 +3,4 @@ Allow: /
 Disallow: /guida/
 Disallow: /grazie.html
 
-Sitemap: https://ilnidodisofi.github.io/sitemap.xml
+Sitemap: https://ilnidodisofi.it/sitemap.xml
