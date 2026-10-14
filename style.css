@@ -91,3 +91,26 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,su
     white-space:normal;
   }
 }
+
+
+/* Subtle, contextual connections to the editorial pages; no standalone Explore panel. */
+.home-context-link{
+  display:inline-flex;align-items:center;gap:16px;width:max-content;max-width:100%;
+  margin-top:24px;padding:0 0 8px;
+  border-bottom:1px solid rgba(110,50,24,.46);
+  font:500 11px/1.6 'Inter',sans-serif;
+  letter-spacing:.08em;text-transform:uppercase;text-decoration:none;
+  color:var(--brand);transition:color .2s,border-color .2s;
+}
+.home-context-link::after{content:"↗";font:400 16px/1 'Inter',sans-serif;flex:0 0 auto}
+.home-context-link:hover{color:var(--ink);border-color:var(--ink)}
+.home-context-link:focus-visible{outline:2px solid var(--brand);outline-offset:5px}
+.story .home-context-link{margin-top:22px}
+.stay-value .home-context-link{margin-top:25px}
+.valdorcia .home-context-link{margin-top:28px}
+.events-context-link{margin-top:32px;color:var(--brand)}
+@media(max-width:560px){
+  .home-context-link{font-size:10px;letter-spacing:.065em;white-space:normal;gap:9px;margin-top:18px}
+  .events-context-link,.valdorcia .home-context-link{margin-top:21px}
+}
+@media(prefers-reduced-motion:reduce){.home-context-link{transition:none}}
