@@ -397,6 +397,13 @@ for (const [language, strings] of Object.entries(homepageGuideTranslations)) {
   if (translations[language]) Object.assign(translations[language], strings);
 }
 
+
+// Compact footer navigation follows the same language setting as the home.
+const homepageFooterTranslations = {"it":{"discover.footer.book":"Prenota","discover.footer.apartment":"Appartamento","discover.footer.sleep":"Dove dormire","discover.footer.romantic":"Weekend romantico","discover.footer.bravio":"Bravìo","discover.footer.val":"Val d'Orcia"},"en":{"discover.footer.book":"Book","discover.footer.apartment":"Apartment","discover.footer.sleep":"Where to stay","discover.footer.romantic":"Romantic weekend","discover.footer.bravio":"Bravìo","discover.footer.val":"Val d'Orcia"},"es":{"discover.footer.book":"Reservar","discover.footer.apartment":"Apartamento","discover.footer.sleep":"Dónde alojarse","discover.footer.romantic":"Escapada romántica","discover.footer.bravio":"Bravìo","discover.footer.val":"Val d'Orcia"},"de":{"discover.footer.book":"Buchen","discover.footer.apartment":"Apartment","discover.footer.sleep":"Übernachten","discover.footer.romantic":"Romantisches Wochenende","discover.footer.bravio":"Bravìo","discover.footer.val":"Val d'Orcia"},"fr":{"discover.footer.book":"Réserver","discover.footer.apartment":"Appartement","discover.footer.sleep":"Où dormir","discover.footer.romantic":"Week-end romantique","discover.footer.bravio":"Bravìo","discover.footer.val":"Val d'Orcia"},"ru":{"discover.footer.book":"Бронирование","discover.footer.apartment":"Апартаменты","discover.footer.sleep":"Где остановиться","discover.footer.romantic":"Романтический уикенд","discover.footer.bravio":"Бравио","discover.footer.val":"Валь-д’Орча"},"zh":{"discover.footer.book":"预订","discover.footer.apartment":"公寓","discover.footer.sleep":"住宿指南","discover.footer.romantic":"浪漫周末","discover.footer.bravio":"滚桶节","discover.footer.val":"奥尔恰谷"}};
+for (const [language, labels] of Object.entries(homepageFooterTranslations)) {
+  if (translations[language]) Object.assign(translations[language], labels);
+}
+
 function setLanguage(lang){
   if(!translations[lang]) lang='it';
   const t={...translations[lang], ...(extraTranslations[lang]||{}), ...(siteV8Translations[lang]||{}), ...(bookingV13Translations[lang]||{})};
