@@ -119,7 +119,8 @@
         <article><span>05</span><h3 data-i18n="events.cantine.title">Cantine Aperte</h3><p data-i18n="events.cantine.text">Cantine visitabili, produttori e degustazioni.</p></article>
         <article><span>06</span><h3 data-i18n="events.natale.title">Natale a Montepulciano</h3><p data-i18n="events.natale.text">Mercatini e atmosfera natalizia nel borgo.</p></article>
         <article><span>07</span><h3 data-i18n="events.ruscello.title">Ruscello · tradizione contadina</h3><p data-i18n="events.ruscello.text">Una rievocazione della civiltà rurale e delle sue tradizioni.</p></article>
-      </div>`;
+      </div>
+      <a class="home-context-link events-context-link" href="/bravio-delle-botti/" data-i18n="discover.bravio.title">Bravìo delle Botti</a>`;
 
     const food = document.createElement('section');
     food.className = 'food-section section';
