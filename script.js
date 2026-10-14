@@ -404,6 +404,13 @@ for (const [language, labels] of Object.entries(homepageFooterTranslations)) {
   if (translations[language]) Object.assign(translations[language], labels);
 }
 
+
+// Label for the link to the five editorial guides.
+const guideNavLabels = {"it":"Esplora","en":"Explore","es":"Explorar","de":"Entdecken","fr":"Explorer","ru":"Открыть","zh":"探索"};
+for (const [language, label] of Object.entries(guideNavLabels)) {
+  if (translations[language]) translations[language]["nav.explore"] = label;
+}
+
 function setLanguage(lang){
   if(!translations[lang]) lang='it';
   const t={...translations[lang], ...(extraTranslations[lang]||{}), ...(siteV8Translations[lang]||{}), ...(bookingV13Translations[lang]||{})};
