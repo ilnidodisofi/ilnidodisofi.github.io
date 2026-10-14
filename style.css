@@ -118,3 +118,9 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,su
 /* Keep the booking heading visible under the fixed navigation when linked from a guide. */
 #prenota{scroll-margin-top:84px}
 @media(max-width:900px){#prenota{scroll-margin-top:72px}}
+
+/* Two discreet travel-help links, below the location description. */
+.location-practical-links{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin:13px 0 0!important;color:rgba(37,40,33,.58);font:400 11px/1.65 Inter,sans-serif;letter-spacing:.015em}
+.location-practical-links a{color:inherit;text-decoration:underline;text-decoration-color:rgba(110,50,24,.25);text-underline-offset:4px}
+.location-practical-links a:hover{color:var(--brand)}
+@media(max-width:560px){.location-practical-links{font-size:10px;gap:4px 10px}}
