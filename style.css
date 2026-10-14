@@ -114,3 +114,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,su
   .events-context-link,.valdorcia .home-context-link{margin-top:21px}
 }
 @media(prefers-reduced-motion:reduce){.home-context-link{transition:none}}
+
+/* Keep the booking heading visible under the fixed navigation when linked from a guide. */
+#prenota{scroll-margin-top:84px}
+@media(max-width:900px){#prenota{scroll-margin-top:72px}}
