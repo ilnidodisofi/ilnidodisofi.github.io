@@ -1,7 +1,13 @@
 if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 window.addEventListener('pageshow',()=>{
-  // Mobile browsers often restore the last anchor/scroll position after a reload.
-  // For the public homepage we always reopen from the top.
+  // Honour deliberate deep links (especially /#prenota from the editorial pages).
+  // Only reset to the top when no meaningful anchor was requested.
+  const id = decodeURIComponent(location.hash.slice(1));
+  const target = id && document.getElementById(id);
+  if(target){
+    setTimeout(()=>target.scrollIntoView({block:'start',behavior:'auto'}),120);
+    return;
+  }
   if(location.hash) history.replaceState(null,'',location.pathname+location.search);
   setTimeout(()=>window.scrollTo({top:0,left:0,behavior:'auto'}),0);
 });
