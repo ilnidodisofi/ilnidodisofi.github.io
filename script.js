@@ -417,6 +417,16 @@ for (const [language, label] of Object.entries(guideNavLabels)) {
   if (translations[language]) translations[language]["nav.explore"] = label;
 }
 
+
+// Compact practical links next to the location information.
+const practicalLinkTranslations = {"it":["Parcheggi a Montepulciano","Montepulciano senza auto"],"en":["Parking in Montepulciano","Montepulciano without a car"],"es":["Aparcamiento en Montepulciano","Montepulciano sin coche"],"de":["Parken in Montepulciano","Montepulciano ohne Auto"],"fr":["Se garer à Montepulciano","Montepulciano sans voiture"],"ru":["Парковки в Монтепульчано","Монтепульчано без автомобиля"],"zh":["蒙特普尔恰诺停车指南","不自驾游蒙特普尔恰诺"]};
+for (const [lang, values] of Object.entries(practicalLinkTranslations)) {
+  if (translations[lang]) Object.assign(translations[lang], {
+    "practical.parking": values[0],
+    "practical.walking": values[1]
+  });
+}
+
 function setLanguage(lang){
   if(!translations[lang]) lang='it';
   const t={...translations[lang], ...(extraTranslations[lang]||{}), ...(siteV8Translations[lang]||{}), ...(bookingV13Translations[lang]||{})};
