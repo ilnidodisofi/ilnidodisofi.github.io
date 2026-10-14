@@ -110,3 +110,28 @@ footer{padding:32px 6vw;align-items:flex-start;flex-direction:column}.footer-inf
 .brand-wordmark{width:127px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
+
+/* Small orientation strip: a quiet, useful counterpart to the homepage facts. */
+.microfacts{width:100%;background:var(--paper)}
+.microfacts-inner{width:min(1180px,88vw);margin:auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-bottom:1px solid var(--line)}
+.microfacts-item{display:flex;align-items:baseline;justify-content:center;gap:10px;padding:29px 12px;border-right:1px solid var(--line);text-align:center}
+.microfacts-item:last-child{border-right:0}
+.microfacts-item strong{font:500 clamp(25px,2.4vw,36px)/1 var(--serif);letter-spacing:-.03em}
+.microfacts-item span{font:500 10px/1.4 var(--sans);letter-spacing:.11em;text-transform:uppercase;color:rgba(37,40,33,.65)}
+.page-sleep .chapter-first{border-top:0}
+
+/* The romantic itinerary should read like a carefully paced journal, not a checklist. */
+.page-romance .chapter-first .card{position:relative;padding-left:48px}
+.page-romance .chapter-first .card strong:before{position:absolute;left:0;top:27px;margin:0;width:auto;height:auto;background:none;transform:none;vertical-align:baseline;color:var(--brand);font:500 11px/1 var(--sans);letter-spacing:.13em}
+.page-romance .chapter-first .card:nth-child(1) strong:before{content:"01"}
+.page-romance .chapter-first .card:nth-child(2) strong:before{content:"02"}
+.page-romance .chapter-first .card:nth-child(3) strong:before{content:"03"}
+.page-romance .chapter-first .card:nth-child(4) strong:before{content:"04"}
+@media(max-width:760px){
+.microfacts-inner{grid-template-columns:repeat(2,minmax(0,1fr))}
+.microfacts-item{padding:24px 5px;justify-content:flex-start;flex-direction:column;gap:8px;align-items:center}
+.microfacts-item:nth-child(2){border-right:0}
+.microfacts-item:nth-child(-n+2){border-bottom:1px solid var(--line)}
+.microfacts-item strong{font-size:30px}
+}
+@media(max-width:440px){.microfacts-item span{font-size:9px;letter-spacing:.08em}}
