@@ -65,7 +65,7 @@
     const legend=root?.querySelector('.map-bottom>span');
     if(legend)legend.innerHTML=`<i class="legend-line"></i> ${t.trail}<i class="legend-wall"></i> ${t.walls}`;
     const scale=root?.querySelector('.map-bottom>span:last-child');if(scale)scale.textContent=t.scale;
-    root?.querySelectorAll('.steps,.mobile-stops').forEach(el=>el.setAttribute('aria-label',t.steps));
+    root?.querySelector('.steps')?.setAttribute('aria-label',t.steps);
     root?.dispatchEvent(new CustomEvent('borgo-language',{detail:{lang:lang(),copy:t}}));
   }
   // The older translation and pricing layers also call setLanguage. Render after
