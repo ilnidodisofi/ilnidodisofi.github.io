@@ -6,8 +6,8 @@
 .home-details{margin-top:28px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .home-details>summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:20px 0;font-size:12px;color:#4d5846}
 .home-details>summary::-webkit-details-marker{display:none}
-.home-details>summary>span:last-child{font-size:20px;transition:transform .2s}
-.home-details[open]>summary>span:last-child{transform:rotate(45deg)}
+.home-details>summary::after{font-size:20px;flex:0 0 auto;margin-left:20px}
+
 .home-details>.stay-value{padding:15px 0 28px;background:none}
 .home-details .stay-details-kicker{display:none}
 .home-details .stay-value-head h3{font:400 36px/1.05 'Cormorant Garamond',Georgia,serif;margin:0}
@@ -69,3 +69,7 @@ body.v3-scrolled .topbar .nav-cta:hover,body.v3-scrolled .topbar .nav-cta:focus-
 @media(max-width:760px){.guest-voices .guest-voices-grid{scrollbar-width:none}.guest-voices .guest-voices-grid::-webkit-scrollbar{display:none}}
 
 @media(min-width:701px) and (max-width:1000px){#borgo-walk .street-donato{font-size:14px}}
+
+/* V4.2: one accordion indicator and targeted size refinements. */
+@media(max-width:760px){.borgo-section .borgo-heading .lead{font-size:17px!important;line-height:1.45}}
+@media(min-width:761px){#borgo-walk #borgo-next{font-size:12px;font-weight:500;line-height:1.4;min-height:40px;padding:11px 8px}}
