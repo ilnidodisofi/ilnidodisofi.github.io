@@ -21,48 +21,51 @@
 .gallery-more>span:last-child{font:400 10px/1.5 Inter,Arial,sans-serif;opacity:.9}
 .gallery-collapse-wrap{text-align:right;margin-top:16px}
 .gallery-collapse{appearance:none;background:none;border:0;border-bottom:1px solid #6e321850;color:#6e3218;padding:8px 0;font:11px/1.6 Inter,Arial,sans-serif;cursor:pointer}
-.booking-dock{position:fixed;right:24px;bottom:24px;z-index:45;max-width:calc(100vw - 32px)}
-.booking-dock a{display:flex;align-items:center;justify-content:space-between;gap:28px;min-height:49px;background:#4d5846;color:#fff;padding:14px 22px;text-decoration:none;font:500 12px/1.5 Inter,Arial,sans-serif;box-shadow:0 5px 22px #2528212c;border:1px solid #ffffff30}
-.booking-dock a:hover{background:#394732}
-.booking-dock a:focus-visible,.gallery-collapse:focus-visible,.home-details>summary:focus-visible{outline:2px solid #8c492e;outline-offset:4px}
-body.lightbox-open .booking-dock{visibility:hidden}
-body{padding-bottom:75px}
+
+
+
+.gallery-collapse:focus-visible,.home-details>summary:focus-visible{outline:2px solid #8c492e;outline-offset:4px}
+
+
 .borgo-section.section{padding-top:66px;padding-bottom:54px}
 .borgo-heading h2{font-size:clamp(38px,4.3vw,62px)}
 #casa.section{padding-top:76px;padding-bottom:62px}
-@media(min-width:901px){.booking-dock{display:none}body{padding-bottom:0}body.v3-scrolled .topbar .nav-cta{background:#4d5846;color:#fff;border-color:#4d5846}}
-@media(max-width:760px){.home-facts{gap:19px;margin-top:20px;font-size:11px}.home-details{margin-top:22px}.home-details>summary{padding:16px 0;font-size:11px}.booking-dock{right:12px;left:12px;bottom:max(12px,env(safe-area-inset-bottom));max-width:none}.booking-dock a{min-height:48px;padding:12px 20px;font-size:12px}.gallery-more strong{font-size:12px}.home-details .stay-value-head h3{font-size:32px}body{padding-bottom:calc(82px + env(safe-area-inset-bottom))}#prenota{scroll-margin-top:78px}.section{scroll-margin-top:72px}}
+@media(min-width:901px){body{padding-bottom:0}body.v3-scrolled .topbar .nav-cta{background:#4d5846;color:#fff;border-color:#4d5846}}
+@media(max-width:760px){.home-facts{gap:19px;margin-top:20px;font-size:11px}.home-details{margin-top:22px}.home-details>summary{padding:16px 0;font-size:11px}.gallery-more strong{font-size:12px}.home-details .stay-value-head h3{font-size:32px}#prenota{scroll-margin-top:78px}.section{scroll-margin-top:72px}}
 
-/* Approved V4: the entire town section uses the host section's sage green. */
-.borgo-section.section{width:100%;max-width:none;margin:0;padding-left:6%;padding-right:6%;background:#4d5846;color:#f7f4ed}
-.borgo-section>.section-kicker{color:#d9dfcc}
-.borgo-section .borgo-heading h2{color:#f7f4ed}
-.borgo-section .borgo-heading h2 em{color:#dce3c9}
-.borgo-section .borgo-heading .lead{color:#ecede3}
-.borgo-section .borgo-links{color:#dce1ce}
-.borgo-section .borgo-caption{color:#d2dac5}
-#borgo-walk{border-color:#dfe4d030;color:#f6f3ea}
-#borgo-walk .map-wrap{background:#4d5846}
-#borgo-walk .map-meta{color:#e0e5d3}
-#borgo-walk #borgo-play{color:#f2e5c7;border-color:#e1d8bd70}
-#borgo-walk .scene-caption{color:#dce3ce}
-#borgo-walk .story-panel{background:#ffffff07;border-color:#dfe4d030}
-#borgo-walk .panel-top{color:#d6ddc9}
-#borgo-walk .tiny-mark{color:#e2d4b6}
-#borgo-walk .story-content>.eyebrow{color:#e3dec4}
-#borgo-walk h3 em{color:#dce3c9}
-#borgo-walk .time{color:#e8dfc5}
-#borgo-walk .description{color:#e0e3d7}
-#borgo-walk .street-key{background:#ffffff05;border-color:#dfe4d030}
-#borgo-walk .street-key>span,#borgo-walk .street-key b{color:#dce1cf}
-#borgo-walk .map-bottom>span{color:#d6ddc9}
-#borgo-walk .legend-line{border-color:#d5ab85}
-#borgo-walk .legend-wall{border-color:#c7b797}
-#borgo-walk .steps button::after{background:#dce3ce55}
-#borgo-walk .steps button.active::after{background:#f0e4c6}
-#borgo-walk button:focus-visible{outline-color:#f2e5c7}
-@media(max-width:760px){.borgo-section.section{padding-left:7%;padding-right:7%}}
 
-#borgo-walk .map-node{color:#3c4537}
-#borgo-walk .map-node.active{color:#fff}
-#borgo-walk .street-donato{left:19%;top:36%;color:#e5e8da;text-shadow:0 1px 2px #26352060}
+/* V4.1: warm town / light sage events, with booking only in the fixed header. */
+.borgo-section.section{width:100%;max-width:none;margin:0;padding-left:6%;padding-right:6%;background:#faf6f0;color:#252821}
+.events-section.section{background:#e8ece4}
+#borgo-walk .map-wrap,#borgo-walk .story-panel{background:#faf6f0}
+#borgo-walk .street-key{background:transparent}
+#borgo-walk .street-donato{left:45%;top:60.5%;font-size:16px;color:#5b604e}
+#borgo-walk .street-teatro{color:#5b604e}
+#borgo-walk .tiny-mark{display:none}
+body.v3-scrolled .topbar .nav-cta{background:#4d5846;color:#fff;border-color:#4d5846}
+body.v3-scrolled .topbar .nav-cta:hover,body.v3-scrolled .topbar .nav-cta:focus-visible{background:#394732;color:#fff}
+.host-copy p{font:400 24px/1.35 var(--serif)}
+#borgo-walk .mobile-stops{display:none}
+#borgo-walk .icon-arrow{display:inline-block;width:14px;height:14px;vertical-align:middle;margin-left:10px;fill:none;stroke:currentColor;stroke-width:1.4}
+@media(max-width:760px){
+ .borgo-section.section{padding-left:7%;padding-right:7%}
+ .host-copy p{font-size:19px;line-height:1.35}
+ .guest-voices .guest-voices-grid{display:flex!important;gap:12px!important;overflow-x:auto!important;overflow-y:hidden!important;scroll-snap-type:x mandatory!important;scroll-padding-left:0;-webkit-overflow-scrolling:touch;margin-right:-6vw!important;padding-right:6vw!important;padding-bottom:8px!important;border:0!important}
+ .guest-voices .guest-voices-grid>.guest-voice-card{flex:0 0 82vw!important;max-width:82vw!important;width:82vw!important;min-height:220px!important;padding:22px 20px!important;margin:0!important;border:1px solid var(--line)!important;background:#ffffff70;scroll-snap-align:start}
+ .guest-voices .guest-voice-card h3{font-size:27px!important}
+ .guest-voices .guest-voice-card p{font-size:13px;line-height:1.65}
+}
+@media(max-width:700px){
+ #borgo-walk .map-scene{overflow:hidden}
+ #borgo-walk .map-node b{display:none}
+ #borgo-walk .mobile-stops{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:0 10px 12px}
+ #borgo-walk .mobile-stops button{display:flex;align-items:center;justify-content:center;gap:5px;min-height:44px;padding:6px 4px;border:1px solid #c8b99d;background:#fffaf1;color:#404936;font-size:10px;line-height:1.3}
+ #borgo-walk .mobile-stops button b{font-size:9px;font-weight:500}
+ #borgo-walk .mobile-stops button.active{background:#8c492e;border-color:#8c492e;color:#fff}
+ #borgo-walk .panel-bottom .steps{display:none}
+ #borgo-walk .panel-bottom{justify-content:flex-end}
+}
+
+@media(max-width:760px){.guest-voices .guest-voices-grid{scrollbar-width:none}.guest-voices .guest-voices-grid::-webkit-scrollbar{display:none}}
+
+@media(min-width:701px) and (max-width:1000px){#borgo-walk .street-donato{font-size:14px}}

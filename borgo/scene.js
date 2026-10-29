@@ -54,7 +54,7 @@ function tree(x,y,size=1){
  push(x,y,s,'tree');
 }
 const path=points=>'M'+points.map(p=>pt(P(...p))).join(' L');
-let scene=`<defs><filter id="borgo-island-shadow" x="-30%" y="-30%" width="180%" height="180%"><feGaussianBlur stdDeviation="12"/></filter><radialGradient id="borgo-scene-bg"><stop stop-color="#56644f"/><stop offset="1" stop-color="#4d5846"/></radialGradient></defs><rect width="1100" height="720" fill="url(#borgo-scene-bg)"/>`;
+let scene=`<defs><filter id="borgo-island-shadow" x="-30%" y="-30%" width="180%" height="180%"><feGaussianBlur stdDeviation="12"/></filter><radialGradient id="borgo-scene-bg"><stop stop-color="#faf6f0"/><stop offset="1" stop-color="#faf6f0"/></radialGradient></defs><rect width="1100" height="720" fill="url(#borgo-scene-bg)"/>`;
 scene+=`<ellipse cx="565" cy="518" rx="410" ry="105" fill="#857657" opacity=".13" filter="url(#borgo-island-shadow)"/>`;
 // A solid cutaway base makes the town read as a miniature on a ridge.
 for(let i=0;i<ring.length;i++){

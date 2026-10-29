@@ -5,6 +5,7 @@ const stops=[
  {kind:'LA PRIMA SOSTA',title:'Piazza<br> <em>Grande.</em>',time:'La seconda tappa, nel cuore monumentale',description:'Da Via del Teatro si raggiunge Piazza Grande, fra il Palazzo Comunale, il Duomo e i palazzi storici. Uno spazio in cui fermarsi, alzare lo sguardo e riconoscere il carattere di Montepulciano.',label:'UNA PIAZZA, MOLTE STORIE',detail:'La pietra, le facciate, il tempo di guardare.'},
  {kind:'DALLA PIAZZA AL VERDE',title:'La<br> <em>Fortezza.</em>',time:'Da Piazza Grande verso la Fortezza',description:'La passeggiata prosegue lungo Via di San Donato verso la Fortezza Medicea. Il disegno del borgo incontra qui il verde che circonda la fortificazione.',label:'L’ULTIMA TAPPA DEL NOSTRO FILO',detail:'Un altro volto del centro, sempre dentro le mura.'}
 ];
+const arrowIcon='<svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 13L13 3M4 3H13V12"/></svg>';
 let ui={play:'Segui il filo',next:'Tappa successiva',back:'Torna al Nido',replay:'Rivedi la passeggiata',playing:'Una passeggiata nel borgo…'},touring=false,finished=false;
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 const trail=root.querySelector('#borgo-trail'),pen=root.querySelector('#borgo-pen');
@@ -55,7 +56,7 @@ function moveTo(index,run){
   activeTick=tick;frame=requestAnimationFrame(tick);
  });
 }
-function choose(index){touring=false;finished=false;token++;cancelMove();root.querySelector('#borgo-play').innerHTML=ui.play+' <span aria-hidden="true">↗</span>';moveTo(index,token);}
+function choose(index){touring=false;finished=false;token++;cancelMove();root.querySelector('#borgo-play').innerHTML=ui.play+arrowIcon;moveTo(index,token);}
 root.querySelectorAll('[data-stop]').forEach(button=>button.addEventListener('click',()=>choose(Number(button.dataset.stop))));
 root.querySelector('#borgo-next').addEventListener('click',()=>choose((selected+1)%3));
 root.querySelector('#borgo-play').addEventListener('click',async()=>{
@@ -66,14 +67,14 @@ root.querySelector('#borgo-play').addEventListener('click',async()=>{
  await moveTo(2,run);if(run!==token)return;
  touring=false;finished=true;root.querySelector('#borgo-play').innerHTML=ui.replay+' <span aria-hidden="true">↺</span>';
 });
-reduced.addEventListener('change',()=>{touring=false;finished=false;token++;cancelMove();paint(selected*120);root.querySelector('#borgo-play').innerHTML=ui.play+' <span aria-hidden="true">↗</span>';});
+reduced.addEventListener('change',()=>{touring=false;finished=false;token++;cancelMove();paint(selected*120);root.querySelector('#borgo-play').innerHTML=ui.play+arrowIcon;});
 document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelAnimationFrame(frame);resetClock=true;}else if(activeTick)frame=requestAnimationFrame(activeTick);});
 root.addEventListener('borgo-language',event=>{
  const t=event.detail.copy;ui=t;
  t.stops.forEach((v,i)=>Object.assign(stops[i],{kind:v[0],time:v[1],description:v[2]}));
  stops[2].title=event.detail.lang==='it'?'La<br> <em>Fortezza.</em>':'<em>Fortezza.</em>';
  details(selected);root.querySelector('.story-panel').classList.remove('changing');
- root.querySelector('#borgo-play').textContent=touring?ui.playing:finished?ui.replay:ui.play;
+ root.querySelector('#borgo-play').innerHTML=touring?ui.playing:finished?ui.replay:ui.play+arrowIcon;
  root.querySelectorAll('[data-stop]').forEach(button=>{const i=Number(button.dataset.stop);button.setAttribute('aria-label',String(i+1)+': '+['Il Nido di Sofì','Piazza Grande','Fortezza'][i]);});
 });
 details(0);paint(0);root.querySelector('.story-panel').classList.remove('changing');
