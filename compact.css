@@ -1,0 +1,68 @@
+/* V4 local trial: compact content, preserved photographs and easy booking. */
+[hidden]{display:none!important}
+.section{scroll-margin-top:85px}
+.home-facts{display:flex;gap:25px;font-size:12px;color:#767b6a;margin:26px 0 0}
+.home-facts b{font:400 24px 'Cormorant Garamond',Georgia,serif;color:#4d5846;margin-right:4px}
+.home-details{margin-top:28px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.home-details>summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:20px 0;font-size:12px;color:#4d5846}
+.home-details>summary::-webkit-details-marker{display:none}
+.home-details>summary>span:last-child{font-size:20px;transition:transform .2s}
+.home-details[open]>summary>span:last-child{transform:rotate(45deg)}
+.home-details>.stay-value{padding:15px 0 28px;background:none}
+.home-details .stay-details-kicker{display:none}
+.home-details .stay-value-head h3{font:400 36px/1.05 'Cormorant Garamond',Georgia,serif;margin:0}
+.home-details .stay-value-head h3 em{font-weight:400;color:#4d5846}
+.home-details .stay-value-grid{margin-top:22px}
+.home-details .stay-value-history{margin-top:22px}
+.house-gallery .gallery-photo[data-photo-expand]:not(.gallery-is-expanded){cursor:pointer}
+.gallery-more{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;background:#252821a8;color:#fff;padding:16px;text-align:center}
+.gallery-more-symbol{font:400 44px/1 'Cormorant Garamond',Georgia,serif}
+.gallery-more strong{font:500 13px/1.4 Inter,Arial,sans-serif}
+.gallery-more>span:last-child{font:400 10px/1.5 Inter,Arial,sans-serif;opacity:.9}
+.gallery-collapse-wrap{text-align:right;margin-top:16px}
+.gallery-collapse{appearance:none;background:none;border:0;border-bottom:1px solid #6e321850;color:#6e3218;padding:8px 0;font:11px/1.6 Inter,Arial,sans-serif;cursor:pointer}
+.booking-dock{position:fixed;right:24px;bottom:24px;z-index:45;max-width:calc(100vw - 32px)}
+.booking-dock a{display:flex;align-items:center;justify-content:space-between;gap:28px;min-height:49px;background:#4d5846;color:#fff;padding:14px 22px;text-decoration:none;font:500 12px/1.5 Inter,Arial,sans-serif;box-shadow:0 5px 22px #2528212c;border:1px solid #ffffff30}
+.booking-dock a:hover{background:#394732}
+.booking-dock a:focus-visible,.gallery-collapse:focus-visible,.home-details>summary:focus-visible{outline:2px solid #8c492e;outline-offset:4px}
+body.lightbox-open .booking-dock{visibility:hidden}
+body{padding-bottom:75px}
+.borgo-section.section{padding-top:66px;padding-bottom:54px}
+.borgo-heading h2{font-size:clamp(38px,4.3vw,62px)}
+#casa.section{padding-top:76px;padding-bottom:62px}
+@media(min-width:901px){.booking-dock{display:none}body{padding-bottom:0}body.v3-scrolled .topbar .nav-cta{background:#4d5846;color:#fff;border-color:#4d5846}}
+@media(max-width:760px){.home-facts{gap:19px;margin-top:20px;font-size:11px}.home-details{margin-top:22px}.home-details>summary{padding:16px 0;font-size:11px}.booking-dock{right:12px;left:12px;bottom:max(12px,env(safe-area-inset-bottom));max-width:none}.booking-dock a{min-height:48px;padding:12px 20px;font-size:12px}.gallery-more strong{font-size:12px}.home-details .stay-value-head h3{font-size:32px}body{padding-bottom:calc(82px + env(safe-area-inset-bottom))}#prenota{scroll-margin-top:78px}.section{scroll-margin-top:72px}}
+
+/* Approved V4: the entire town section uses the host section's sage green. */
+.borgo-section.section{width:100%;max-width:none;margin:0;padding-left:6%;padding-right:6%;background:#4d5846;color:#f7f4ed}
+.borgo-section>.section-kicker{color:#d9dfcc}
+.borgo-section .borgo-heading h2{color:#f7f4ed}
+.borgo-section .borgo-heading h2 em{color:#dce3c9}
+.borgo-section .borgo-heading .lead{color:#ecede3}
+.borgo-section .borgo-links{color:#dce1ce}
+.borgo-section .borgo-caption{color:#d2dac5}
+#borgo-walk{border-color:#dfe4d030;color:#f6f3ea}
+#borgo-walk .map-wrap{background:#4d5846}
+#borgo-walk .map-meta{color:#e0e5d3}
+#borgo-walk #borgo-play{color:#f2e5c7;border-color:#e1d8bd70}
+#borgo-walk .scene-caption{color:#dce3ce}
+#borgo-walk .story-panel{background:#ffffff07;border-color:#dfe4d030}
+#borgo-walk .panel-top{color:#d6ddc9}
+#borgo-walk .tiny-mark{color:#e2d4b6}
+#borgo-walk .story-content>.eyebrow{color:#e3dec4}
+#borgo-walk h3 em{color:#dce3c9}
+#borgo-walk .time{color:#e8dfc5}
+#borgo-walk .description{color:#e0e3d7}
+#borgo-walk .street-key{background:#ffffff05;border-color:#dfe4d030}
+#borgo-walk .street-key>span,#borgo-walk .street-key b{color:#dce1cf}
+#borgo-walk .map-bottom>span{color:#d6ddc9}
+#borgo-walk .legend-line{border-color:#d5ab85}
+#borgo-walk .legend-wall{border-color:#c7b797}
+#borgo-walk .steps button::after{background:#dce3ce55}
+#borgo-walk .steps button.active::after{background:#f0e4c6}
+#borgo-walk button:focus-visible{outline-color:#f2e5c7}
+@media(max-width:760px){.borgo-section.section{padding-left:7%;padding-right:7%}}
+
+#borgo-walk .map-node{color:#3c4537}
+#borgo-walk .map-node.active{color:#fff}
+#borgo-walk .street-donato{left:19%;top:36%;color:#e5e8da;text-shadow:0 1px 2px #26352060}
