@@ -1,0 +1,30 @@
+/* V3 = approved V1 + transparent header + animated original logo. */
+.topbar{background:transparent;backdrop-filter:none;border-bottom-color:#ffffff25;color:#fff;transition:background .45s ease,color .45s ease,border-color .45s ease,box-shadow .45s ease}
+.topbar .brand-lockup img{filter:brightness(0) invert(1);transition:filter .45s ease}
+.topbar .nav-cta,.topbar .language-picker select{color:inherit;border-color:#ffffff90}
+.topbar .language-picker select option{color:#252821;background:#fbfaf7}
+body.v3-scrolled .topbar{background:rgba(251,250,247,.96);backdrop-filter:blur(12px);border-bottom-color:rgba(37,40,33,.08);color:#252821;box-shadow:0 2px 16px #25282105}
+body.v3-scrolled .brand-lockup img{filter:none}
+body.v3-scrolled .topbar .nav-cta,body.v3-scrolled .topbar .language-picker select{border-color:#25282170}
+.topbar .nav-cta:hover,.topbar .nav-cta:focus-visible{color:#252821;background:#fbfaf7}
+body.v3-scrolled .topbar .nav-cta:hover,body.v3-scrolled .topbar .nav-cta:focus-visible{background:#252821;color:#fff}
+.v3-logo-section{position:relative}
+.v3-logo-art{position:relative;width:min(760px,75vw);aspect-ratio:1108/784;max-height:430px}
+.v3-logo-art .v3-logo-original{position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:contain;opacity:1;transition:opacity .3s ease}
+.v3-logo-section.is-drawing .v3-logo-original{opacity:0;transition:none}
+.v3-logo-replay{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);appearance:none;border:0;border-bottom:1px solid #6e321840;padding:8px 0;background:transparent;color:#6e3218;font:10px/1.5 Inter,Arial,sans-serif;letter-spacing:.08em;cursor:pointer;transition:border-color .2s ease}
+.v3-logo-replay:hover{border-color:#6e3218}.v3-logo-replay:focus-visible{outline:2px solid #6e3218;outline-offset:5px}
+@media(prefers-reduced-motion:reduce){.topbar,.topbar .brand-lockup img,.v3-logo-art .v3-logo-original{transition:none}.v3-logo-section.is-drawing .v3-logo-original{opacity:1}.v3-logo-replay{display:none}}
+.v3-logo-section{scroll-margin-top:78px}
+.v3-logo-section.is-prepared .v3-logo-original{opacity:0}
+@media(prefers-reduced-motion:reduce){.v3-logo-section.is-prepared .v3-logo-original{opacity:1}}
+
+
+.v3-logo-section.is-drawing .v3-logo-original{transition:none}
+/* Draw identical bitmap pixels through a Canvas mask on every browser. */
+
+.v3-logo-canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:none}
+.v3-logo-section.is-drawing .v3-logo-canvas{display:block}
+@media(prefers-reduced-motion:reduce){.v3-logo-section.is-drawing .v3-logo-canvas{display:none}}
+
+@media(max-width:560px){.v3-logo-replay{bottom:20px;font-size:9px}}
