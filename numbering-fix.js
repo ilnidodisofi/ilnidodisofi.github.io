@@ -103,7 +103,7 @@
   // Execute the previously published script unchanged, preserving pricing, FAQ and numbering.
   try {
     const xhr = new XMLHttpRequest();
-    xhr.open('GET','numbering-fix-core.js?v=1',false);
+    xhr.open('GET','/numbering-fix-core.js?v=1',false);
     xhr.send(null);
     if((xhr.status >= 200 && xhr.status < 300) || xhr.status === 0){
       (0,eval)(`${xhr.responseText}\n//# sourceURL=numbering-fix-core.js`);
