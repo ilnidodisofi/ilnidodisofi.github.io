@@ -3,54 +3,54 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(/assets/fonts/bb8f3c3b0ca40380.ttf) format('truetype');
+  src: url(/assets/fonts/bb8f3c3b0ca40380.woff2) format('woff2');
 }
 @font-face {
   font-family: 'Cormorant Garamond';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(/assets/fonts/75407d22188550d6.ttf) format('truetype');
+  src: url(/assets/fonts/75407d22188550d6.woff2) format('woff2');
 }
 @font-face {
   font-family: 'Cormorant Garamond';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(/assets/fonts/705776b6237d1fd4.ttf) format('truetype');
+  src: url(/assets/fonts/705776b6237d1fd4.woff2) format('woff2');
 }
 @font-face {
   font-family: 'Cormorant Garamond';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(/assets/fonts/a9565983a6247cbc.ttf) format('truetype');
+  src: url(/assets/fonts/a9565983a6247cbc.woff2) format('woff2');
 }
 @font-face {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url(/assets/fonts/ee9558be9f8a4d75.ttf) format('truetype');
+  src: url(/assets/fonts/ee9558be9f8a4d75.woff2) format('woff2');
 }
 @font-face {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(/assets/fonts/a699af1dea30b799.ttf) format('truetype');
+  src: url(/assets/fonts/a699af1dea30b799.woff2) format('woff2');
 }
 @font-face {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(/assets/fonts/e45972c7e9f24dc3.ttf) format('truetype');
+  src: url(/assets/fonts/e45972c7e9f24dc3.woff2) format('woff2');
 }
 @font-face {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(/assets/fonts/87e867b52640b3b3.ttf) format('truetype');
+  src: url(/assets/fonts/87e867b52640b3b3.woff2) format('woff2');
 }
